@@ -1,0 +1,9 @@
+<%= turbo_stream_from @game %>
+
+<div class="container">
+  <h3>Waiting for players</h3>
+
+  <div id="players">
+    <%= render "games/players", players: @game.players, game: @game %>
+  </div>
+</div>
