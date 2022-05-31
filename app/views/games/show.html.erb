@@ -1,9 +1,10 @@
 <%= turbo_stream_from @game %>
+<%= turbo_stream_from current_user %>
 
 <div class="container">
   <h3>Waiting for players</h3>
 
   <div id="players">
-    <%= render "games/players", players: @game.players, game: @game %>
+    <%= render "games/players", players: @game.players, game: @game, user: current_user%>
   </div>
 </div>

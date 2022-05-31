@@ -1,4 +1,7 @@
 <% players.each do |player| %>
   <%= player.email %>
-  <%= link_to "Are you ready", ready_participation_path(player.find_participation(game)), data: { turbo_method: :post }, id:"test" %>
+
+  <% if user == player %>
+    <%= link_to "Are you ready", ready_participation_path(player.find_participation(game)), data: { turbo_method: :post }, id:"test" %>
+  <% end %>
 <% end %>
