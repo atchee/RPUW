@@ -10,8 +10,10 @@ puts "Database cleaned"
 
 
 user_list = [
-  { nickname: "bob", email: 'bob@test.com', password: 'password', password_confirmation: 'password' },
-  { nickname: "lara", email: 'lara@test.com', password: 'password', password_confirmation: 'password' },
+  { nickname: "Bob", email: 'bob@test.com', password: 'password', password_confirmation: 'password' },
+  { nickname: "Lara", email: 'lara@test.com', password: 'password', password_confirmation: 'password' },
+  { nickname: "Jasper", email: 'jasper@test.com', password: 'password', password_confirmation: 'password' },
+  { nickname: "Diane", email: 'diane@test.com', password: 'password', password_confirmation: 'password' }
 ]
 
 user_list.each do |user|
