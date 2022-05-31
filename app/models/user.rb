@@ -7,4 +7,8 @@ class User < ApplicationRecord
   has_many :participations
   has_many :attempts, through: :participations
   has_many :games, through: :participations
+
+  def find_participation(game)
+    self.participations.find_by(game: game)
+  end
 end
