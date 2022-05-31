@@ -12,7 +12,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new
+    @game = Game.new(user: current_user)
     @game.questions = Question.all.sample(20)
     @game.save
 

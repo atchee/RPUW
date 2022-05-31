@@ -45,3 +45,16 @@
 .big-yellow-btn:focus {
   outline: none;
 }
+
+.orange-btn {
+  border-radius: 5px;
+  background-color: #e9933e;
+  margin: 0 auto;
+  padding: 5px;
+  color: #eef7fc;
+  box-shadow: 0 4px 15px 0 #e85a19;
+
+  &:hover {
+    color : #eef7fc;
+  }
+}
