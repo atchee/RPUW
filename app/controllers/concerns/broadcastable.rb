@@ -11,4 +11,13 @@ module Broadcastable
         }
     end
   end
+
+  def broadcast_question
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "game",
+      partial: "games/question",
+      locals: {
+        question: @game.current_question
+      }
+  end
 end

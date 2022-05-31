@@ -9,6 +9,6 @@ class User < ApplicationRecord
   has_many :games, through: :participations
 
   def find_participation(game)
-    self.participations.find_by(game: game)
+    participations.find_by(game: game)
   end
 end

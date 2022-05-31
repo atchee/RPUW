@@ -12,4 +12,9 @@ class ParticipationsController < ApplicationController
 
     broadcast_players_list
   end
+
+  def answer
+    # raise
+
+  end
 end

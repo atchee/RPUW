@@ -18,4 +18,14 @@ class GamesController < ApplicationController
 
     redirect_to game_path(@game)
   end
+
+  def start
+    @game = Game.find(params[:id])
+    @game.update(status: 'running')
+
+    broadcast_question
+  end
+
+  # def next_question
+  # end
 end
