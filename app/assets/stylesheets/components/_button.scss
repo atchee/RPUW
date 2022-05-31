@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 5px;
   color: #eef7fc;
-  box-shadow: 0 4px 15px 0 #478fca;
+  box-shadow: 0 4px 15px 0 rgba(71, 143, 202, 0.75);
 
   &:hover {
     color : #eef7fc;
@@ -24,7 +24,7 @@
   align-items: center;
   align-content: space-around;
   flex-direction: column;
-  box-shadow: 0 4px 15px 0 #e37743;
+  box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
 
   background-size: 300% 100%;
   transition: all 1s ease-in-out;
@@ -48,11 +48,11 @@
 
 .orange-btn {
   border-radius: 5px;
-  background-color: #e9933e;
+  background-color: rgb(233, 147, 62);
   margin: 0 auto;
   padding: 5px;
   color: #eef7fc;
-  box-shadow: 0 4px 15px 0 #e85a19;
+  box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
 
   &:hover {
     color : #eef7fc;
