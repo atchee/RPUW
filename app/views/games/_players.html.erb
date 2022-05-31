@@ -2,9 +2,17 @@
 
   <div>
     <% players.each do |player| %>
-      <div>
+      <div class="fa-stack fa-1x";>
         <% if game.user == player && player.find_participation(game).ready?%>
-          <p><%= player.nickname %> <span><i class="fa-solid fa-star"></i></span></p>
+          <p>
+            <%= player.nickname %>
+            <span>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa fa-check"></i>
+            </span>
+           </p>
+        <%elsif game.user == player%>
+        <p><%= player.nickname %> <span><i class="fa-solid fa-star"></i></span></p>
         <%elsif player.find_participation(game).ready? %>
           <p><%= player.nickname %> <span><i class="fa fa-check"></i></span></p>
         <% else %>
