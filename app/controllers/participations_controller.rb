@@ -9,4 +9,9 @@ class ParticipationsController < ApplicationController
     user = Participation.find(params[:id])
     user.toggle!(:ready)
   end
+
+  def answer
+    # raise
+
+  end
 end
