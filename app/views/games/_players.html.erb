@@ -4,7 +4,7 @@
     <% players.each do |player| %>
       <div class="fa-stack fa-1x card-player";>
         <% if game.user == player && player.find_participation(game).ready?%>
-          <p>
+          <p id="owner">
             <%= player.nickname %>
             <span>
               <i class="fa-solid fa-star"></i>
