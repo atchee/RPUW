@@ -2,9 +2,10 @@ require 'open-uri'
 require 'json'
 
 puts "Cleaning up database..."
-Questions.destroy_all
-Answers.destroy_all
-Themes.destroy_all
+Theme.destroy_all
+Question.destroy_all
+Answer.destroy_all
+User.destroy_all
 puts "Database cleaned"
 
 
@@ -20,15 +21,15 @@ user_list.each do |user|
 end
 
 themes_list = [
-    "Literature",
-    "General knowledge",
-    "Mythology",
-    "Movies",
-    "Manga & Anime",
-    "Sports",
-    "History",
-    "Geography",
-    "Science"
+  "Literature",
+  "General knowledge",
+  "Mythology",
+  "Movies",
+  "Manga & Anime",
+  "Sports",
+  "History",
+  "Geography",
+  "Science"
   ]
 
   themes_list.each do |name|
@@ -109,7 +110,7 @@ q_8.save!
 p "created 1 question!"
 
 
-q_9 = Question.create(content: "What was the original name of New York City?", theme: Theme.find_by(name: "General Knowledge"))
+q_9 = Question.create(content: "What was the original name of New York City?", theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_9, content: "New Amsterdam", correct: true)
 Answer.create(question: q_9, content: "New London", correct: false)
 Answer.create(question: q_9, content: "New Hamburg", correct: false)
@@ -127,16 +128,16 @@ q_10.save!
 p "created 1 question!"
 
 
-q11 = Question.create(content: "Who directed the 1973 film 'American Graffiti'?", theme: Theme.find_by(name: "Movies"))
+q_11 = Question.create(content: "Who directed the 1973 film 'American Graffiti'?", theme: Theme.find_by(name: "Movies"))
 Answer.create(question: q_11, content: "George Lucas", correct: true)
 Answer.create(question: q_11, content: "Ron Howard", correct: false)
 Answer.create(question: q_11, content: "Francis Ford Coppola", correct: false)
 Answer.create(question: q_11, content: "Steven Spielberg", correct: false)
-q11.save!
+q_11.save!
 p "created 1 question!"
 
 
-q_12 = Question.create(content: "Who won the 2017 Formula One World Drivers' Championship?", theme: Theme.find_by(name: "Sport"))
+q_12 = Question.create(content: "Who won the 2017 Formula One World Drivers' Championship?", theme: Theme.find_by(name: "Sports"))
 Answer.create(question: q_12, content: "Lewis Hamilton", correct: true)
 Answer.create(question: q_12, content: "Sebastian Vettel", correct: false)
 Answer.create(question: q_12, content: "Nico Rosberg", correct: false)

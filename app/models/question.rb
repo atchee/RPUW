@@ -1,5 +1,5 @@
 class Question < ApplicationRecord
   belongs_to :theme
-  has_many :answers
-  has_many :game_questions
+  has_many :answers, dependent: :destroy
+  has_many :game_questions, dependent: :destroy
 end
