@@ -7,3 +7,11 @@
     <%= render "games/players", players: @game.players, game: @game %>
   </div>
 </div>
+
+<%= link_to "Voir la question",  start_game_path(@game), id:"questions" %>
+
+<turbo-stream action="append" target="questions">
+  <template>
+    <div> Voir la question</div>
+  </template>
+</turbo-stream>
