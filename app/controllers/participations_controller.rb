@@ -15,6 +15,5 @@ class ParticipationsController < ApplicationController
 
   def answer
     # raise
-
   end
 end

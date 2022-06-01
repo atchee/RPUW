@@ -1,0 +1,9 @@
+<% participations.each do |participation| %>
+  <p><%= participation.user.nickname %></p>
+  <p><%= participation.point %>
+
+
+  <% if participation.user == looser %>
+    <p id="<%= dom_id(participation.user) %>">Looser</p>
+  <% end %>
+<% end %>

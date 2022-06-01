@@ -13,15 +13,17 @@ export default class extends Controller {
 
   revealAnswer(evt) {
     evt.preventDefault()
+
     const answerId = evt.params.answerId
     console.log(this.participationIdValue)
+    console.log(answerId)
     // console.log("Hello I clicked to an answer")
     // console.log(this.inputTarget)
     // console.log(this.inputTarget.dataset.answerid)
     // const answerid = parseInt(this.inputTarget.dataset.answerid)
     // this.resultTarget.innerText = `The id is : ${answerid}`
     const url = `/participations/${this.participationIdValue}/answer?answer_id=${answerId}`
-
+    console.log(url)
     fetch(url, {
       method: "POST",
       headers: { 'Accept': 'text/vnd.turbo-stream.html', "X-CSRF-Token": this.csrfToken },
