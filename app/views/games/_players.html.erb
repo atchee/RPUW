@@ -8,8 +8,7 @@
           <p id="owner">
             <%= player.nickname %>
             <span>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa fa-check"></i>
+              <i class="fa fa-check check"></i>
             </span>
            </p>
         <%elsif game.user == player%>
@@ -31,7 +30,7 @@
 
   <div class="btn-play">
     <% if game.players_ready? && game.user == user %>
-      <%= link_to "Start", game_path(game), class:"big-yellow-btn"%>
+      <%= link_to "Start", start_game_path(@game), data: { turbo_method: :post }, class:"big-yellow-btn" %>
     <% end %>
   </div>
 
