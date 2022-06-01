@@ -1,0 +1,61 @@
+#players-desk-1round {
+  width: 1200px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#player-desk-1round {
+  background-image: asset-url('round1/desk-1round.png');
+  background-size: contain;
+  background-position: center;
+  width: 250px;
+  height: 355px;
+  position: relative;
+}
+
+#player-nickname-1round {
+  position: absolute;
+  background-color: #a2bbdf71;
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  border-radius: 5px;
+  color: #eef7fc;
+  text-align: center;
+  padding: 4px;
+  text-shadow: #f7d648 1px 0 10px;
+  left: 55px;
+  top: 32px;
+}
+
+#card-point-1round {
+  background-color: #eef7fc52;
+  border-radius: 5px;
+  width: 100px;
+  height: 225px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  left: 75px;
+  top: 86px;
+}
+
+.point-1round-orange {
+  background: radial-gradient(#f7d648, #f6ca44, #F4BD3F, #F3B03A, #F2AA38, #F1A335);
+  border-radius: 5px;
+  border: solid 2px #e85a19 ;
+  box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
+  width: 80px;
+  height: 20px;
+}
+
+.point-1round-gray {
+  background: radial-gradient(#eef7fc, #D8D8D8);
+  border-radius: 5px;
+  border: solid 2px #e85a19 ;
+  width: 80px;
+  height: 20px;
+}
