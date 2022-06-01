@@ -15,4 +15,8 @@ class Game < ApplicationRecord
     participations.map(&:ready).all?
   end
 
+  def started?
+    status == "running"
+  end
+
 end

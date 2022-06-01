@@ -1,15 +1,28 @@
 <%= turbo_stream_from @game %>
-<div data-controller="answer" data-answer-participation-id-value="<%= current_user.find_participation(@game).id %>">
-
 <%= turbo_stream_from current_user %>
 
+<div data-controller="answer" data-answer-participation-id-value="<%= current_user.find_participation(@game).id %>">
   <div class="container" id="game">
-  <h3>Waiting for players</h3>
+    <% unless @game.started? %>
+      <div id="players">
+        <h3>Waiting for players</h3>
+        <%= render "games/players", players: @game.players, game: @game, user: current_user %>
+      </div>
+    <% end %>
 
-  <div id="players">
-    <%= render "games/players", players: @game.players, game: @game, user: current_user %>
+    <div id="question">
+      <% if @game.started? %>
+        <%= render "games/question", question: @game.current_question %>
+      <% end %>
+    </div>
+
+    <div id="scores">
+      <% if @game.started? %>
+        <%= render "games/scores", participations: @game.participations, looser: false %>
+      <% end %>
+    </div>
   </div>
-  </div>
+
 
   <%= link_to "Display questions", start_game_path(@game), data: { turbo_method: :post } %>
 
