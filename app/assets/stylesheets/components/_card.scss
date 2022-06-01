@@ -1,0 +1,18 @@
+.card-players {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-player {
+  height: 50px;
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+
+  #owner {
+    background-image: linear-gradient(to right, #f7d648, #e9933e, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
+  }
+}

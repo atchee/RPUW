@@ -1,5 +1,38 @@
 
-<% players.each do |player| %>
-  <%= player.email %>
-  <%= link_to "Are you ready", ready_participation_path(player.participations.find_by(game: game)), data: { turbo_method: :post } %>
-<% end %>
+<div id="sas">
+
+  <div class="card-players">
+    <% players.each do |player| %>
+      <div class="fa-stack fa-1x card-player";>
+        <% if game.user == player && player.find_participation(game).ready?%>
+          <p id="owner">
+            <%= player.nickname %>
+            <span>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa fa-check"></i>
+            </span>
+           </p>
+        <%elsif game.user == player%>
+        <p><%= player.nickname %> <span><i class="fa-solid fa-star"></i></span></p>
+        <%elsif player.find_participation(game).ready? %>
+          <p><%= player.nickname %> <span><i class="fa fa-check"></i></span></p>
+        <% else %>
+          <%= player.nickname %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="btn-play">
+    <% unless user.find_participation(game).ready? %>
+      <%= link_to "Are you ready", ready_participation_path(user.find_participation(game)), data: { turbo_method: :post }, id:"test", class:"big-yellow-btn" %>
+    <% end %>
+  </div>
+
+  <div class="btn-play">
+    <% if game.players_ready? && game.user == user %>
+      <%= link_to "Start", game_path(game), class:"big-yellow-btn"%>
+    <% end %>
+  </div>
+
+</div>
