@@ -1,11 +1,15 @@
- <%= question.content %>
- <ul>
-  <% question.answers.each do |answer| %>
-    <li data-answer-target="input", data-answerid=<%= answer.id %>>
-      <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post, action: "click->answer#revealAnswer" } %>
-    </li>
-  <% end %>
- </ul>
+ <div class="question" class="flex-container">
+  <%= question.content %>
+  <div>
+    <ul class="answer" class="flex-content">
+      <% question.answers.each do |answer| %>
+        <li  data-answer-target="input", data-answerid=<%= answer.id %>>
+          <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post, action: "click->answer#revealAnswer" } %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+ </div>
 
  <div>
   <span data-answer-target="response"></span>
