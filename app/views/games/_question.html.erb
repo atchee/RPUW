@@ -1,12 +1,12 @@
  <%= question.content %>
  <ul>
   <% question.answers.each do |answer| %>
-    <li data-answer-target="input", data-answerid=<%= answer.id %>>
-      <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post, action: "click->answer#revealAnswer" } %>
+    <li data-answer-target="input">
+      <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post, action: "click->answer#revealAnswer", answer_answer_id_param: answer.id } %>
     </li>
   <% end %>
  </ul>
 
  <div>
-  <span data-answer-target="response"></span>
+  <span data-answer-target="result"></span>
  </div>

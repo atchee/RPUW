@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :participations, only: [] do
     member do
       post "/ready", to: "participations#ready"
-      post "/answer", to: "participations#answer"
+      post "/answer", to: "answers#answer"
     end
   end
   # Defines the root path route ("/")
