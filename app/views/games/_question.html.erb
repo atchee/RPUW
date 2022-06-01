@@ -1,14 +1,14 @@
- <div class="question" class="flex-container">
+ <div class="question" >
   <%= question.content %>
-  <div>
-    <ul class="answer" class="flex-content">
+    <ul class="answer" class="flex-container">
       <% question.answers.each do |answer| %>
+        <div class="flex-content" id="choice">
         <li  data-answer-target="input", data-answerid=<%= answer.id %>>
           <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post, action: "click->answer#revealAnswer" } %>
         </li>
+        </div>
       <% end %>
     </ul>
-  </div>
  </div>
 
  <div>
