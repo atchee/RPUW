@@ -8,12 +8,11 @@ class Game < ApplicationRecord
 
   def current_question
     self.questions[self.question_number]
-
     # array        # integer
   end
-  
+
   def players_ready?
     participations.map(&:ready).all?
   end
-  
+
 end
