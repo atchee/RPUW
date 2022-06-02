@@ -1,6 +1,15 @@
 <% participations.each do |participation| %>
-  <p>Participant :<%= participation.user.nickname %></p>
-  <p>Score : <%= participation.point %>
 
-
+  <% if participation.point == 9 %>
+    <div class="winner">
+      <p>The winner is : <%= participation.user.nickname %> | Score : <%= participation.point %></p>
+    </div>
+  <% else %>
+    <div class="looser">
+      <p>The loosers are : </p>
+      <p>Joueur<%= participation.user.nickname %> | Score : <%= participation.point %></p>
+    </div>
+  <% end %>
 <% end %>
+
+<%= link_to "Play again",root_path, class:"big-yellow-btn" %>
