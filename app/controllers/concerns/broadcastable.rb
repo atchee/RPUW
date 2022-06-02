@@ -24,7 +24,18 @@ module Broadcastable
       locals: {
         question: @game.current_question
       }
+      # TimerJob.set(wait: 3.second).perform_later(@game.id)
+      # while @game.question_number < 20
+            @game.question_number += 1
+            @game.save
+            TimerJob.set(wait: 3.second).perform_later(@game.id)
+            # sleep 3
+            # broadcast_question
+      # end
+
+    #  @game.timer
   end
+
 
   def broadcast_scores
     Turbo::StreamsChannel.broadcast_update_to @game,
