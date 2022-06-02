@@ -1,9 +1,9 @@
 class Game < ApplicationRecord
   belongs_to :user
 
-  has_many :participations
+  has_many :participations, dependent: :destroy
   has_many :players, through: :participations, source: :user
-  has_many :game_questions
+  has_many :game_questions, dependent: :destroy
   has_many :questions, through: :game_questions
 
   def current_question
