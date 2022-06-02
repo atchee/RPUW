@@ -35,4 +35,24 @@ module Broadcastable
         looser: @looser
       }
   end
+
+  def broadcast_summary
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "summary",
+      partial: "games/summary",
+      locals: {
+        participations: @game.participations,
+        looser: @looser
+      }
+  end
+
+  def broadcast_remove_question
+    Turbo::StreamsChannel.broadcast_remove_to @game,
+      target: "question"
+  end
+
+  def broadcast_remove_scores
+    Turbo::StreamsChannel.broadcast_remove_to @game,
+      target: "scores"
+  end
 end

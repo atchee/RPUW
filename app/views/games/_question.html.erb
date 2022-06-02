@@ -1,6 +1,11 @@
 
- <div class="question" >
-  <%= question.content %>
+
+<div class="block-questions">
+  <div class="question">
+    <%= question.content %>
+  </div>
+
+  <div class="block-answers">
     <ul class="answer" class="flex-container" data-answer-target="listButton">
       <% question.answers.each do |answer| %>
         <div class="flex-content" id="choice" data-answer-target="input">
@@ -10,4 +15,5 @@
         </div>
       <% end %>
     </ul>
- </div>
+  </div>
+</div>
