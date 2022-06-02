@@ -1,9 +1,14 @@
+.game {
+  display: flex;
+}
+
 #players-desk-1round {
   width: 1200px;
   height: 450px;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
+  padding-top: 112px;
 }
 
 #player-desk-1round {
@@ -26,6 +31,7 @@
   text-shadow: #f7d648 1px 0 10px;
   left: 55px;
   top: 32px;
+  width: 140px;
 }
 
 #card-point-1round {
@@ -50,6 +56,15 @@
   box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
   width: 80px;
   height: 20px;
+  margin: 0px;
+
+  &:active {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+  }
 }
 
 .point-1round-gray {
@@ -58,4 +73,5 @@
   border: solid 2px #e85a19 ;
   width: 80px;
   height: 20px;
+  margin: 0px;
 }

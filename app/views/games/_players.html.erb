@@ -1,6 +1,5 @@
 
 <div id="sas">
-
   <div class="card-players">
     <% players.each do |player| %>
       <div class="fa-stack fa-1x card-player";>
@@ -11,10 +10,8 @@
               <i class="fa fa-check check"></i>
             </span>
            </p>
-        <%elsif game.user == player%>
-        <p><%= player.nickname %> <span><i class="fa-solid fa-star"></i></span></p>
         <%elsif player.find_participation(game).ready? %>
-          <p><%= player.nickname %> <span><i class="fa fa-check"></i></span></p>
+          <p><%= player.nickname %> <span><i class="fa fa-check check"></i></span></p>
         <% else %>
           <%= player.nickname %>
         <% end %>
