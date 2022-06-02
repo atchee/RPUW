@@ -19,4 +19,7 @@ class Game < ApplicationRecord
     status == "running"
   end
 
+  def ended?
+    status == "ended"
+  end
 end

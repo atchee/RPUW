@@ -28,6 +28,12 @@ class GamesController < ApplicationController
     broadcast_scores
   end
 
+  # def end
+  #   @game = Game.find(params[:id])
+  #   @game.update(status: 'ended')
+  #   broadcast_summary
+  # end
+
   # def next_question
   # end
 end

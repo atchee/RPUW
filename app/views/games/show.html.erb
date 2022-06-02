@@ -3,7 +3,7 @@
 
 <div data-controller="answer" data-answer-participation-id-value="<%= current_user.find_participation(@game).id %>">
   <div class="container" id="game">
-    <% unless @game.started? %>
+    <% unless @game.started? || @game.ended? %>
       <div id="players">
         <h3>Waiting for players</h3>
         <%= render "games/players", players: @game.players, game: @game, user: current_user %>
@@ -21,10 +21,14 @@
         <%= render "games/scores", participations: @game.participations, looser: false %>
       <% end %>
     </div>
+
+    <div id="summary">
+      <% if @game.ended? %>
+        <%= render "games/summary", participations: @game.participations, looser: false %>
+      <% end %>
+    </div>
+    </div>
   </div>
-
-
-  <%= link_to "Display questions", start_game_path(@game), data: { turbo_method: :post } %>
 
   </div>
 </div>

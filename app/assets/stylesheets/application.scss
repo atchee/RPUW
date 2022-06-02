@@ -10,7 +10,6 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "components/question";
 
 body {
   background-color: #eef7fc;
@@ -18,6 +17,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #eef7fc;
 
   &:hover {
     text-decoration: none;
