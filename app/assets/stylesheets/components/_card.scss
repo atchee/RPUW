@@ -10,9 +10,23 @@
   padding: 10px;
   margin: 10px;
   width: 400px;
+  position: relative;
 
   #owner {
     background-image: linear-gradient(to right, #f7d648, #e9933e, #e85a19);
     box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
+    border-radius: 5px;
   }
+}
+
+.check {
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-image: radial-gradient(#46EC8B, #109648);
+  box-shadow: 0 4px 15px 0 rgba(16, 150, 72, 0.75);
+  border: solid 1px rgb(16, 150, 72);
+  color:#fcfeff;
 }
