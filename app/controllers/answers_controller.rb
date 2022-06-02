@@ -14,6 +14,7 @@ class AnswersController < ApplicationController
       @looser = false
 
       if winner?
+        @winner = @participation.user
         @game.update(status: "ended")
         broadcast_summary
         broadcast_remove_question
