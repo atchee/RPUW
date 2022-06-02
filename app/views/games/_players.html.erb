@@ -30,7 +30,7 @@
 
   <div class="btn-play">
     <% if game.players_ready? && game.user == user %>
-      <%= link_to "Start", start_game_path(@game), class:"big-yellow-btn", data: { turbo_method: :post } %>
+      <%= link_to "Start", start_game_path(game), class:"big-yellow-btn", data: { turbo_method: :post } %>
     <% end %>
   </div>
 
