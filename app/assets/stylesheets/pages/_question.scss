@@ -1,10 +1,10 @@
 .block-questions {
   color: #eef7fc;
-  background: radial-gradient(circle, #a2bbdf, #2a3a84);
+  background: rgb(42, 58, 132);
   font-size: 16px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-  padding: 8px;
+  box-shadow: 0 4px 15px 0 rgba(65, 133, 234, 0.515);
+  padding: 0px 28px;
   margin: auto;
   height: 200px;
   width: 70%;
@@ -32,10 +32,11 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 10px 50px;
+  padding: 0;
 
   li {
     color:#eef7fc;
-    background-color:#2a3b8491;
+    background-color: #eef7fc52;
     border-radius: 5px;
     padding: 5px;
     display: flex;
@@ -43,7 +44,7 @@
     align-items: center;
     align-content: space-around;
     flex-direction: column;
-    box-shadow: 0 4px 15px 0 rgba(42, 58, 132, 0.75);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 
     background-size: 300% 100%;
     transition: all 0.4s ease-in-out;
