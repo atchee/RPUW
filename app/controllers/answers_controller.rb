@@ -13,8 +13,10 @@ class AnswersController < ApplicationController
       @participation.update(point: @score)
       @looser = false
 
-      broadcast_question
-      broadcast_scores
+      TimerJob.set(wait: 10.second).perform_later(@game.id)
+
+      # broadcast_question
+      # broadcast_scores
     else
       @looser = @participation.user
       # alert: "mauvaise réponse"
