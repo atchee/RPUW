@@ -12,11 +12,17 @@
   width: 400px;
   position: relative;
 
-  #owner {
-    background-image: linear-gradient(to right, #f7d648, #e9933e, #e85a19);
-    box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
-    border-radius: 5px;
+  p {
+    padding-left: 10px;
   }
+
+  #owner {
+    background-color: rgba(247, 215, 72, 0.878);
+    box-shadow: 0 4px 15px 0 rgba(247, 215, 72, 0.75);
+    border-radius: 5px;
+
+  }
+
 }
 
 .check {
@@ -27,6 +33,5 @@
   top: -10px;
   background-image: radial-gradient(#46EC8B, #109648);
   box-shadow: 0 4px 15px 0 rgba(16, 150, 72, 0.75);
-  border: solid 1px rgb(16, 150, 72);
   color:#fcfeff;
 }

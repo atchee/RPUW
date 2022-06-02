@@ -1,19 +1,20 @@
 
-
-<div class="block-questions">
+<div class="game">
+  <div class="block-questions">
   <div class="question">
     <%= question.content %>
   </div>
 
   <div class="block-answers">
-    <ul class="answer" class="flex-container" data-answer-target="listButton">
+    <ul class="flex-container answer" data-answer-target="listButton">
       <% question.answers.each do |answer| %>
         <div class="flex-content" id="choice" data-answer-target="input">
-          <li>
-            <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post, action: "click->answer#revealAnswer", answer_answer_id_param: answer.id} %>
+          <li data-action="click->answer#revealAnswer" data-answer-answer-id-param="<%= answer.id %>">
+            <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post } %>
           </li>
         </div>
       <% end %>
     </ul>
   </div>
+</div>
 </div>
