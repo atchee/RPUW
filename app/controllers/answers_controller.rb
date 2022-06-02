@@ -13,12 +13,23 @@ class AnswersController < ApplicationController
       @participation.update(point: @score)
       @looser = false
 
-      broadcast_question
-      broadcast_scores
+      if winner?
+        @game.update(status: "ended")
+        broadcast_summary
+        broadcast_remove_question
+        broadcast_remove_scores
+      else
+        broadcast_question
+        broadcast_scores
+      end
     else
       @looser = @participation.user
       # alert: "mauvaise réponse"
-      broadcast_scores
+      # broadcast_scores
     end
+  end
+
+  def winner?
+    @score == 9
   end
 end

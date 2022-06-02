@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :games, only: [:create, :show] do
     member do
       post "/start", to: "games#start"
+      post "/end", to: "games#end"
     end
   end
 
