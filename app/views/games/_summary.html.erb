@@ -5,10 +5,10 @@
       <p>The winner is : <%= participation.user.nickname %> | Score : <%= participation.point %></p>
     </div>
   <% else %>
-    <div class="">
-      <p>The loosers are : </p>
+    <span>
+      <p>Looser : </p>
       <p>Joueur<%= participation.user.nickname %> | Score : <%= participation.point %></p>
-    </div>
+    </span>
   <% end %>
 <% end %>
 
