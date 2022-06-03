@@ -13,6 +13,9 @@ class AnswersController < ApplicationController
       @participation.update(point: @score)
       attempt_record(true)
       @looser = false
+
+
+      # TimerJob.set(wait: 10.second).perform_later(@game.id)
       # broadcast_question
       # broadcast_scores
       if winner?

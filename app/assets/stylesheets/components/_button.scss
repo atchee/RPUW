@@ -27,12 +27,12 @@
   box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
 
   background-size: 300% 100%;
-  transition: all 1s ease-in-out;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
 
   &:hover {
     background-position: 100% 0;
-    transition: all 1s ease-in-out;
+    transition: all 0.4s ease-in-out;
     background-image: linear-gradient(to right, #478fca, #2a3a84, #a2bbdf, #2a3a84);
     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
   }
