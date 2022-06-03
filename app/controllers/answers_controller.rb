@@ -30,8 +30,9 @@ class AnswersController < ApplicationController
     else
       attempt_record(false)
       @looser = @participation.user
+
       # alert: "mauvaise réponse"
-      # broadcast_scores
+      broadcast_scores
     end
   end
 
