@@ -43,6 +43,7 @@ module Broadcastable
       partial: "games/scores",
       locals: {
         participations: @game.participations,
+        attempts: @attempts,
         looser: @looser
       }
   end

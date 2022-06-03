@@ -33,6 +33,7 @@ class AnswersController < ApplicationController
     else
       attempt_record(false)
       @looser = @participation.user
+
       # alert: "mauvaise réponse"
       # broadcast_scores
       if @game.all_attempts_false
@@ -40,6 +41,7 @@ class AnswersController < ApplicationController
         @game.save
         broadcast_question
       end
+      broadcast_scores
     end
   end
 
