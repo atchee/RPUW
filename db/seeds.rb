@@ -243,3 +243,27 @@ Answer.create(question: q_24, content: "The Rock", correct: false)
 Answer.create(question: q_24, content: "Mission: Impossible", correct: false)
 q_24.save!
 p "created 1 question!"
+
+q_25 = Question.create(content: "On which continent is the country of Angola located?", theme: Theme.find_by(name: "Geography"))
+Answer.create(question: q_25, content: "Africa", correct: true)
+Answer.create(question: q_25, content: "Europe", correct: false)
+Answer.create(question: q_25, content: "Asia", correct: false)
+Answer.create(question: q_25, content: "South America", correct: false)
+q_25.save!
+p "created 1 question!"
+
+q_26 = Question.create(content: "How many countries does Spain have a land border with?", theme: Theme.find_by(name: "Geography"))
+Answer.create(question: q_26, content: "5", correct: true)
+Answer.create(question: q_26, content: "2", correct: false)
+Answer.create(question: q_26, content: "3", correct: false)
+Answer.create(question: q_26, content: "4", correct: false)
+q_26.save!
+p "created 1 question!"
+
+q_27 = Question.create(content: "In 'Call Of Duty: Zombies' what does the game traditionally reward you for completing a boss round?", theme: Theme.find_by(name: "Manga & Anime"))
+Answer.create(question: q_27, content: "Max Ammo", correct: true)
+Answer.create(question: q_27, content: "A Pack-A-Punched gun", correct: false)
+Answer.create(question: q_27, content: "Death Machine", correct: false)
+Answer.create(question: q_27, content: "Monkey Bombs", correct: false)
+q_27.save!
+p "created 1 question!"
