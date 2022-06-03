@@ -211,3 +211,35 @@ Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
 Answer.create(question: q_20, content: "Earth and Mars", correct: false)
 q_20.save!
 p "created 1 question!"
+
+q_21 = Question.create(content: "Which of these countries remained neutral during World War II?", theme: Theme.find_by(name: "History"))
+Answer.create(question: q_21, content: "Switzerland", correct: true)
+Answer.create(question: q_21, content: "United Kingdom", correct: false)
+Answer.create(question: q_21, content: "France", correct: false)
+Answer.create(question: q_21, content: "Italy", correct: false)
+q_21.save!
+p "created 1 question!"
+
+q_22 = Question.create(content: "Folic acid is the synthetic form of which vitamin?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_22, content: "Vitamin B", correct: true)
+Answer.create(question: q_22, content: "Vitamin A", correct: false)
+Answer.create(question: q_22, content: "Vitamin C", correct: false)
+Answer.create(question: q_22, content: "Vitamin D", correct: false)
+q_22.save!
+p "created 1 question!"
+
+q_23 = Question.create(content: "What year did the Vietnam War end?", theme: Theme.find_by(name: "History"))
+Answer.create(question: q_23, content: "1975", correct: true)
+Answer.create(question: q_23, content: "1978", correct: false)
+Answer.create(question: q_23, content: "1967", correct: false)
+Answer.create(question: q_23, content: "1969", correct: false)
+q_23.save!
+p "created 1 question!"
+
+q_24 = Question.create(content: "Which of these Movies was NOT released in 1996?", theme: Theme.find_by(name: "Movies"))
+Answer.create(question: q_24, content: "Gladiator", correct: true)
+Answer.create(question: q_24, content: "Independence Day", correct: false)
+Answer.create(question: q_24, content: "The Rock", correct: false)
+Answer.create(question: q_24, content: "Mission: Impossible", correct: false)
+q_24.save!
+p "created 1 question!"
