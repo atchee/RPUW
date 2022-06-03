@@ -5,6 +5,9 @@ class TimerJob < ApplicationJob
 
   def perform(*args)
     @game = Game.find(args[0])
+    if @game.current_question
+    sleep 3
     broadcast_question
+
   end
 end

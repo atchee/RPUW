@@ -23,6 +23,14 @@ class Game < ApplicationRecord
     status == "ended"
   end
 
+  def current_attempts
+    current_question.game_questions.where(game: self).flat_map(&:attempts)
+  end
+
+  # def any_attempts_correct?
+  #   current_attempts.any?(&:)
+  # end
+
   # def timer
   #   while @game.question_number < 20
   #     @game.question_number += 1

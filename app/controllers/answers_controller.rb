@@ -14,6 +14,7 @@ class AnswersController < ApplicationController
       @looser = false
 
       # TimerJob.set(wait: 10.second).perform_later(@game.id)
+      TimerJob.perform_later(@game.id)
 
       # broadcast_question
       # broadcast_scores
