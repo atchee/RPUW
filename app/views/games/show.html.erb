@@ -5,7 +5,10 @@
   <div class="container" id="game">
     <% unless @game.started? || @game.ended? %>
       <div id="players">
-        <h3>Waiting for players</h3>
+        <div id="waiting">
+          <h3 id="bounceTxt">Waiting for players . . .</h3>
+        </div>
+
         <%= render "games/players", players: @game.players, game: @game, user: current_user %>
       </div>
     <% end %>

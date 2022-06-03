@@ -6,10 +6,10 @@
   </div>
 
   <div class="block-answers">
-    <ul class="flex-container answer" data-answer-target="listButton">
-      <% question.answers.each do |answer| %>
+    <ul class="flex-container answers" data-answer-target="listButton">
+      <% question.answers.shuffle.each do |answer| %>
         <div class="flex-content" id="choice" data-answer-target="input">
-          <li data-action="click->answer#revealAnswer" data-answer-answer-id-param="<%= answer.id %>">
+          <li  class= "answer"data-action="click->answer#revealAnswer" data-answer-answer-id-param="<%= answer.id %>">
             <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post } %>
           </li>
         </div>
