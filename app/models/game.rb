@@ -22,4 +22,17 @@ class Game < ApplicationRecord
   def ended?
     status == "ended"
   end
+
+  # def timer
+  #   while @game.question_number < 20
+  #     @game.question_number += 1
+  #     @game.save
+  #     TimerJob.set(wait: 3.second).perform_later(@game.id)
+  #     # sleep 3
+  #     # broadcast_question
+  #   end
+  #   # broadcast_question
+  #   # broadcast_scores
+  # end
+
 end
