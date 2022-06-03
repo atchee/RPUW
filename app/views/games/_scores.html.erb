@@ -1,9 +1,24 @@
-<% participations.each do |participation| %>
-  <p><%= participation.user.nickname %></p>
-  <p><%= participation.point %>
+<div class="game">
+  <div id="players-desk-1round">
 
+  <% participations.order(:id).each do |participation| %>
+    <div id="player-desk-1round">
+      <p id="player-nickname-1round"><%= participation.user.nickname %></p>
+      <div id="card-point-1round">
+        <% (9 - participation.point).times do %>
+          <p class="point-1round-gray"></p>
+        <% end %>
 
-  <% if participation.user == looser %>
-    <p id="<%= dom_id(participation.user) %>">Looser</p>
+        <% participation.point.times do %>
+          <p class="point-1round-orange"></p>
+        <% end %>
+      </div>
+    </div>
+
+    <% if participation.user == looser %>
+      <p id="<%= dom_id(participation.user) %>">Looser</p>
+    <% end %>
   <% end %>
-<% end %>
+
+</div>
+</div>
