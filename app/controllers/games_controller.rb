@@ -13,7 +13,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(user: current_user)
-    @game.questions = Question.all.sample(20)
+    @game.questions = Question.all.sample(40)
     @game.save
 
     redirect_to game_path(@game)

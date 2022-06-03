@@ -268,6 +268,30 @@ Answer.create(question: q_27, content: "Monkey Bombs", correct: false)
 q_27.save!
 p "created 1 question!"
 
+q_28 = Question.create(content: "Which is the most abundant element in the universe?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_28, content: "Hydrogen", correct: true)
+Answer.create(question: q_28, content: "Helium", correct: false)
+Answer.create(question: q_28, content: "Lithium", correct: false)
+Answer.create(question: q_28, content: "Oxygen", correct: false)
+q_28.save!
+p "created 1 question!"
+
+q_29 = Question.create(content: "Which Japanese company is the world's largest manufacturer of motorcycles?", theme: Theme.find_by(name: "General knowledge"))
+Answer.create(question: q_29, content: "Honda", correct: true)
+Answer.create(question: q_29, content: "Yamaha", correct: false)
+Answer.create(question: q_29, content: "Suzuki", correct: false)
+Answer.create(question: q_29, content: "Kawasaki", correct: false)
+q_29.save!
+p "created 1 question!"
+
+q_30 = Question.create(content: "Who directed the Kill Bill movies?", theme: Theme.find_by(name: "Movies"))
+Answer.create(question: q_30, content: "Quentin Tarantino", correct: true)
+Answer.create(question: q_30, content: "Arnold Schwarzenegger", correct: false)
+Answer.create(question: q_30, content: "David Lean", correct: false)
+Answer.create(question: q_30, content: "Stanley Kubrick", correct: false)
+q_30.save!
+p "created 1 question!"
+
 q_31 = Question.create(content: "Who was the only god from Greece who did not get a name change in Rome?", theme: Theme.find_by(name: "Mythology"))
 Answer.create(question: q_31, content: "Apollo", correct: true)
 Answer.create(question: q_31, content: "Demeter", correct: false)
@@ -348,29 +372,6 @@ Answer.create(question: q_40, content: "Washington", correct: false)
 q_40.save!
 p "created 1 question!"
 
-q_41 = Question.create(content: "Which is the most abundant element in the universe?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_41, content: "Hydrogen", correct: true)
-Answer.create(question: q_41, content: "Helium", correct: false)
-Answer.create(question: q_41, content: "Lithium", correct: false)
-Answer.create(question: q_41, content: "Oxygen", correct: false)
-q_41.save!
-p "created 1 question!"
-
-q_42 = Question.create(content: "Which Japanese company is the world's largest manufacturer of motorcycles?", theme: Theme.find_by(name: "General knowledge"))
-Answer.create(question: q_42, content: "Honda", correct: true)
-Answer.create(question: q_42, content: "Yamaha", correct: false)
-Answer.create(question: q_42, content: "Suzuki", correct: false)
-Answer.create(question: q_42, content: "Kawasaki", correct: false)
-q_42.save!
-p "created 1 question!"
-
-q_43 = Question.create(content: "Who directed the Kill Bill movies?", theme: Theme.find_by(name: "Movies"))
-Answer.create(question: q_43, content: "Quentin Tarantino", correct: true)
-Answer.create(question: q_43, content: "Arnold Schwarzenegger", correct: false)
-Answer.create(question: q_43, content: "David Lean", correct: false)
-Answer.create(question: q_43, content: "Stanley Kubrick", correct: false)
-q_43.save!
-p "created 1 question!"
 
 # q_44 = Question.create(content: "On a dartboard, what number is directly opposite No. 1?", theme: Theme.find_by(name: "General Knowledge"))
 # Answer.create(question: q_44, content: "19", correct: true)
