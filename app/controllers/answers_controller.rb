@@ -15,9 +15,6 @@ class AnswersController < ApplicationController
       @looser = false
 
       # TimerJob.set(wait: 10.second).perform_later(@game.id)
-
-
-      # TimerJob.set(wait: 10.second).perform_later(@game.id)
       # broadcast_question
       # broadcast_scores
       if winner?
@@ -33,15 +30,13 @@ class AnswersController < ApplicationController
     else
       attempt_record(false)
       @looser = @participation.user
-
-      # alert: "mauvaise réponse"
-      # broadcast_scores
+      broadcast_scores
       if @game.all_attempts_false
         @game.question_number += 1
         @game.save
         broadcast_question
+        broadcast_scores
       end
-      broadcast_scores
     end
   end
 
