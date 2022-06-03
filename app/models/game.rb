@@ -30,7 +30,7 @@ class Game < ApplicationRecord
   def all_attempts_false
     p "============"
     p current_attempts
-    current_attempts.all? { |at| at.success == false } && current_attempts.count == 2
+    current_attempts.all? { |at| at.success == false } && current_attempts.count == 4
   end
 
   def any_attempts_correct?
