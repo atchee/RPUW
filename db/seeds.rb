@@ -212,6 +212,62 @@ Answer.create(question: q_20, content: "Earth and Mars", correct: false)
 q_20.save!
 p "created 1 question!"
 
+q_21 = Question.create(content: "Which of these countries remained neutral during World War II?", theme: Theme.find_by(name: "History"))
+Answer.create(question: q_21, content: "Switzerland", correct: true)
+Answer.create(question: q_21, content: "United Kingdom", correct: false)
+Answer.create(question: q_21, content: "France", correct: false)
+Answer.create(question: q_21, content: "Italy", correct: false)
+q_21.save!
+p "created 1 question!"
+
+q_22 = Question.create(content: "Folic acid is the synthetic form of which vitamin?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_22, content: "Vitamin B", correct: true)
+Answer.create(question: q_22, content: "Vitamin A", correct: false)
+Answer.create(question: q_22, content: "Vitamin C", correct: false)
+Answer.create(question: q_22, content: "Vitamin D", correct: false)
+q_22.save!
+p "created 1 question!"
+
+q_23 = Question.create(content: "What year did the Vietnam War end?", theme: Theme.find_by(name: "History"))
+Answer.create(question: q_23, content: "1975", correct: true)
+Answer.create(question: q_23, content: "1978", correct: false)
+Answer.create(question: q_23, content: "1967", correct: false)
+Answer.create(question: q_23, content: "1969", correct: false)
+q_23.save!
+p "created 1 question!"
+
+q_24 = Question.create(content: "Which of these Movies was NOT released in 1996?", theme: Theme.find_by(name: "Movies"))
+Answer.create(question: q_24, content: "Gladiator", correct: true)
+Answer.create(question: q_24, content: "Independence Day", correct: false)
+Answer.create(question: q_24, content: "The Rock", correct: false)
+Answer.create(question: q_24, content: "Mission: Impossible", correct: false)
+q_24.save!
+p "created 1 question!"
+
+q_25 = Question.create(content: "On which continent is the country of Angola located?", theme: Theme.find_by(name: "Geography"))
+Answer.create(question: q_25, content: "Africa", correct: true)
+Answer.create(question: q_25, content: "Europe", correct: false)
+Answer.create(question: q_25, content: "Asia", correct: false)
+Answer.create(question: q_25, content: "South America", correct: false)
+q_25.save!
+p "created 1 question!"
+
+q_26 = Question.create(content: "How many countries does Spain have a land border with?", theme: Theme.find_by(name: "Geography"))
+Answer.create(question: q_26, content: "5", correct: true)
+Answer.create(question: q_26, content: "2", correct: false)
+Answer.create(question: q_26, content: "3", correct: false)
+Answer.create(question: q_26, content: "4", correct: false)
+q_26.save!
+p "created 1 question!"
+
+q_27 = Question.create(content: "In 'Call Of Duty: Zombies' what does the game traditionally reward you for completing a boss round?", theme: Theme.find_by(name: "Manga & Anime"))
+Answer.create(question: q_27, content: "Max Ammo", correct: true)
+Answer.create(question: q_27, content: "A Pack-A-Punched gun", correct: false)
+Answer.create(question: q_27, content: "Death Machine", correct: false)
+Answer.create(question: q_27, content: "Monkey Bombs", correct: false)
+q_27.save!
+p "created 1 question!"
+
 q_31 = Question.create(content: "Who was the only god from Greece who did not get a name change in Rome?", theme: Theme.find_by(name: "Mythology"))
 Answer.create(question: q_31, content: "Apollo", correct: true)
 Answer.create(question: q_31, content: "Demeter", correct: false)
@@ -220,82 +276,106 @@ Answer.create(question: q_31, content: "Athena", correct: false)
 q_31.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_32 = Question.create(content: "What disease crippled U.S. President Franklin D. Roosevelt and led him to help the nation find a cure? ", theme: Theme.find_by(name: "History"))
+Answer.create(question: q_32, content: "Polio", correct: true)
+Answer.create(question: q_32, content: "Cancer", correct: false)
+Answer.create(question: q_32, content: "Meningitis", correct: false)
+Answer.create(question: q_32, content: "HIV", correct: false)
+q_32.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_33 = Question.create(content: "Kuala Lumpur is the capital of which country?", theme: Theme.find_by(name: "Geography"))
+Answer.create(question: q_33, content: "Malaysia", correct: true)
+Answer.create(question: q_33, content: "Indonesia", correct: false)
+Answer.create(question: q_33, content: "Singapore", correct: false)
+Answer.create(question: q_33, content: "Thailand", correct: false)
+q_33.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_34 = Question.create(content: "This element, when overcome with extreme heat and pressure, creates diamonds.", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_34, content: "Carbon", correct: true)
+Answer.create(question: q_34, content: "Nitrogen", correct: false)
+Answer.create(question: q_34, content: "Oxygen", correct: false)
+Answer.create(question: q_34, content: "Hydrogen", correct: false)
+q_34.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_35 = Question.create(content: "Which of these is the name of a Japanese system of alternative medicine, literally meaning 'finger pressure'", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_35, content: "Shiatsu", correct: true)
+Answer.create(question: q_35, content: "Ukiyo", correct: false)
+Answer.create(question: q_35, content: "Majime", correct: false)
+Answer.create(question: q_35, content: "Ikigai", correct: false)
+q_35.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_36 = Question.create(content: "Which company designed the 'Betamax' video cassette format?", theme: Theme.find_by(name: "General knowledge"))
+Answer.create(question: q_36, content: "Sony", correct: true)
+Answer.create(question: q_36, content: "Panasonic", correct: false)
+Answer.create(question: q_36, content: "LG", correct: false)
+Answer.create(question: q_36, content: "Fujitsu", correct: false)
+q_36.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_37 = Question.create(content: "Who is the real winner of the May 2022 'Le Wagon code tournament", theme: Theme.find_by(name: "General knowledge"))
+Answer.create(question: q_37, content: "Tim for batch #861", correct: true)
+Answer.create(question: q_37, content: "Some cheater from the data batch", correct: false)
+Answer.create(question: q_37, content: "Batch #860", correct: false)
+Answer.create(question: q_37, content: "Jar Jar le Quetar", correct: false)
+q_37.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_38 = Question.create(content: "How many sides does a trapezium have?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_38, content: "4", correct: true)
+Answer.create(question: q_38, content: "3", correct: false)
+Answer.create(question: q_38, content: "5", correct: false)
+Answer.create(question: q_38, content: "6", correct: false)
+q_38.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_39 = Question.create(content: "The 1996 film 'Fargo' is primarily set in which US state?", theme: Theme.find_by(name: "Movies"))
+Answer.create(question: q_39, content: "Minnesota", correct: true)
+Answer.create(question: q_39, content: "North Dakota", correct: false)
+Answer.create(question: q_39, content: "South Dakota", correct: false)
+Answer.create(question: q_39, content: "Wisconsin", correct: false)
+q_39.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_40 = Question.create(content: "What state is the largest state of the United States of America?", theme: Theme.find_by(name: "Geography"))
+Answer.create(question: q_40, content: "Alaska", correct: true)
+Answer.create(question: q_40, content: "California", correct: false)
+Answer.create(question: q_40, content: "Texas", correct: false)
+Answer.create(question: q_40, content: "Washington", correct: false)
+q_40.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
-Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
-Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
-Answer.create(question: q_20, content: "Earth and Mars", correct: false)
-q_20.save!
+q_41 = Question.create(content: "Which is the most abundant element in the universe?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_41, content: "Hydrogen", correct: true)
+Answer.create(question: q_41, content: "Helium", correct: false)
+Answer.create(question: q_41, content: "Lithium", correct: false)
+Answer.create(question: q_41, content: "Oxygen", correct: false)
+q_41.save!
+p "created 1 question!"
+
+q_42 = Question.create(content: "Which Japanese company is the world's largest manufacturer of motorcycles?", theme: Theme.find_by(name: "General knowledge"))
+Answer.create(question: q_42, content: "Honda", correct: true)
+Answer.create(question: q_42, content: "Yamaha", correct: false)
+Answer.create(question: q_42, content: "Suzuki", correct: false)
+Answer.create(question: q_42, content: "Kawasaki", correct: false)
+q_42.save!
+p "created 1 question!"
+
+q_43 = Question.create(content: "Who directed the Kill Bill movies?", theme: Theme.find_by(name: "Movies"))
+Answer.create(question: q_43, content: "Quentin Tarantino", correct: true)
+Answer.create(question: q_43, content: "Arnold Schwarzenegger", correct: false)
+Answer.create(question: q_43, content: "David Lean", correct: false)
+Answer.create(question: q_43, content: "Stanley Kubrick", correct: false)
+q_43.save!
+p "created 1 question!"
+
+# q_44 = Question.create(content: "On a dartboard, what number is directly opposite No. 1?", theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_44, content: "19", correct: true)
+# Answer.create(question: q_44, content: "20", correct: false)
+# Answer.create(question: q_44, content: "12", correct: false)
+# Answer.create(question: q_44, content: "15", correct: false)
+# q_44.save!
 p "created 1 question!"
