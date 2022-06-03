@@ -35,6 +35,7 @@ class AnswersController < ApplicationController
         @game.question_number += 1
         @game.save
         broadcast_question
+        broadcast_scores
       end
     end
   end
