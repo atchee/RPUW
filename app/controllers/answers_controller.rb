@@ -15,7 +15,6 @@ class AnswersController < ApplicationController
       @looser = false
 
       # TimerJob.set(wait: 10.second).perform_later(@game.id)
-      TimerJob.perform_later(@game.id)
 
 
       # TimerJob.set(wait: 10.second).perform_later(@game.id)
@@ -36,6 +35,11 @@ class AnswersController < ApplicationController
       @looser = @participation.user
       # alert: "mauvaise réponse"
       # broadcast_scores
+      if @game.all_attempts_false
+        @game.question_number += 1
+        @game.save
+        broadcast_question
+      end
     end
   end
 
@@ -46,8 +50,7 @@ class AnswersController < ApplicationController
   private
 
   def attempt_record(attempt)
-    @participation = Participation.find(params[:id])
-    @answer = Answer.find(params[:answer_id])
-    @attempt = Attempt.create(participation_id: @participation.id, game_question_id: @answer.question_id, success: attempt)
+    game_question = @answer.question.game_questions.find_by(game: @game)
+    Attempt.create(participation: @participation, game_question: game_question, success: attempt)
   end
 end

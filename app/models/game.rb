@@ -27,9 +27,15 @@ class Game < ApplicationRecord
     current_question.game_questions.where(game: self).flat_map(&:attempts)
   end
 
-  # def any_attempts_correct?
-  #   current_attempts.any?(&:)
-  # end
+  def all_attempts_false
+    p "============"
+    p current_attempts
+    current_attempts.all? { |at| at.success == false } && current_attempts.count == 2
+  end
+
+  def any_attempts_correct?
+    current_attempts.any?(&:succes)
+  end
 
   # def timer
   #   while @game.question_number < 20

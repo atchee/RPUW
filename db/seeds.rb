@@ -211,3 +211,91 @@ Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
 Answer.create(question: q_20, content: "Earth and Mars", correct: false)
 q_20.save!
 p "created 1 question!"
+
+q_31 = Question.create(content: "Who was the only god from Greece who did not get a name change in Rome?", theme: Theme.find_by(name: "Mythology"))
+Answer.create(question: q_31, content: "Apollo", correct: true)
+Answer.create(question: q_31, content: "Demeter", correct: false)
+Answer.create(question: q_31, content: "Zeus", correct: false)
+Answer.create(question: q_31, content: "Athena", correct: false)
+q_31.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
+
+q_20 = Question.create(content: "The asteroid belt is located between which two planets?", theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_20, content: "Mars and Jupiter", correct: true)
+Answer.create(question: q_20, content: "Jupiter and Saturn", correct: false)
+Answer.create(question: q_20, content: "Mercury and Venus", correct: false)
+Answer.create(question: q_20, content: "Earth and Mars", correct: false)
+q_20.save!
+p "created 1 question!"
