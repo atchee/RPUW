@@ -10,6 +10,10 @@ class Game < ApplicationRecord
     self.questions[self.question_number]
   end
 
+  def previous_question
+    self.questions[self.question_number - 1]
+  end
+
   def players_ready?
     participations.map(&:ready).all?
   end
@@ -24,6 +28,10 @@ class Game < ApplicationRecord
 
   def current_attempts
     current_question.game_questions.where(game: self).flat_map(&:attempts)
+  end
+
+  def previous_attempts
+    previous_question.game_questions.where(game: self).flat_map(&:attempts)
   end
 
   def all_attempts_false

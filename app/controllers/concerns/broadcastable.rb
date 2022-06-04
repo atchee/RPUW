@@ -24,16 +24,6 @@ module Broadcastable
       locals: {
         question: @game.current_question
       }
-      # TimerJob.set(wait: 3.second).perform_later(@game.id)
-      # while @game.question_number < 20
-#             @game.question_number += 1
-#             @game.save
-#             TimerJob.set(wait: 3.second).perform_later(@game.id)
-            # sleep 3
-            # broadcast_question
-      # end
-
-    #  @game.timer
   end
 
 
@@ -66,5 +56,30 @@ module Broadcastable
   def broadcast_remove_scores
     Turbo::StreamsChannel.broadcast_remove_to @game,
       target: "scores"
+  end
+
+  def broadcast_answer
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "answer",
+      partial: "games/answer",
+      locals: {
+        answer: @answer
+      }
+  end
+
+  def broadcast_remove_answer
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "answer",
+      partial: "games/empty_answer"
+  end
+
+  def broadcast_desk
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "participation_#{@participation.id}",
+      partial: "games/desk",
+      locals: {
+        participation: @participation,
+        winner: @answer.correct?
+      }
   end
 end

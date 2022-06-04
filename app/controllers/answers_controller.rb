@@ -7,30 +7,24 @@ class AnswersController < ApplicationController
     @game = @participation.game
 
     if @answer.correct?
-      @game.question_number += 1
-      @game.save
-      @score = @participation.point += 1
-      @participation.update(point: @score)
-      attempt_record(true)
-      @looser = false
+      correct_answer
 
-      # TimerJob.set(wait: 10.second).perform_later(@game.id)
-      # broadcast_question
-      # broadcast_scores
       if winner?
-        @winner = @participation.user
-        @game.update(status: "ended")
-        broadcast_summary
-        broadcast_remove_question
-        broadcast_remove_scores
+        end_game
       else
-        broadcast_question
+        broadcast_answer
         broadcast_scores
+        broadcast_desk
+        sleep 2
+        broadcast_remove_answer
+        broadcast_question
       end
+
     else
       attempt_record(false)
       @looser = @participation.user
       broadcast_scores
+
       if @game.all_attempts_false
         @game.question_number += 1
         @game.save
@@ -45,6 +39,23 @@ class AnswersController < ApplicationController
   end
 
   private
+
+  def correct_answer
+    @game.question_number += 1
+    @game.save
+    @score = @participation.point += 1
+    @participation.update(point: @score)
+    attempt_record(true)
+    @looser = false
+  end
+
+  def end_game
+    @winner = @participation.user
+    @game.update(status: "ended")
+    broadcast_summary
+    broadcast_remove_question
+    broadcast_remove_scores
+  end
 
   def attempt_record(attempt)
     game_question = @answer.question.game_questions.find_by(game: @game)

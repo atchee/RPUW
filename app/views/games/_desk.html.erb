@@ -1,0 +1,21 @@
+<div id="player-desk-1round" class="<%= "winner" if winner %>" data-controller="desk">
+  <p id="player-nickname-1round"><%= participation.user.nickname %></p>
+
+  <div id="card-point-1round">
+    <% (9 - participation.point).times do %>
+      <p class="point-1round-gray"></p>
+    <% end %>
+
+    <% if participation.point.positive? && participation.correct_answer? && participation.last_attempt_correct? %>
+      <p class="point-1round-orange last"></p>
+    <% end %>
+
+    <% (participation.point - 1).times do %>
+      <p class="point-1round-orange"></p>
+    <% end %>
+  </div>
+
+  <% if participation.game.current_attempts.flat_map(&:participation).include?(participation) %>
+    <p id="<%= dom_id(participation.user) %> "><i class="fa-solid fa-poo looser"></i></p>
+  <% end %>
+</div>

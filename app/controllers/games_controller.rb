@@ -22,18 +22,9 @@ class GamesController < ApplicationController
   def start
     @game = Game.find(params[:id])
     @game.update(status: 'running')
-    # timer
+
     broadcast_remove_players_list
     broadcast_question
     broadcast_scores
   end
-
-  # def end
-  #   @game = Game.find(params[:id])
-  #   @game.update(status: 'ended')
-  #   broadcast_summary
-  # end
-
-  # def next_question
-  # end
 end

@@ -57,7 +57,10 @@
   width: 80px;
   height: 20px;
   margin: 0px;
-  animation: fadeIn 2s linear;
+}
+
+.point-1round-orange.last {
+  animation: fadeIn .5s linear;
 }
 
 @keyframes fadeIn {
@@ -80,4 +83,8 @@
   font-size: 40px;
   top: -17px;
   right: 167px;
+}
+
+.winner {
+  border: 2px solid green;
 }
