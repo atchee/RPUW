@@ -15,21 +15,30 @@ class AnswersController < ApplicationController
         broadcast_answer
         broadcast_scores
         broadcast_desk
+        @game.question_number += 1
+        @game.save
         sleep 2
         broadcast_remove_answer
         broadcast_question
+        broadcast_timer
       end
 
     else
       attempt_record(false)
       @looser = @participation.user
       broadcast_scores
+      broadcast_desk
 
       if @game.all_attempts_false
+        @correct_answer = @game.current_question.correct_answer
         @game.question_number += 1
         @game.save
+        broadcast_answer
+        sleep 2
+        broadcast_remove_answer
         broadcast_question
         broadcast_scores
+        broadcast_timer
       end
     end
   end
@@ -41,8 +50,6 @@ class AnswersController < ApplicationController
   private
 
   def correct_answer
-    @game.question_number += 1
-    @game.save
     @score = @participation.point += 1
     @participation.update(point: @score)
     attempt_record(true)

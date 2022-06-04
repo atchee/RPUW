@@ -41,4 +41,8 @@ class Game < ApplicationRecord
   def any_attempts_correct?
     current_attempts.any?(&:succes)
   end
+
+  def incorrect_attempt?(participation)
+    previous_attempts.flat_map(&:participation).include?(participation)
+  end
 end

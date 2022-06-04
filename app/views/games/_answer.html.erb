@@ -1,1 +1,7 @@
-<h3>The correct answer was <%= answer.content %></h3>
+<% if answer.present? %>
+  <h3>The correct answer was <%= answer.content %></h3>
+<% end %>
+
+<% if correct_answer.present? %>
+  <h3>All incorrect was: <%= correct_answer.content %></h3>
+<% end %>

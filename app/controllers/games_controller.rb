@@ -26,5 +26,20 @@ class GamesController < ApplicationController
     broadcast_remove_players_list
     broadcast_question
     broadcast_scores
+    broadcast_timer
+  end
+
+  def next_question
+    @game = Game.find(params[:id])
+    @game.question_number += 1
+    @game.save
+    @answer = @game.previous_question.correct_answer
+
+    broadcast_answer
+    sleep 2
+    broadcast_remove_answer
+    broadcast_question
+    broadcast_scores
+    broadcast_timer
   end
 end

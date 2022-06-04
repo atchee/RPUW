@@ -34,7 +34,8 @@ module Broadcastable
       locals: {
         participations: @game.participations,
         attempts: @attempts,
-        looser: @looser
+        looser: @looser,
+        correct_answer: @correct_answer
       }
   end
 
@@ -63,7 +64,8 @@ module Broadcastable
       target: "answer",
       partial: "games/answer",
       locals: {
-        answer: @answer
+        answer: @answer,
+        correct_answer: @correct_answer || false,
       }
   end
 
@@ -79,7 +81,17 @@ module Broadcastable
       partial: "games/desk",
       locals: {
         participation: @participation,
-        winner: @answer.correct?
+        winner: @answer.correct?,
+        looser: @looser.present?
+      }
+  end
+
+  def broadcast_timer
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "timer",
+      partial: "games/timer",
+      locals: {
+        game: @game
       }
   end
 end

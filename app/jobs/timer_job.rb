@@ -5,9 +5,13 @@ class TimerJob < ApplicationJob
 
   def perform(*args)
     @game = Game.find(args[0])
+
     unless @game.any_attempts_correct?
-      # sleep 3
+      @game.question_number += 1
+      @game.save
       broadcast_question
+      broadcast_timer
+      TimerJob.set(wait: 10.seconds).perform_later(@game.id)
     end
   end
 end
