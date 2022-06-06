@@ -36,6 +36,23 @@ module Broadcastable
     #  @game.timer
   end
 
+  def broadcast_answer
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "answer",
+      partial: "games/answer",
+      locals: {
+        question: @game.current_question
+      }
+  end
+
+  def broadcast_desk
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "participation_#{@participation.id}",
+      partial: "games/desk",
+      locals: {
+        participation: @participation
+      }
+  end
 
   def broadcast_scores
     Turbo::StreamsChannel.broadcast_update_to @game,
