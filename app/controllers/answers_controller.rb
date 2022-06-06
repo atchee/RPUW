@@ -41,7 +41,7 @@ class AnswersController < ApplicationController
   end
 
   def winner?
-    @score == 9
+    @score >= 9
   end
 
   private
