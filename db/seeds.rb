@@ -112,7 +112,7 @@ q_6.save!
 p "created 1 question!"
 
 
-q_7 = Question.create(content: "En 1939, la Grande Bretagne et la France déclarent la guerre à l'Allemagne après qu'elle ai début l'invasion de quel pays?", point_value: 1, theme: Theme.find_by(name: "History"))
+q_7 = Question.create(content: "En 1939, la Grande Bretagne et la France déclarent la guerre à l'Allemagne après qu'elle ai débuté l'invasion de quel pays?", point_value: 1, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_7, content: "Pologne", correct: true)
 Answer.create(question: q_7, content: "Tchécoslovaquie", correct: false)
 Answer.create(question: q_7, content: "Autriche", correct: false)
