@@ -59,7 +59,7 @@ themes_list.each do |name|
   p 'created 1 theme'
 end
 
-q_1 = Question.create(content: "En 1818, l'écrivaine Mary Shelly a écrit un roman de fiction et créa quel célebre personnage?", theme: Theme.find_by(name: "Literature"))
+q_1 = Question.create(content: "En 1818, l'écrivaine Mary Shelly a écrit un roman de fiction et créa quel célebre personnage?", point_value: 2, theme: Theme.find_by(name: "Literature"))
 Answer.create(question: q_1, content: "Le montre de Frankenstein", correct: true)
 Answer.create(question: q_1, content: "La Chose", correct: false)
 Answer.create(question: q_1, content: "Dracula", correct: false)
@@ -67,7 +67,7 @@ Answer.create(question: q_1, content: "L'homme invisible", correct: false)
 q_1.save!
 p "created 1 question!"
 
-q_2 = Question.create(content: "Entre 1973 et 1990, quel pays fut dirigé par le dictateur Augusto Pinochet?", theme: Theme.find_by(name: "History"))
+q_2 = Question.create(content: "Entre 1973 et 1990, quel pays fut dirigé par le dictateur Augusto Pinochet?", point_value: 1, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_2, content: "Chili", correct: true)
 Answer.create(question: q_2, content: "Colombie", correct: false)
 Answer.create(question: q_2, content: "Nicaragua", correct: false)
@@ -76,7 +76,7 @@ q_2.save!
 p "created 1 question!"
 
 
-q_3 = Question.create(content: "Quelle personne, par ses recommandations ou ses conseils, exerce une influence sur le choix d'un produit?", theme: Theme.find_by(name: "General knowledge"))
+q_3 = Question.create(content: "Quelle personne, par ses recommandations ou ses conseils, exerce une influence sur le choix d'un produit?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_3, content: "Prescripteur", correct: true)
 Answer.create(question: q_3, content: "Percepteur", correct: false)
 Answer.create(question: q_3, content: "Persifleur", correct: false)
@@ -85,7 +85,7 @@ q_3.save!
 p "created 1 question!"
 
 
-q_4 = Question.create(content: "Qu'elle est la capitale de la Turquie?", theme: Theme.find_by(name: "Geography"))
+q_4 = Question.create(content: "Qu'elle est la capitale de la Turquie?", point_value: 1, theme: Theme.find_by(name: "Geography"))
 Answer.create(question: q_4, content: "Ankara", correct: true)
 Answer.create(question: q_4, content: "Istanbul", correct: false)
 Answer.create(question: q_4, content: "Izmir", correct: false)
@@ -94,7 +94,7 @@ q_4.save!
 p "created 1 question!"
 
 
-q_5 = Question.create(content: "Quel compositeur, auteur de l'Arlésienne et Don Procopio est célèbre pour son opéra 'Carmen'?", theme: Theme.find_by(name: "General knowledge"))
+q_5 = Question.create(content: "Quel compositeur, auteur de l'Arlésienne et Don Procopio est célèbre pour son opéra 'Carmen'?", point_value: 2, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_5, content: "Georges Bizet", correct: true)
 Answer.create(question: q_5, content: "Giuseppe Verdi", correct: false)
 Answer.create(question: q_5, content: "Gioachino Rossini", correct: false)
@@ -103,7 +103,7 @@ q_5.save!
 p "created 1 question!"
 
 
-q_6 = Question.create(content: "Combien y a-t-il de pièces différentes dans le jeu Tetris?", theme: Theme.find_by(name: "General knowledge"))
+q_6 = Question.create(content: "Combien y a-t-il de pièces différentes dans le jeu Tetris?", point_value: 2, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_6, content: "7", correct: true)
 Answer.create(question: q_6, content: "5", correct: false)
 Answer.create(question: q_6, content: "6", correct: false)
@@ -112,7 +112,7 @@ q_6.save!
 p "created 1 question!"
 
 
-q_7 = Question.create(content: "En 1939, la Grande Bretagne et la France déclarent la guerre à l'Allemagne après qu'elle ai début l'invasion de quel pays?", theme: Theme.find_by(name: "History"))
+q_7 = Question.create(content: "En 1939, la Grande Bretagne et la France déclarent la guerre à l'Allemagne après qu'elle ai début l'invasion de quel pays?", point_value: 1, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_7, content: "Pologne", correct: true)
 Answer.create(question: q_7, content: "Tchécoslovaquie", correct: false)
 Answer.create(question: q_7, content: "Autriche", correct: false)
@@ -121,7 +121,7 @@ q_7.save!
 p "created 1 question!"
 
 
-q_8 = Question.create(content: "Quelle est la capitale de l'Ecosse?", theme: Theme.find_by(name: "Geography"))
+q_8 = Question.create(content: "Quelle est la capitale de l'Ecosse?", point_value: 1, theme: Theme.find_by(name: "Geography"))
 Answer.create(question: q_8, content: "Edimbourg", correct: true)
 Answer.create(question: q_8, content: "Glasgow", correct: false)
 Answer.create(question: q_8, content: "Leeds", correct: false)
@@ -130,7 +130,7 @@ q_8.save!
 p "created 1 question!"
 
 
-q_9 = Question.create(content: "Quel était le nom original de la ville de New York?", theme: Theme.find_by(name: "General knowledge"))
+q_9 = Question.create(content: "Quel était le nom original de la ville de New York?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_9, content: "New Amsterdam", correct: true)
 Answer.create(question: q_9, content: "New London", correct: false)
 Answer.create(question: q_9, content: "New Hamburg", correct: false)
@@ -139,7 +139,7 @@ q_9.save!
 p "created 1 question!"
 
 
-q_10 = Question.create(content: "Quelle lune est le seul satellite de notre système solaire a posséder une atmosphère dense?", theme: Theme.find_by(name: "Science"))
+q_10 = Question.create(content: "Quelle lune est le seul satellite de notre système solaire a posséder une atmosphère dense?", point_value: 1, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_10, content: "Titan", correct: true)
 Answer.create(question: q_10, content: "Europa", correct: false)
 Answer.create(question: q_10, content: "Miranda", correct: false)
@@ -148,7 +148,7 @@ q_10.save!
 p "created 1 question!"
 
 
-q_11 = Question.create(content: "Quel est le réalisateur du film de 1973 'American Graffiti'?", theme: Theme.find_by(name: "Movies"))
+q_11 = Question.create(content: "Quel est le réalisateur du film de 1973 'American Graffiti'?", point_value: 1, theme: Theme.find_by(name: "Movies"))
 Answer.create(question: q_11, content: "George Lucas", correct: true)
 Answer.create(question: q_11, content: "Ron Howard", correct: false)
 Answer.create(question: q_11, content: "Francis Ford Coppola", correct: false)
@@ -157,7 +157,7 @@ q_11.save!
 p "created 1 question!"
 
 
-q_12 = Question.create(content: "Quelle bataille menée en 1859 par la France aux côtés du royaume de Sardaigne contre l'Autriche contribua à la naissance d'une nation italienne?", theme: Theme.find_by(name: "History"))
+q_12 = Question.create(content: "Quelle bataille menée en 1859 par la France aux côtés du royaume de Sardaigne contre l'Autriche contribua à la naissance d'une nation italienne?", point_value: 3, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_12, content: "Solférino", correct: true)
 Answer.create(question: q_12, content: "Magenta", correct: false)
 Answer.create(question: q_12, content: "Marengo", correct: false)
@@ -165,7 +165,7 @@ Answer.create(question: q_12, content: "Montebello", correct: false)
 q_12.save!
 p "created 1 question!"
 
-q_13 = Question.create(content: "Quel anime est célèbre pour son utilisation de musique 'Eurobeat'", theme: Theme.find_by(name: "Manga & Anime"))
+q_13 = Question.create(content: "Quel anime est célèbre pour son utilisation de musique 'Eurobeat'", point_value: 2, theme: Theme.find_by(name: "Manga & Anime"))
 Answer.create(question: q_13, content: "Initial D", correct: true)
 Answer.create(question: q_13, content: "Wangan Midnight", correct: false)
 Answer.create(question: q_13, content: "Kino no Tabi", correct: false)
@@ -173,7 +173,7 @@ Answer.create(question: q_13, content: "Cowboy Bebop", correct: false)
 q_13.save!
 p "created 1 question!"
 
-q_14 = Question.create(content: "Comment s'appelle le lion en peluche dans le manga Bleach?", theme: Theme.find_by(name: "Manga & Anime"))
+q_14 = Question.create(content: "Comment s'appelle le lion en peluche dans le manga Bleach?", point_value: 2, theme: Theme.find_by(name: "Manga & Anime"))
 Answer.create(question: q_14, content: "Kon", correct: true)
 Answer.create(question: q_14, content: "Jo", correct: false)
 Answer.create(question: q_14, content: "Ichigo", correct: false)
@@ -181,7 +181,7 @@ Answer.create(question: q_14, content: "Chad", correct: false)
 q_14.save!
 p "created 1 question!"
 
-q_15 = Question.create(content: "Quel personnage de la mythologie Grecque a voyagé dans les Enfers pour ramener sa femme Eurydice dans le monde des vivants?", theme: Theme.find_by(name: "Mythology"))
+q_15 = Question.create(content: "Quel personnage de la mythologie Grecque a voyagé dans les Enfers pour ramener sa femme Eurydice dans le monde des vivants?", point_value: 2, theme: Theme.find_by(name: "Mythology"))
 Answer.create(question: q_15, content: "Orphée", correct: true)
 Answer.create(question: q_15, content: "Hercule", correct: false)
 Answer.create(question: q_15, content: "Persée", correct: false)
@@ -189,7 +189,7 @@ Answer.create(question: q_15, content: "Dédale", correct: false)
 q_15.save!
 p "created 1 question!"
 
-q_16 = Question.create(content: "Hel était la fille de quel personnage de la mythologie nordique?", theme: Theme.find_by(name: "Mythology"))
+q_16 = Question.create(content: "Hel était la fille de quel personnage de la mythologie nordique?", point_value: 2, theme: Theme.find_by(name: "Mythology"))
 Answer.create(question: q_16, content: "Loki", correct: true)
 Answer.create(question: q_16, content: "Thor", correct: false)
 Answer.create(question: q_16, content: "Odin", correct: false)
@@ -197,7 +197,7 @@ Answer.create(question: q_16, content: "Baldr", correct: false)
 q_16.save!
 p "created 1 question!"
 
-q_17 = Question.create(content: "Dans 'Amadeus', quel est le titre de l'oeuvre que Mozart dicte à Salieri, peu avant sa mort?", theme: Theme.find_by(name: "Movies"))
+q_17 = Question.create(content: "Dans 'Amadeus', quel est le titre de l'oeuvre que Mozart dicte à Salieri, peu avant sa mort?", point_value: 2, theme: Theme.find_by(name: "Movies"))
 Answer.create(question: q_17, content: "Requiem", correct: true)
 Answer.create(question: q_17, content: "Don Giovanni", correct: false)
 Answer.create(question: q_17, content: "Les Noces de Figaro", correct: false)
@@ -205,15 +205,15 @@ Answer.create(question: q_17, content: "La Flûte enchantée", correct: false)
 q_17.save!
 p "created 1 question!"
 
-q_18 = Question.create(content: "Quel personnage indien dirige le Kwik-E-Mart dans Les Simpson?", theme: Theme.find_by(name: "Movies"))
+q_18 = Question.create(content: "Quel personnage indien dirige le Kwik-E-Mart dans Les Simpson?", point_value: 1, theme: Theme.find_by(name: "Movies"))
 Answer.create(question: q_18, content: "Apu Nahasapeemapetilon", correct: true)
 Answer.create(question: q_18, content: "Charles Montgomery Burns", correct: false)
 Answer.create(question: q_18, content: "Rajesh Koothrappali", correct: false)
-Answer.create(question: q_18, content: "Tahiti Bob", correct: false)
+Answer.create(question: q_18, content: "Jean Eudes Nallatamby", correct: false)
 q_18.save!
 p "created 1 question!"
 
-q_19 = Question.create(content: "Dans le roman Le Seigneur des Anneaux, combien d'anneaux de pouvoir furent donnés à la race des hommes?", theme: Theme.find_by(name: "Literature"))
+q_19 = Question.create(content: "Dans le roman Le Seigneur des Anneaux, combien d'anneaux de pouvoir furent donnés à la race des hommes?", point_value: 1, theme: Theme.find_by(name: "Literature"))
 Answer.create(question: q_19, content: "9", correct: true)
 Answer.create(question: q_19, content: "7", correct: false)
 Answer.create(question: q_19, content: "5", correct: false)
@@ -221,7 +221,7 @@ Answer.create(question: q_19, content: "12", correct: false)
 q_19.save!
 p "created 1 question!"
 
-q_20 = Question.create(content: "La ceinture d'astéroïdes est située entre quelles plannetes?", theme: Theme.find_by(name: "Science"))
+q_20 = Question.create(content: "La ceinture d'astéroïdes est située entre quelles plannetes?", point_value: 2, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_20, content: "Mars et Jupiter", correct: true)
 Answer.create(question: q_20, content: "Jupiter et Saturn", correct: false)
 Answer.create(question: q_20, content: "Mercure et Venus", correct: false)
@@ -229,7 +229,7 @@ Answer.create(question: q_20, content: "La Terre et Mars", correct: false)
 q_20.save!
 p "created 1 question!"
 
-q_21 = Question.create(content: "Lequel de ces pays resta neutre durant la Seconde Guerre Mondiale?", theme: Theme.find_by(name: "History"))
+q_21 = Question.create(content: "Lequel de ces pays resta neutre durant la Seconde Guerre Mondiale?", point_value: 1, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_21, content: "Suisse", correct: true)
 Answer.create(question: q_21, content: "Royaume-Uni", correct: false)
 Answer.create(question: q_21, content: "France", correct: false)
@@ -237,7 +237,7 @@ Answer.create(question: q_21, content: "Italie", correct: false)
 q_21.save!
 p "created 1 question!"
 
-q_22 = Question.create(content: "Quelle onomatopée désigne un son faux et discordant produit par la voix ?", theme: Theme.find_by(name: "General knowledge"))
+q_22 = Question.create(content: "Quelle onomatopée désigne un son faux et discordant produit par la voix ?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_22, content: "Couac", correct: true)
 Answer.create(question: q_22, content: "Pop", correct: false)
 Answer.create(question: q_22, content: "Clic", correct: false)
@@ -245,7 +245,7 @@ Answer.create(question: q_22, content: "Ouf", correct: false)
 q_22.save!
 p "created 1 question!"
 
-q_23 = Question.create(content: "En qu'elle année eu lieu la bataille d'Austerlitz?", theme: Theme.find_by(name: "History"))
+q_23 = Question.create(content: "En quelle année eu lieu la bataille d'Austerlitz?", point_value: 2, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_23, content: "1805", correct: true)
 Answer.create(question: q_23, content: "1790", correct: false)
 Answer.create(question: q_23, content: "1815", correct: false)
@@ -253,7 +253,7 @@ Answer.create(question: q_23, content: "1825", correct: false)
 q_23.save!
 p "created 1 question!"
 
-q_24 = Question.create(content: "Lequel de ces films n'est PAS sorti en 1996?", theme: Theme.find_by(name: "Movies"))
+q_24 = Question.create(content: "Lequel de ces films n'est PAS sorti en 1996?", point_value: 2, theme: Theme.find_by(name: "Movies"))
 Answer.create(question: q_24, content: "Gladiator", correct: true)
 Answer.create(question: q_24, content: "Independence Day", correct: false)
 Answer.create(question: q_24, content: "The Rock", correct: false)
@@ -261,7 +261,7 @@ Answer.create(question: q_24, content: "Mission: Impossible", correct: false)
 q_24.save!
 p "created 1 question!"
 
-q_25 = Question.create(content: "Quel personnage prénommé Balthazar est l’oncle maternel de Donald Duck?", theme: Theme.find_by(name: "Literature"))
+q_25 = Question.create(content: "Quel personnage prénommé Balthazar est l’oncle maternel de Donald Duck?", point_value: 1, theme: Theme.find_by(name: "Literature"))
 Answer.create(question: q_25, content: "Picsou", correct: true)
 Answer.create(question: q_25, content: "Gontran", correct: false)
 Answer.create(question: q_25, content: "Gripsou", correct: false)
@@ -269,7 +269,7 @@ Answer.create(question: q_25, content: "Flairsou", correct: false)
 q_25.save!
 p "created 1 question!"
 
-q_26 = Question.create(content: "En géométrie, quel adjectif qualifie un angle de 180°?", theme: Theme.find_by(name: "Science"))
+q_26 = Question.create(content: "En géométrie, quel adjectif qualifie un angle de 180°?", point_value: 1, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_26, content: "Plat", correct: true)
 Answer.create(question: q_26, content: "Droit", correct: false)
 Answer.create(question: q_26, content: "Aigus", correct: false)
@@ -277,7 +277,7 @@ Answer.create(question: q_26, content: "Obtus", correct: false)
 q_26.save!
 p "created 1 question!"
 
-q_27 = Question.create(content: "A qui, considéré comme le père de la chimie modèrne est attribué la célèbre phrase 'Rien ne se perd, rien ne se crée, tout se transforme'?", theme: Theme.find_by(name: "Science"))
+q_27 = Question.create(content: "A qui, considéré comme le père de la chimie modèrne est attribué la célèbre phrase 'Rien ne se perd, rien ne se crée, tout se transforme'?", point_value: 3, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_27, content: "Antoine Lavoisier", correct: true)
 Answer.create(question: q_27, content: "Louis Pasteur", correct: false)
 Answer.create(question: q_27, content: "Dmitri Mendeleïev", correct: false)
@@ -285,7 +285,7 @@ Answer.create(question: q_27, content: "Alfred Nobel", correct: false)
 q_27.save!
 p "created 1 question!"
 
-q_28 = Question.create(content: "Quel est l'élément le plus présent dans l'univers?", theme: Theme.find_by(name: "Science"))
+q_28 = Question.create(content: "Quel est l'élément le plus présent dans l'univers?", point_value: 1, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_28, content: "L'Hydrogène", correct: true)
 Answer.create(question: q_28, content: "L'Hélium", correct: false)
 Answer.create(question: q_28, content: "Le Lithium", correct: false)
@@ -293,7 +293,7 @@ Answer.create(question: q_28, content: "L'Oxygen", correct: false)
 q_28.save!
 p "created 1 question!"
 
-q_29 = Question.create(content: "Quelle entreprise Japonaise est le premier fabricant au monde de motocycles?", theme: Theme.find_by(name: "General knowledge"))
+q_29 = Question.create(content: "Quelle entreprise Japonaise est le premier fabricant au monde de motocycles?", point_value: 2, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_29, content: "Honda", correct: true)
 Answer.create(question: q_29, content: "Yamaha", correct: false)
 Answer.create(question: q_29, content: "Suzuki", correct: false)
@@ -301,7 +301,7 @@ Answer.create(question: q_29, content: "Kawasaki", correct: false)
 q_29.save!
 p "created 1 question!"
 
-q_30 = Question.create(content: "Qui est le réalisateur du film Kill Bill?", theme: Theme.find_by(name: "Movies"))
+q_30 = Question.create(content: "Qui est le réalisateur du film Kill Bill?", point_value: 1, theme: Theme.find_by(name: "Movies"))
 Answer.create(question: q_30, content: "Quentin Tarantino", correct: true)
 Answer.create(question: q_30, content: "Arnold Schwarzenegger", correct: false)
 Answer.create(question: q_30, content: "David Lean", correct: false)
@@ -309,7 +309,7 @@ Answer.create(question: q_30, content: "Stanley Kubrick", correct: false)
 q_30.save!
 p "created 1 question!"
 
-q_31 = Question.create(content: "Qui est le seul dieu Grecque à ne pas avoir vu son nom changer dans la Rome antique?", theme: Theme.find_by(name: "Mythology"))
+q_31 = Question.create(content: "Qui est le seul dieu Grecque à ne pas avoir vu son nom changer dans la Rome antique?", point_value: 2, theme: Theme.find_by(name: "Mythology"))
 Answer.create(question: q_31, content: "Apollon", correct: true)
 Answer.create(question: q_31, content: "Déméter", correct: false)
 Answer.create(question: q_31, content: "Zeus", correct: false)
@@ -317,7 +317,7 @@ Answer.create(question: q_31, content: "Athena", correct: false)
 q_31.save!
 p "created 1 question!"
 
-q_32 = Question.create(content: "Lors du siège de Paris par les prussiens en 1870, par quel moyen le ministre Gambetta traverse-t-il les lignes ennemies? ", theme: Theme.find_by(name: "History"))
+q_32 = Question.create(content: "Lors du siège de Paris par les prussiens en 1870, par quel moyen le ministre Gambetta traverse-t-il les lignes ennemies? ", point_value: 2, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_32, content: "En montgolfière", correct: true)
 Answer.create(question: q_32, content: "Déguisé en prussien", correct: false)
 Answer.create(question: q_32, content: "Dans un tunnel", correct: false)
@@ -325,7 +325,7 @@ Answer.create(question: q_32, content: "En train", correct: false)
 q_32.save!
 p "created 1 question!"
 
-q_33 = Question.create(content: "De quel pays Kuala Lumpur est la capitale?", theme: Theme.find_by(name: "Geography"))
+q_33 = Question.create(content: "De quel pays Kuala Lumpur est la capitale?", point_value: 1, theme: Theme.find_by(name: "Geography"))
 Answer.create(question: q_33, content: "Malaysie", correct: true)
 Answer.create(question: q_33, content: "Indonesie", correct: false)
 Answer.create(question: q_33, content: "Singapour", correct: false)
@@ -333,7 +333,7 @@ Answer.create(question: q_33, content: "Thaïlande", correct: false)
 q_33.save!
 p "created 1 question!"
 
-q_34 = Question.create(content: "Quel élément, lorsqu'il est soumit à une chaleur et une pression extrème, crée le diamant?", theme: Theme.find_by(name: "Science"))
+q_34 = Question.create(content: "Quel élément, lorsqu'il est soumit à une chaleur et une pression extrème, crée le diamant?", point_value: 1, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_34, content: "Carbone", correct: true)
 Answer.create(question: q_34, content: "Nitrogène", correct: false)
 Answer.create(question: q_34, content: "Oxygène", correct: false)
@@ -341,7 +341,7 @@ Answer.create(question: q_34, content: "Hydrogène", correct: false)
 q_34.save!
 p "created 1 question!"
 
-q_35 = Question.create(content: "Lequel de ces termes japonais désigne un système de médecine alternative et signifie litéralement 'pression des doigts'?", theme: Theme.find_by(name: "Science"))
+q_35 = Question.create(content: "Lequel de ces termes japonais désigne un système de médecine alternative et signifie litéralement 'pression des doigts'?", point_value: 1, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_35, content: "Shiatsu", correct: true)
 Answer.create(question: q_35, content: "Ukiyo", correct: false)
 Answer.create(question: q_35, content: "Majime", correct: false)
@@ -349,7 +349,7 @@ Answer.create(question: q_35, content: "Ikigai", correct: false)
 q_35.save!
 p "created 1 question!"
 
-q_36 = Question.create(content: "Qu'était la 'pascaline', nommé en 1642 par Blaise Pascal?", theme: Theme.find_by(name: "General knowledge"))
+q_36 = Question.create(content: "Qu'était la 'pascaline', nommé en 1642 par Blaise Pascal?", point_value: 3, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_36, content: "La première machine à calculer", correct: true)
 Answer.create(question: q_36, content: "Une formule mathématique", correct: false)
 Answer.create(question: q_36, content: "Un composé chimique", correct: false)
@@ -357,7 +357,7 @@ Answer.create(question: q_36, content: "Une boisson", correct: false)
 q_36.save!
 p "created 1 question!"
 
-q_37 = Question.create(content: "Qui est le véritable gagnant du tournoi de code 2022 du Wagon?", theme: Theme.find_by(name: "General knowledge"))
+q_37 = Question.create(content: "Qui est le véritable gagnant du tournoi de code 2022 du Wagon?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_37, content: "Tim pour le batch #861", correct: true)
 Answer.create(question: q_37, content: "Un tricheur du batch Data", correct: false)
 Answer.create(question: q_37, content: "Le batch #860", correct: false)
@@ -365,7 +365,7 @@ Answer.create(question: q_37, content: "Jar Jar le Quetar", correct: false)
 q_37.save!
 p "created 1 question!"
 
-q_38 = Question.create(content: "Combien de côtés compte un trapèze?", theme: Theme.find_by(name: "Science"))
+q_38 = Question.create(content: "Combien de côtés compte un trapèze?", point_value: 1, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_38, content: "4", correct: true)
 Answer.create(question: q_38, content: "3", correct: false)
 Answer.create(question: q_38, content: "5", correct: false)
@@ -373,7 +373,7 @@ Answer.create(question: q_38, content: "6", correct: false)
 q_38.save!
 p "created 1 question!"
 
-q_39 = Question.create(content: "Le film de 1996 'Fargo' se déroule principalement dans quel état des USA?", theme: Theme.find_by(name: "Movies"))
+q_39 = Question.create(content: "Le film de 1996 'Fargo' se déroule principalement dans quel état des USA?", point_value: 1, theme: Theme.find_by(name: "Movies"))
 Answer.create(question: q_39, content: "Minnesota", correct: true)
 Answer.create(question: q_39, content: "Dakota du Nord", correct: false)
 Answer.create(question: q_39, content: "Dakota du Sud", correct: false)
@@ -381,7 +381,7 @@ Answer.create(question: q_39, content: "Wisconsin", correct: false)
 q_39.save!
 p "created 1 question!"
 
-q_40 = Question.create(content: "Quel pays partage la plus longue frontière continue avec la France?", theme: Theme.find_by(name: "Geography"))
+q_40 = Question.create(content: "Quel pays partage la plus longue frontière continue avec la France?", point_value: 1, theme: Theme.find_by(name: "Geography"))
 Answer.create(question: q_40, content: "Brésil", correct: true)
 Answer.create(question: q_40, content: "Espagne", correct: false)
 Answer.create(question: q_40, content: "Belgique", correct: false)
