@@ -1,4 +1,4 @@
-<div id="player-desk-1round" data-controller="desk">
+<div id="player-desk-1round" data-controller="desk" data-desk-points-value="<%= participation.game.previous_question.point_value %>">
   <p id="player-nickname-1round"><%= participation.user.nickname %></p>
 
   <div id="<%= participation.game.incorrect_attempt?(participation) ? 'card-point-1round-looser' : 'card-point-1round' %>">
@@ -6,7 +6,7 @@
       <p class="point-1round-gray"></p>
     <% end %>
 
-    <% (participation.point).times do %>
+    <% (participation.point).times do |point| %>
       <p class="point-1round-orange"></p>
     <% end %>
   </div>
