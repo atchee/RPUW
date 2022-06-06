@@ -67,4 +67,13 @@ module Broadcastable
     Turbo::StreamsChannel.broadcast_remove_to @game,
       target: "scores"
   end
+
+  def broadcast_timer
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "timer",
+      partial: "games/timer",
+      locals: {
+        game: @game
+      }
+  end
 end

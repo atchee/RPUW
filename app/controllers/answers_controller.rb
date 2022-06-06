@@ -13,6 +13,7 @@ class AnswersController < ApplicationController
       @participation.update(point: @score)
       attempt_record(true)
       @looser = false
+      broadcast_timer
 
       # TimerJob.set(wait: 10.second).perform_later(@game.id)
       # broadcast_question
@@ -36,6 +37,7 @@ class AnswersController < ApplicationController
         @game.save
         broadcast_question
         broadcast_scores
+        broadcast_timer
       end
     end
   end
