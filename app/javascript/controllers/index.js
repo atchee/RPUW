@@ -13,9 +13,12 @@ application.register("desk", DeskController)
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
+
+import TimerController from "./timer_controller.js"
+application.register("timer", TimerController)
+
 import SolutionController from "./solution_controller.js"
 application.register("solution", SolutionController)
 
 import TitleAnimationController from "./title_animation_controller.js"
 application.register("title-animation", TitleAnimationController)
-

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     member do
       post "/start", to: "games#start"
       post "/end", to: "games#end"
+      post "/next_question", to: "games#next_question"
     end
   end
 
