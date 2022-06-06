@@ -40,6 +40,7 @@ p 'created 1 user'
 #   p 'created 1 user'
 # end
 
+
 themes_list = [
   "Literature",
   "General knowledge",
@@ -50,14 +51,13 @@ themes_list = [
   "History",
   "Geography",
   "Science"
-  ]
+]
 
-  themes_list.each do |name|
-    theme = Theme.create!(name: name)
-    p theme
-    p 'created 1 theme'
-  end
-
+themes_list.each do |name|
+  theme = Theme.create!(name: name)
+  p theme
+  p 'created 1 theme'
+end
 
 q_1 = Question.create(content: "En 1818, l'écrivaine Mary Shelly a écrit un roman de fiction et créa quel célebre personnage?", theme: Theme.find_by(name: "Literature"))
 Answer.create(question: q_1, content: "Le montre de Frankenstein", correct: true)
@@ -388,7 +388,6 @@ Answer.create(question: q_40, content: "Belgique", correct: false)
 Answer.create(question: q_40, content: "Suisse", correct: false)
 q_40.save!
 p "created 1 question!"
-
 
 # q_44 = Question.create(content: "On a dartboard, what number is directly opposite No. 1?", theme: Theme.find_by(name: "General Knowledge"))
 # Answer.create(question: q_44, content: "19", correct: true)
