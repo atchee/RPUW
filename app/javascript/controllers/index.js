@@ -9,3 +9,6 @@ application.register("answer", AnswerController)
 
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
+
+import TitleAnimationController from "./title_animation_controller.js"
+application.register("title-animation", TitleAnimationController)
