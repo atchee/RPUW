@@ -10,18 +10,35 @@ User.destroy_all
 puts "Database cleaned"
 
 
-user_list = [
-  { nickname: "Açelya", email: 'Açelya@lewagon.com', password: 'password', password_confirmation: 'password', admin: true },
-  { nickname: "Sophie", email: 'Sophie@lewagon.com', password: 'password', password_confirmation: 'password', admin: false },
-  { nickname: "Edouard", email: 'Edouard@lewagon.com', password: 'password', password_confirmation: 'password', admin: false },
-  { nickname: "Adams", email: 'Adams@lewagon.com', password: 'password', password_confirmation: 'password', admin: false }
-]
-
-user_list.each do |user|
-  u = User.create!(user)
-  p u
+  user_1 = User.new({ nickname: "Açelya", email: 'Açelya@lewagon.com', password: 'password', password_confirmation: 'password', admin: true })
+  file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-ace_wg6tis.png")
+  user_1.photos.attach(io: file, filename: "avatar-ace_wg6tis", content_type: "image/png")
+  user_1.save!
   p 'created 1 user'
-end
+
+  user_2 = User.new({ nickname: "Sophie", email: 'Sophie@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
+  file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-sophie_okhgjj.png")
+  user_2.photos.attach(io: file, filename: "avatar-sophie_okhgjj", content_type: "image/png")
+  user_2.save!
+  p 'created 1 user'
+
+  user_3 = User.new({ nickname: "Edouard", email: 'Edouard@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
+  file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-edouard_jxnko2.png")
+  user_3.photos.attach(io: file, filename: "avatar-edouard_jxnko2", content_type: "image/png")
+  user_3.save!
+  p 'created 1 user'
+
+  user_4 = User.new({ nickname: "Adams", email: 'Adams@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
+  file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-adams_zpnqft.png")
+  user_4.photos.attach(io: file, filename: "avatar-adams_zpnqft", content_type: "image/png")
+  user_4.save!
+  p 'created 1 user'
+
+# user_list.each do |user|
+#   u = User.create!(user)
+#   p u
+#   p 'created 1 user'
+# end
 
 themes_list = [
   "Literature",
