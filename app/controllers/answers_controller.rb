@@ -24,6 +24,8 @@ class AnswersController < ApplicationController
         broadcast_remove_question
         broadcast_remove_scores
       else
+        broadcast_remove_question
+        broadcast_answer
         sleep 2 # To get time to see the broadcasted score
         broadcast_question
         broadcast_scores
@@ -33,6 +35,8 @@ class AnswersController < ApplicationController
       @looser = @participation.user
       broadcast_scores
       if @game.all_attempts_false
+        broadcast_remove_question
+        broadcast_answer
         sleep 2 # To get time to see the broadcasted score
         @game.question_number += 1
         @game.save
