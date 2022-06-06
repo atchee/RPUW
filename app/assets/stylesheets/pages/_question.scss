@@ -70,6 +70,7 @@
   align-content: space-around;
   flex-direction: column;
   box-shadow: 0 4px 15px 0 rgba(229, 16, 16, 0.75);
+  animation: fadeIn 0.5s linear;
 }
 
 .answer-true {
@@ -83,4 +84,10 @@
   align-content: space-around;
   flex-direction: column;
   box-shadow: 0 4px 15px 0 rgba(10, 67, 20, 0.75);
+  animation: fadeIn 0.5s linear;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

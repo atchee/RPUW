@@ -15,3 +15,7 @@ application.register("hello", HelloController)
 
 import SolutionController from "./solution_controller.js"
 application.register("solution", SolutionController)
+
+import TitleAnimationController from "./title_animation_controller.js"
+application.register("title-animation", TitleAnimationController)
+

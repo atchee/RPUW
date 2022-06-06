@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :participations, dependent: :destroy
   has_many :attempts, through: :participations
   has_many :games, through: :participations
+  has_one_attached :photo
 
   def find_participation(game)
     participations.find_by(game: game)
