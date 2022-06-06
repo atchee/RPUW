@@ -13,7 +13,6 @@ class AnswersController < ApplicationController
       @participation.update(point: @score)
       attempt_record(true)
       @looser = false
-      broadcast_timer
 
       if winner?
         @winner = @participation.user
@@ -26,6 +25,7 @@ class AnswersController < ApplicationController
         broadcast_answer
         broadcast_scores
         sleep 2 # To get time to see the broadcasted score
+        broadcast_timer
         broadcast_question
       end
     else
@@ -40,8 +40,8 @@ class AnswersController < ApplicationController
         @game.save
         broadcast_question
         broadcast_scores
-        broadcast_timer
         broadcast_desk
+        broadcast_timer
       end
     end
   end
