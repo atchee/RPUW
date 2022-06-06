@@ -1,18 +1,8 @@
 <div class="game">
   <div id="players-desk-1round">
     <% participations.order(:id).each do |participation| %>
-      <div id="player-desk-1round">
-        <p id="player-nickname-1round"><%= participation.user.nickname %></p>
-
-        <div id="<%= participation.game.incorrect_attempt?(participation) ? 'card-point-1round-looser' : 'card-point-1round' %>">
-          <% (9 - participation.point).times do %>
-            <p class="point-1round-gray"></p>
-          <% end %>
-
-          <% (participation.point).times do %>
-            <p class="point-1round-orange"></p>
-          <% end %>
-        </div>
+      <div id="participation_<%= participation.id %>">
+        <%= render "games/desk", participation: participation %>
       </div>
     <% end %>
   </div>

@@ -7,6 +7,6 @@ class Participation < ApplicationRecord
   end
 
   def last_attempt_correct?
-    attempts.success
+    attempts.last&.success
   end
 end

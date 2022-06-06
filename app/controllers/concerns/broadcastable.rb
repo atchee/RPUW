@@ -45,6 +45,15 @@ module Broadcastable
       }
   end
 
+  def broadcast_desk
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "participation_#{@participation.id}",
+      partial: "games/desk",
+      locals: {
+        participation: @participation
+      }
+  end
+
   def broadcast_scores
     Turbo::StreamsChannel.broadcast_update_to @game,
       target: "scores",

@@ -7,6 +7,9 @@ import { application } from "./application"
 import AnswerController from "./answer_controller.js"
 application.register("answer", AnswerController)
 
+import DeskController from "./desk_controller.js"
+application.register("desk", DeskController)
+
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
