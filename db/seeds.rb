@@ -30,7 +30,7 @@ p 'created 1 user'
 
 user_4 = User.new({ nickname: "Adams", email: 'Adams@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
 file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-adams_zpnqft.png")
-user_4.photo.attach(io: file, filename: "avatar-adams_zpnqft.png", content_type: "image/png")
+user_4.photo.attach(io: file, filename: "avatar-adams_zpnqft", content_type: "image/png")
 user_4.save!
 p 'created 1 user'
 
