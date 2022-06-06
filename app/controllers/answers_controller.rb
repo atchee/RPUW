@@ -14,9 +14,6 @@ class AnswersController < ApplicationController
       attempt_record(true)
       @looser = false
 
-      # TimerJob.set(wait: 10.second).perform_later(@game.id)
-      # broadcast_question
-      # broadcast_scores
       if winner?
         @winner = @participation.user
         @game.update(status: "ended")
@@ -24,18 +21,18 @@ class AnswersController < ApplicationController
         broadcast_remove_question
         broadcast_remove_scores
       else
-        broadcast_remove_question
+        # broadcast_remove_question
         broadcast_answer
+        broadcast_scores
         sleep 2 # To get time to see the broadcasted score
         broadcast_question
-        broadcast_scores
       end
     else
       attempt_record(false)
       @looser = @participation.user
       broadcast_scores
       if @game.all_attempts_false
-        broadcast_remove_question
+        # broadcast_remove_question
         broadcast_answer
         sleep 2 # To get time to see the broadcasted score
         @game.question_number += 1

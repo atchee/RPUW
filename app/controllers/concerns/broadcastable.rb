@@ -42,9 +42,6 @@ module Broadcastable
       partial: "games/answer",
       locals: {
         question: @game.current_question
-        # participations: @game.participations,
-        # attempts: @attempts,
-        # looser: @looser
       }
   end
 
