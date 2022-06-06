@@ -9,7 +9,7 @@ class AnswersController < ApplicationController
     if @answer.correct?
       @game.question_number += 1
       @game.save
-      @score = @participation.point += 1
+      @score = @participation.point += @answer.question.point_value
       @participation.update(point: @score)
       attempt_record(true)
       @looser = false
@@ -44,7 +44,7 @@ class AnswersController < ApplicationController
   end
 
   def winner?
-    @score == 9
+    @score >= 9
   end
 
   private
