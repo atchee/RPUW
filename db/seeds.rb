@@ -353,7 +353,7 @@ q_36 = Question.create(content: "Qu'était la 'pascaline', nommé en 1642 par Bl
 Answer.create(question: q_36, content: "La première machine à calculer", correct: true)
 Answer.create(question: q_36, content: "Une formule mathématique", correct: false)
 Answer.create(question: q_36, content: "Un composé chimique", correct: false)
-Answer.create(question: q_36, content: "Une école de formation aux sciences", correct: false)
+Answer.create(question: q_36, content: "Une boisson", correct: false)
 q_36.save!
 p "created 1 question!"
 
