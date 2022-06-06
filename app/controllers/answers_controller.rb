@@ -21,6 +21,7 @@ class AnswersController < ApplicationController
         broadcast_summary
         broadcast_remove_question
         broadcast_remove_scores
+        broadcast_remove_timer
       else
         broadcast_answer
         broadcast_scores
