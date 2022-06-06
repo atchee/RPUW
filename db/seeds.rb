@@ -10,29 +10,29 @@ User.destroy_all
 puts "Database cleaned"
 
 
-  user_1 = User.new({ nickname: "Açelya", email: 'Açelya@lewagon.com', password: 'password', password_confirmation: 'password', admin: true })
-  file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-ace_wg6tis.png")
-  user_1.photos.attach(io: file, filename: "avatar-ace_wg6tis", content_type: "image/png")
-  user_1.save!
-  p 'created 1 user'
+user_1 = User.new({ nickname: "Açelya", email: 'Açelya@lewagon.com', password: 'password', password_confirmation: 'password', admin: true })
+file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-ace_wg6tis.png")
+user_1.photo.attach(io: file, filename: "avatar-ace_wg6tis", content_type: "image/png")
+user_1.save!
+p 'created 1 user'
 
-  user_2 = User.new({ nickname: "Sophie", email: 'Sophie@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
-  file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-sophie_okhgjj.png")
-  user_2.photos.attach(io: file, filename: "avatar-sophie_okhgjj", content_type: "image/png")
-  user_2.save!
-  p 'created 1 user'
+user_2 = User.new({ nickname: "Sophie", email: 'Sophie@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
+file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-sophie_okhgjj.png")
+user_2.photo.attach(io: file, filename: "avatar-sophie_okhgjj", content_type: "image/png")
+user_2.save!
+p 'created 1 user'
 
-  user_3 = User.new({ nickname: "Edouard", email: 'Edouard@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
-  file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-edouard_jxnko2.png")
-  user_3.photos.attach(io: file, filename: "avatar-edouard_jxnko2", content_type: "image/png")
-  user_3.save!
-  p 'created 1 user'
+user_3 = User.new({ nickname: "Edouard", email: 'Edouard@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
+file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-edouard_jxnko2.png")
+user_3.photo.attach(io: file, filename: "avatar-edouard_jxnko2", content_type: "image/png")
+user_3.save!
+p 'created 1 user'
 
-  user_4 = User.new({ nickname: "Adams", email: 'Adams@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
-  file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-adams_zpnqft.png")
-  user_4.photos.attach(io: file, filename: "avatar-adams_zpnqft", content_type: "image/png")
-  user_4.save!
-  p 'created 1 user'
+user_4 = User.new({ nickname: "Adams", email: 'Adams@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
+file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-adams_zpnqft.png")
+user_4.photo.attach(io: file, filename: "avatar-adams_zpnqft.png", content_type: "image/png")
+user_4.save!
+p 'created 1 user'
 
 # user_list.each do |user|
 #   u = User.create!(user)
@@ -157,7 +157,7 @@ q_11.save!
 p "created 1 question!"
 
 
-q_12 = Question.create(content: "Quelle bataille menée en 1859 par la France aux côtés du royaume de Sardaigne contre l'Autriche contribua à la naissance d'une nation italienne?", theme: Theme.find_by(name: "Histoire"))
+q_12 = Question.create(content: "Quelle bataille menée en 1859 par la France aux côtés du royaume de Sardaigne contre l'Autriche contribua à la naissance d'une nation italienne?", theme: Theme.find_by(name: "History"))
 Answer.create(question: q_12, content: "Solférino", correct: true)
 Answer.create(question: q_12, content: "Magenta", correct: false)
 Answer.create(question: q_12, content: "Marengo", correct: false)
