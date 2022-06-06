@@ -5,8 +5,8 @@
   <div class="container" id="game">
     <% unless @game.started? || @game.ended? %>
       <div id="players">
-        <div id="waiting">
-          <h3 id="bounceTxt">Waiting for players . . .</h3>
+        <div id='bouncing-text'>
+          <p id='bounceTxt'>Waiting players . . .</p>
         </div>
 
         <%= render "games/players", players: @game.players, game: @game, user: current_user %>
@@ -16,6 +16,12 @@
     <div id="question">
       <% if @game.started? %>
         <%= render "games/question", question: @game.current_question %>
+      <% end %>
+    </div>
+
+    <div id="answer">
+      <% if @game.started? %>
+
       <% end %>
     </div>
 
@@ -35,3 +41,30 @@
 
   </div>
 </div>
+
+<script>
+  var myText = document.getElementById("bounceTxt").innerHTML,
+     wrapText = "";
+
+  for (var i = 0; i < myText.length; i++) {
+      wrapText += "<em>" + myText.charAt(i) + "</em>";
+  }
+
+  document.getElementById("bounceTxt").innerHTML = wrapText;
+
+  var myLetters = document.getElementsByTagName("em"),
+      j = 0;
+
+  function applyBounce() {
+      setTimeout(function () {
+            myLetters[j].className = "bounce-me";
+            j++;
+
+            if (j < myLetters.length) {
+                applyBounce();
+            }
+      }, 250);
+  }
+
+  applyBounce();
+</script>
