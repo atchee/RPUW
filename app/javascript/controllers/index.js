@@ -9,3 +9,6 @@ application.register("answer", AnswerController)
 
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
+
+import SolutionController from "./solution_controller.js"
+application.register("solution", SolutionController)
