@@ -21,7 +21,7 @@
 
     <div id="answer">
       <% if @game.started? %>
-        <%= render "games/scores", participations: @game.participations, looser: false %>
+        <%= render "games/answer", question: @game.current_question %>
       <% end %>
 
     </div>
