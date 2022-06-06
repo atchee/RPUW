@@ -93,4 +93,10 @@ module Broadcastable
         game: @game
       }
   end
+
+  def broadcast_remove_timer
+    Turbo::StreamsChannel.broadcast_remove_to @game,
+      target: "timer"
+  end
+
 end
