@@ -2,6 +2,7 @@
   <div id="players-desk-1round">
     <% participations.order(:id).each do |participation| %>
       <div id="player-desk-1round">
+        <%= image_tag "avatar/#{participation.user.photo.filename}.png" %>
         <p id="player-nickname-1round"><%= participation.user.nickname %></p>
 
         <div id="card-point-1round">

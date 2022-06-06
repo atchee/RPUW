@@ -9,6 +9,10 @@
   display: flex;
   justify-content: space-evenly;
   padding-top: 112px;
+
+  img {
+    width: min-content;
+  }
 }
 
 #player-desk-1round {
