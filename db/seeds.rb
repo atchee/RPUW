@@ -60,7 +60,7 @@ themes_list.each do |name|
 end
 
 q_1 = Question.create(content: "En 1818, l'écrivaine Mary Shelly a écrit un roman de fiction et créa quel célebre personnage?", point_value: 2, theme: Theme.find_by(name: "Literature"))
-Answer.create(question: q_1, content: "Le montre de Frankenstein", correct: true)
+Answer.create(question: q_1, content: "Le monstre de Frankenstein", correct: true)
 Answer.create(question: q_1, content: "La Chose", correct: false)
 Answer.create(question: q_1, content: "Dracula", correct: false)
 Answer.create(question: q_1, content: "L'homme invisible", correct: false)
