@@ -1,0 +1,44 @@
+.summary {
+  a {
+    position: absolute;
+    right: 20px;
+    bottom: 75px;
+  }
+}
+
+.winner-gif {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 96px;
+    right: 510px;
+  }
+}
+
+
+.winner {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: min-content;
+  }
+
+  p {
+    border-radius: 5px;
+    background-color: #a2bbdf;
+    margin-top: 25px;
+    padding: 10px;
+    color: #eef7fc;
+    box-shadow: 0 4px 15px 0 rgba(71, 143, 202, 0.75);
+    font-size: 30px;
+  }
+}
+
+#avatar-winner {
+  object-fit: contain;
+  width: 160px;
+}

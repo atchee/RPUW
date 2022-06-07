@@ -9,6 +9,10 @@
   display: flex;
   justify-content: space-evenly;
   padding-top: 112px;
+
+  img {
+    width: min-content;
+  }
 }
 
 #player-desk-1round {
@@ -68,26 +72,31 @@
 .point-1round-orange {
   background: radial-gradient(#f7d648, #f6ca44, #F4BD3F, #F3B03A, #F2AA38, #F1A335);
   border-radius: 5px;
-  border: solid 2px #e85a19 ;
+  border: solid 2px #e85a19;
   box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
   width: 80px;
   height: 20px;
   margin: 0px;
 }
 
-.point-1round-orange.last{
-  animation: fadeIn 1s linear;
+.point-1round-orange.flash {
+  animation: flash 500ms, 2s ease alternate;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes flash {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 .point-1round-gray {
   background: radial-gradient(#eef7fc, #D8D8D8);
   border-radius: 5px;
-  border: solid 2px #e85a19 ;
+  border: solid 2px #e85a19;
   width: 80px;
   height: 20px;
   margin: 0px;
@@ -95,7 +104,7 @@
 
 .looser {
   color: brown;
-  position : absolute;
+  position: absolute;
   font-size: 40px;
   top: -17px;
   right: 167px;

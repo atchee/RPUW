@@ -4,16 +4,24 @@
     <% players.each do |player| %>
       <div class="fa-stack fa-1x card-player";>
         <% if game.user == player && player.find_participation(game).ready?%>
-          <p id="owner">
-            <%= player.nickname %>
+          <div id="owner">
+            <%= image_tag "avatar/#{player.photo.filename}.png", class:"avatar-large"%>
+            <p><%= player.nickname %></p>
             <span>
               <i class="fa fa-check check"></i>
             </span>
-           </p>
+           </div>
         <%elsif player.find_participation(game).ready? %>
-          <p><%= player.nickname %> <span><i class="fa fa-check check"></i></span></p>
+
+          <div class="">
+            <%= image_tag "avatar/#{player.photo.filename}.png", class:"avatar-large"%>
+            <p><%= player.nickname %> <span><i class="fa fa-check check"></i></span></p>
+          </div>
         <% else %>
+        <div>
+          <%= image_tag "avatar/#{player.photo.filename}.png", class:"avatar-large"%>
           <%= player.nickname %>
+        </div>
         <% end %>
       </div>
     <% end %>
