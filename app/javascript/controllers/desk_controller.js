@@ -8,17 +8,16 @@ export default class extends Controller {
   };
 
   connect() {
-    // console.log(this.pointsValue)
     // console.log("hello from desk controller")
+    // console.log(this.pointsValue)
+    // console.log(this.correctValue)
     // console.log(answers)
-    // console.log(Array.from(answers).slice(0, this.pointsValue))
-    console.log(this.correctValue)
     const answers = document.querySelectorAll('.point-1round-orange');
 
     Array.from(answers).slice(0, this.pointsValue).forEach((answer) => {
-      // if (this.correctValue === true) {
-      answer.classList.add('flash');
-      // }
+      if (this.correctValue === true) {
+        answer.classList.add('flash');
+      }
     });
   }
 }
