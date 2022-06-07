@@ -83,6 +83,10 @@
   animation: flash 500ms, 2s ease alternate;
 }
 
+.point-1round-orange.unflash {
+  animation: none;
+}
+
 @keyframes flash {
   from {
     opacity: 1;
