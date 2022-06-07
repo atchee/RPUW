@@ -4,16 +4,16 @@
 
 #players-desk-1round {
   width: 1200px;
-  height: 300px;
+  height: 250px;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
-  padding-top: 112px;
+  padding-top: 99px;
 
   img {
-    width: 100%;
+    width: 90%;
     position: absolute;
-    top: -118px;
+    top: -90px;
     right: 10px;
     z-index: -1;
   }
@@ -23,8 +23,8 @@
   background-image: asset-url('round1/desk-1round.png');
   background-size: contain;
   background-position: center;
-  width: 166.7px;
-  height: 236.7px;
+  width: 139px;
+  height: 197.25px;
   position: relative;
 }
 
@@ -37,40 +37,40 @@
   text-align: center;
   padding: 1px;
   text-shadow: #f7d648 1px 0 10px;
-  left: 36px;
-  top: 19px;
-  width: 93.4px;
-  font-size: 15px;
+  left: 24px;
+  top: 15px;
+  width: 90px;
+  font-size: 13px;
 }
 
 #card-point-1round {
   background-color: #eef7fc52;
   border-radius: 5px;
-  width: 66.7px;
-  height: 150px;
+  width: 55.6px;
+  height: 125px;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-  left: 50px;
-  top: 60px;
+  left: 42px;
+  top: 50px;
 }
 
 #card-point-1round-looser {
   background-color: rgba(229, 16, 16, 0.601);
   border-radius: 5px;
-  width: 66.7px;
-  height: 150px;
+  width: 55.6px;
+  height: 125px;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-  left: 75px;
-  top: 86px;
+  left: 42px;
+  top: 50px;
   animation: fadeIn 0.5s linear;
 }
 
@@ -79,8 +79,8 @@
   border-radius: 5px;
   border: solid 2px #e85a19;
   box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
-  width: 53.4px;
-  height: 13.4px;
+  width: 44.5px;
+  height: 11.2px;
   margin: 0px;
 }
 
@@ -106,7 +106,7 @@
   background: radial-gradient(#eef7fc, #D8D8D8);
   border-radius: 5px;
   border: solid 2px #e85a19;
-  width: 53.4px;
-  height: 13.4px;
+  width: 44.5px;
+  height: 11.2px;
   margin: 0px;
 }

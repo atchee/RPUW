@@ -1,6 +1,6 @@
 .timer{
   color: white;
-  background-color: #2A3A84;
+  background-color: rgb(42, 58, 132);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -9,16 +9,20 @@
   align-items: center;
   // justify-content: right;
   font-size: 25px;
-  top: 60px
+  top: 88px;
+  position: absolute;
+  box-shadow: 0 4px 15px 0 rgba(42, 58, 132, 0.75);
 }
 
 .timer_blue{
-  background-color: #2A3A84
+  background-color: #2A3A84;
+  box-shadow: 0 4px 15px 0 rgba(42, 58, 132, 0.75);
 }
 
 .timer_orange{
-  background-color: #e85a19;
-  text-align: center
+  background-color: rgb(232, 90, 25);
+  text-align: center;
+  box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
 }
 
 .timer_red{
@@ -26,6 +30,7 @@
   text-align: center;
 	animation: beat .50s infinite alternate;
 	transform-origin: center;
+  box-shadow: 0 4px 15px 0 rgba(229, 16, 16, 0.75);
 }
 
 /* Heart beat animation */
