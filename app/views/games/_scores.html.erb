@@ -1,23 +1,8 @@
 <div class="game">
   <div id="players-desk-1round">
     <% participations.order(:id).each do |participation| %>
-      <div id="player-desk-1round">
-        <%= image_tag "avatar/#{participation.user.photo.filename}.png" %>
-        <p id="player-nickname-1round"><%= participation.user.nickname %></p>
-
-        <div id="card-point-1round">
-          <% (9 - participation.point).times do %>
-            <p class="point-1round-gray"></p>
-          <% end %>
-
-          <% participation.point.times do %>
-            <p class="point-1round-orange"></p>
-          <% end %>
-        </div>
-
-        <% if participation.game.current_attempts.flat_map(&:participation).include?(participation) %>
-          <p id="<%= dom_id(participation.user) %> "><i class="fa-solid fa-poo looser"></i></p>
-        <% end %>
+      <div id="participation_<%= participation.id %>">
+        <%= render "games/desk", participation: participation %>
       </div>
     <% end %>
   </div>

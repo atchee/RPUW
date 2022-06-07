@@ -1,0 +1,14 @@
+<div id="player-desk-1round" data-controller="desk" data-desk-points-value="<%= participation.game.previous_question.point_value %>" data-desk-correct-value="<%= participation.game.previous_attempts.any? ? participation.game.previous_attempts.last.success : false %>">
+  <%= image_tag "avatar/#{participation.user.photo.filename}.png" %>
+  <p id="player-nickname-1round"><%= participation.user.nickname %></p>
+
+  <div id="<%= participation.game.incorrect_attempt?(participation) ? 'card-point-1round-looser' : 'card-point-1round' %>">
+    <% (9 - participation.point).times do %>
+      <p class="point-1round-gray"></p>
+    <% end %>
+
+    <% (participation.point).times do |point| %>
+      <p class="point-1round-orange"></p>
+    <% end %>
+  </div>
+</div>

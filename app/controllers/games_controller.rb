@@ -22,10 +22,10 @@ class GamesController < ApplicationController
   def start
     @game = Game.find(params[:id])
     @game.update(status: 'running')
-    # timer
     broadcast_remove_players_list
     broadcast_question
     broadcast_scores
+    broadcast_timer
   end
 
   # def end
@@ -34,6 +34,12 @@ class GamesController < ApplicationController
   #   broadcast_summary
   # end
 
-  # def next_question
-  # end
+  def next_question
+    @game = Game.find(params[:id])
+    @game.question_number += 1
+    @game.save
+    broadcast_question
+    broadcast_scores
+    broadcast_timer
+  end
 end

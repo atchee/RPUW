@@ -13,9 +13,21 @@
       </div>
     <% end %>
 
+    <div id="timer" class="<%= "owner" if current_user == @game.user %>">
+      <% if @game.started? %>
+        <%= render "games/timer", game: @game %>
+      <% end %>
+    </div>
+
     <div id="question">
       <% if @game.started? %>
         <%= render "games/question", question: @game.current_question %>
+      <% end %>
+    </div>
+
+    <div id="answer">
+      <% if @game.started? %>
+
       <% end %>
     </div>
 
