@@ -1,13 +1,13 @@
 
-<div class="waiting-container">
-  <div class="focus">
-    <div class="focus--mask">
-      <% unless user.find_participation(game).ready? %>
-      <p class="focus--mask-inner">Waiting</p>
-      <% end %>
+<% unless user.find_participation(game).ready? %>
+  <div class="waiting-container">
+    <div class="focus">
+      <div class="focus--mask">
+        <p class="focus--mask-inner">Waiting</p>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
 
 <div id="sas">
   <div class="card-players">
