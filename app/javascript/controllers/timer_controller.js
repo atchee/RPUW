@@ -9,7 +9,9 @@ import { Controller } from "@hotwired/stimulus"
     };
 
     connect() {
+      console.log("test")
       const owner = this.element.closest("#timer").classList.contains("owner")
+      console.log(owner)
       this.csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute("content")
       this.interval = setInterval(() => {
         if (this.timeValue > 0) {
@@ -17,6 +19,17 @@ import { Controller } from "@hotwired/stimulus"
           this.timeValue -= 1
         } else {
           if (owner) this._nextQuestion()
+        }
+        if (this.timeValue > 10) {
+          this.element.classList.add("timer_green");
+        }
+        if (this.timeValue < 10){
+          this.element.classList.remove("timer_green");
+          this.element.classList.add("timer_orange");
+        }
+        if (this.timeValue < 5){
+          this.element.classList.remove("timer_orange");
+          this.element.classList.add("timer_red");
         }
       }, 1000);
     }
