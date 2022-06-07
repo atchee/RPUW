@@ -59,11 +59,11 @@ themes_list.each do |name|
   p 'created 1 theme'
 end
 
-q_1 = Question.create(content: "En 1818, l'écrivaine Mary Shelly a écrit un roman de fiction et créa quel célebre personnage?", point_value: 2, theme: Theme.find_by(name: "Literature"))
-Answer.create(question: q_1, content: "Le monstre de Frankenstein", correct: true)
-Answer.create(question: q_1, content: "La Chose", correct: false)
-Answer.create(question: q_1, content: "Dracula", correct: false)
-Answer.create(question: q_1, content: "L'homme invisible", correct: false)
+q_1 = Question.create(content: "Est-ce que le RAP c'était mieux avant ?", point_value: 2, theme: Theme.find_by(name: "Literature"))
+Answer.create(question: q_1, content: "Largement", correct: true)
+Answer.create(question: q_1, content: "La nouvelle génération est cool", correct: false)
+Answer.create(question: q_1, content: "Le rock c'est mieux", correct: false)
+Answer.create(question: q_1, content: "La réponse D", correct: false)
 q_1.save!
 p "created 1 question!"
 
@@ -76,16 +76,16 @@ q_2.save!
 p "created 1 question!"
 
 
-q_3 = Question.create(content: "Quelle personne, par ses recommandations ou ses conseils, exerce une influence sur le choix d'un produit?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
-Answer.create(question: q_3, content: "Prescripteur", correct: true)
-Answer.create(question: q_3, content: "Percepteur", correct: false)
-Answer.create(question: q_3, content: "Persifleur", correct: false)
-Answer.create(question: q_3, content: "Persécuteur", correct: false)
+q_3 = Question.create(content: "Qui est le 44ème président des USA ?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
+Answer.create(question: q_3, content: "Barack Obama", correct: true)
+Answer.create(question: q_3, content: "Donald Trump", correct: false)
+Answer.create(question: q_3, content: "Bill Clinton", correct: false)
+Answer.create(question: q_3, content: "Georges W Bush", correct: false)
 q_3.save!
 p "created 1 question!"
 
 
-q_4 = Question.create(content: "Qu'elle est la capitale de la Turquie?", point_value: 1, theme: Theme.find_by(name: "Geography"))
+q_4 = Question.create(content: "Quelle est la capitale de la Turquie?", point_value: 1, theme: Theme.find_by(name: "Geography"))
 Answer.create(question: q_4, content: "Ankara", correct: true)
 Answer.create(question: q_4, content: "Istanbul", correct: false)
 Answer.create(question: q_4, content: "Izmir", correct: false)
@@ -94,11 +94,11 @@ q_4.save!
 p "created 1 question!"
 
 
-q_5 = Question.create(content: "Quel compositeur, auteur de l'Arlésienne et Don Procopio est célèbre pour son opéra 'Carmen'?", point_value: 2, theme: Theme.find_by(name: "General knowledge"))
-Answer.create(question: q_5, content: "Georges Bizet", correct: true)
-Answer.create(question: q_5, content: "Giuseppe Verdi", correct: false)
-Answer.create(question: q_5, content: "Gioachino Rossini", correct: false)
-Answer.create(question: q_5, content: "Richard Wagner", correct: false)
+q_5 = Question.create(content: "Quel est le compositeur le plus joué au monde?", point_value: 2, theme: Theme.find_by(name: "General knowledge"))
+Answer.create(question: q_5, content: "Beethoven", correct: true)
+Answer.create(question: q_5, content: "Mozart", correct: false)
+Answer.create(question: q_5, content: "Rohff", correct: false)
+Answer.create(question: q_5, content: "Patrick Sébastien", correct: false)
 q_5.save!
 p "created 1 question!"
 
@@ -112,11 +112,11 @@ q_6.save!
 p "created 1 question!"
 
 
-q_7 = Question.create(content: "En 1939, la Grande Bretagne et la France déclarent la guerre à l'Allemagne après qu'elle ai débuté l'invasion de quel pays?", point_value: 1, theme: Theme.find_by(name: "History"))
-Answer.create(question: q_7, content: "Pologne", correct: true)
-Answer.create(question: q_7, content: "Tchécoslovaquie", correct: false)
-Answer.create(question: q_7, content: "Autriche", correct: false)
-Answer.create(question: q_7, content: "Hongrie", correct: false)
+q_7 = Question.create(content: "Qui est le compositeur du slogan Mc Donald's 'I'm lovin' it' ?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
+Answer.create(question: q_7, content: "Justin Timberlake", correct: true)
+Answer.create(question: q_7, content: "Drake", correct: false)
+Answer.create(question: q_7, content: "Pharrell Williams", correct: false)
+Answer.create(question: q_7, content: "Snoop Dog", correct: false)
 q_7.save!
 p "created 1 question!"
 
@@ -139,11 +139,11 @@ q_9.save!
 p "created 1 question!"
 
 
-q_10 = Question.create(content: "Quelle lune est le seul satellite de notre système solaire a posséder une atmosphère dense?", point_value: 1, theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_10, content: "Titan", correct: true)
-Answer.create(question: q_10, content: "Europa", correct: false)
-Answer.create(question: q_10, content: "Miranda", correct: false)
-Answer.create(question: q_10, content: "Callisto", correct: false)
+q_10 = Question.create(content: "Qui est le king de la terre battue à Rolland Garros ?", point_value: 1, theme: Theme.find_by(name: "Science"))
+Answer.create(question: q_10, content: "Rafael Nadal", correct: true)
+Answer.create(question: q_10, content: "Novak Djokovic", correct: false)
+Answer.create(question: q_10, content: "Roger Federer", correct: false)
+Answer.create(question: q_10, content: "Edouard Doin", correct: false)
 q_10.save!
 p "created 1 question!"
 
