@@ -9,7 +9,6 @@ class ParticipationsController < ApplicationController
     participation = Participation.find(params[:id])
     participation.toggle!(:ready)
     @game = participation.game
-
     broadcast_players_list
   end
 

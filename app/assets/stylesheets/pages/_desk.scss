@@ -4,7 +4,7 @@
 
 #players-desk-1round {
   width: 1200px;
-  height: 450px;
+  height: 300px;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
@@ -13,7 +13,7 @@
   img {
     width: 100%;
     position: absolute;
-    top: -198px;
+    top: -118px;
     right: 10px;
     z-index: -1;
   }
@@ -23,8 +23,8 @@
   background-image: asset-url('round1/desk-1round.png');
   background-size: contain;
   background-position: center;
-  width: 250px;
-  height: 355px;
+  width: 166.7px;
+  height: 236.7px;
   position: relative;
 }
 
@@ -35,33 +35,34 @@
   border-radius: 5px;
   color: #eef7fc;
   text-align: center;
-  padding: 4px;
+  padding: 1px;
   text-shadow: #f7d648 1px 0 10px;
-  left: 55px;
-  top: 32px;
-  width: 140px;
+  left: 36px;
+  top: 19px;
+  width: 93.4px;
+  font-size: 15px;
 }
 
 #card-point-1round {
   background-color: #eef7fc52;
   border-radius: 5px;
-  width: 100px;
-  height: 225px;
+  width: 66.7px;
+  height: 150px;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-  left: 75px;
-  top: 86px;
+  left: 50px;
+  top: 60px;
 }
 
 #card-point-1round-looser {
   background-color: rgba(229, 16, 16, 0.601);
   border-radius: 5px;
-  width: 100px;
-  height: 225px;
+  width: 66.7px;
+  height: 150px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -78,8 +79,8 @@
   border-radius: 5px;
   border: solid 2px #e85a19;
   box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
-  width: 80px;
-  height: 20px;
+  width: 53.4px;
+  height: 13.4px;
   margin: 0px;
 }
 
@@ -105,15 +106,7 @@
   background: radial-gradient(#eef7fc, #D8D8D8);
   border-radius: 5px;
   border: solid 2px #e85a19;
-  width: 80px;
-  height: 20px;
+  width: 53.4px;
+  height: 13.4px;
   margin: 0px;
-}
-
-.looser {
-  color: brown;
-  position: absolute;
-  font-size: 40px;
-  top: -17px;
-  right: 167px;
 }
