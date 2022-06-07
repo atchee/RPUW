@@ -1,9 +1,7 @@
 .card-players {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px 72px;
-  margin-left: 132px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px auto;
 }
 
 .card-player {
