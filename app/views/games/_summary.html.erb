@@ -1,15 +1,17 @@
-<% participations.each do |participation| %>
+<div class="summary">
+  <% participations.each do |participation| %>
 
-  <% if participation.point == 9 %>
-    <div class="winner">
-      <p>The winner is : <%= participation.user.nickname %> | Score : <%= participation.point %></p>
-    </div>
-  <% else %>
-    <span>
-      <p>Looser : </p>
-      <p>Joueur<%= participation.user.nickname %> | Score : <%= participation.point %></p>
-    </span>
+    <% if participation.point == 9 %>
+      <div class="winner-gif">
+        <%= image_tag "gif/gold-glitter.gif"%>
+      </div>
+      <div class="winner">
+        <%= image_tag "gif/winner.png"%>
+        <%= image_tag "avatar/#{participation.user.photo.filename}.png", id:"avatar-winner"%>
+        <p><%= participation.user.nickname %> | <%= participation.point %> pts</p>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= link_to "Play again",root_path, class:"big-yellow-btn" %>
+  <%= link_to "Play again",root_path, class:"big-yellow-btn" %>
+</div>
