@@ -7,11 +7,11 @@
           <p id="owner">
             <%= player.nickname %>
             <span>
-              <i class="fa fa-check check flip"></i>
+              <i class="fa fa-check check"></i>
             </span>
            </p>
         <%elsif player.find_participation(game).ready? %>
-          <p><%= player.nickname %> <span><i class="fa fa-check check flip"></i></span></p>
+          <p><%= player.nickname %> <span><i class="fa fa-check check"></i></span></p>
         <% else %>
           <%= player.nickname %>
         <% end %>
