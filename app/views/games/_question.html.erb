@@ -6,11 +6,13 @@
     <br>
     <%= "Pour #{question.point_value} point(s)" %>
   </div>
-    <div class="block-answers">
+    <div class="block-answers" data-controller="listener">
       <ul class="flex-container answers" data-answer-target="listButton">
         <% question.answers.each do |answer| %>
           <div class="flex-content" id="choice" data-answer-target="input">
-            <li class= "answer" id="<%= "correct" if answer.correct? %>" data-action="click->answer#revealAnswer" data-answer-answer-id-param="<%= answer.id %>">
+          <%# <button id="clicktest" data-action="click->listener#ouioui" data-listener-target="clicktest">test</button> %>
+            <li class= "answer" id="<%= "correct" if answer.correct? %>" data-action="click->answer#revealAnswer click->listener#non" data-answer-answer-id-param="<%= answer.id %>, ">
+            <% %>
               <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post } %>
             </li>
           </div>

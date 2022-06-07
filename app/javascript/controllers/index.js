@@ -13,6 +13,8 @@ application.register("desk", DeskController)
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
+import ListenerController from "./listener_controller.js"
+application.register("listener", ListenerController)
 
 import TimerController from "./timer_controller.js"
 application.register("timer", TimerController)

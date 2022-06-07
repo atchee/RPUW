@@ -26,15 +26,16 @@
       </div>
     <% end %>
   </div>
-
   <div class="btn-play">
     <% unless user.find_participation(game).ready? %>
       <%= link_to "Are you ready", ready_participation_path(user.find_participation(game)), data: { turbo_method: :post }, id:"test", class:"big-yellow-btn" %>
     <% end %>
   </div>
 
+
   <div class="btn-play">
     <% if game.players_ready? && game.user == user %>
+
       <%= link_to "Start", start_game_path(game), class:"big-yellow-btn", data: { turbo_method: :post } %>
     <% end %>
   </div>
