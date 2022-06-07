@@ -43,6 +43,8 @@ class AnswersController < ApplicationController
         broadcast_desk
         broadcast_timer
       end
+
+      @game.update(status: "ended") if @game.question_number == 40
     end
   end
 

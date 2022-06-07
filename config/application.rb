@@ -16,6 +16,9 @@ module RPUW
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # Turn off the default way Rails will handle errors
+    config.exceptions_app = self.routes
+
     # Configuration for the application, engines, and railties goes here.
     #
     config.active_job.queue_adapter = :sidekiq
