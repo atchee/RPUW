@@ -21,7 +21,7 @@ import { Controller } from "@hotwired/stimulus"
           if (owner) this._nextQuestion()
         }
         if (this.timeValue > 10) {
-          this.element.classList.add("timer_green");
+          this.element.classList.add("timer_green", "timer");
         }
         if (this.timeValue < 10){
           this.element.classList.remove("timer_green");

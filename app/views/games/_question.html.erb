@@ -1,10 +1,10 @@
 <div class="game">
   <div class="block-questions">
-
+  <div class="question-point">
+    <p><%= "#{question.point_value} pts" %></p>
+  </div>
   <div class="question">
     <%= question.content %>
-    <br>
-    <%= "Pour #{question.point_value} point(s)" %>
   </div>
     <div class="block-answers">
       <ul class="flex-container answers" data-answer-target="listButton">
