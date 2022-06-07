@@ -8,13 +8,14 @@
             <%= image_tag "avatar/#{player.photo.filename}.png", class:"avatar-large"%>
             <p><%= player.nickname %></p>
             <span>
-              <i class="fa fa-check check flip"></i>
+              <i class="fa fa-check check"></i>
             </span>
            </div>
         <%elsif player.find_participation(game).ready? %>
+
           <div class="">
             <%= image_tag "avatar/#{player.photo.filename}.png", class:"avatar-large"%>
-            <p><%= player.nickname %> <span><i class="fa fa-check check flip"></i></span></p>
+            <p><%= player.nickname %> <span><i class="fa fa-check check"></i></span></p>
           </div>
         <% else %>
         <div>
