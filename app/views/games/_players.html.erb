@@ -1,15 +1,12 @@
-
-<% unless user.find_participation(game).ready? %>
-  <div class="waiting-container">
+<div id="sas">
+  <% unless user.find_participation(game).ready? %>
     <div class="focus">
       <div class="focus--mask">
         <p class="focus--mask-inner">Waiting</p>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 
-<div id="sas">
   <div class="card-players">
     <% players.each do |player| %>
       <div class="fa-stack fa-1x card-player";>
@@ -46,9 +43,9 @@
 
   </div>
 
-  <div class="btn-play">
+  <div>
     <% if game.players_ready? && game.user == user %>
-      <%= link_to "Start", start_game_path(game), class:"big-yellow-btn", data: { turbo_method: :post } %>
+      <%= link_to "Start", start_game_path(game), class:"little-yellow-btn", data: { turbo_method: :post } %>
     <% end %>
   </div>
 
