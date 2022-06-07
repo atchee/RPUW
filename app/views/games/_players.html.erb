@@ -32,12 +32,14 @@
           <p><%= player.nickname %></p>
         </div>
         <% end %>
+        <% if user == player %>
+          <% unless user.find_participation(game).ready? %>
+            <%= link_to "Ready ?", ready_participation_path(user.find_participation(game)), data: { turbo_method: :post }, id:"test", class:"little-orange-btn" %>
+          <% end %>
+        <% end %>
       </div>
     <% end %>
 
-    <% unless user.find_participation(game).ready? %>
-      <%= link_to "Ready ?", ready_participation_path(user.find_participation(game)), data: { turbo_method: :post }, id:"test", class:"little-orange-btn" %>
-    <% end %>
   </div>
 
   <div>
