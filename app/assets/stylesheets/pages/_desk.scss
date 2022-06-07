@@ -11,7 +11,11 @@
   padding-top: 112px;
 
   img {
-    width: min-content;
+    width: 100%;
+    position: absolute;
+    top: -198px;
+    right: 10px;
+    z-index: -1;
   }
 }
 
