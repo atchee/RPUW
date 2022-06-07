@@ -1,4 +1,5 @@
-<div id="player-desk-1round" data-controller="desk" data-desk-points-value="<%= participation.game.previous_question.point_value %>">
+<div id="player-desk-1round" data-controller="desk" data-desk-points-value="<%= participation.game.previous_question.point_value %>" data-desk-correct-value="<%= participation.game.previous_attempts %>">
+  <%= image_tag "avatar/#{participation.user.photo.filename}.png" %>
   <p id="player-nickname-1round"><%= participation.user.nickname %></p>
 
   <div id="<%= participation.game.incorrect_attempt?(participation) ? 'card-point-1round-looser' : 'card-point-1round' %>">
