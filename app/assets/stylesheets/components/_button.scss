@@ -67,9 +67,11 @@
   color: #eef7fc;
   height: 30px;
   position: absolute;
-  bottom: -12px;
-  left: -25px;
+  bottom: -14px;
+  left: 56px;
   box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
+  display: flex;
+  align-items: center;
 
   &:hover {
     color: #eef7fc;

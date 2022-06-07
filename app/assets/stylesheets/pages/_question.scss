@@ -1,30 +1,30 @@
 .block-questions {
   color: #eef7fc;
   background: rgb(42, 58, 132);
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 20px;
   box-shadow: 0 4px 15px 0 rgba(65, 133, 234, 0.515);
   padding: 0px 28px;
   margin: auto;
-  height: 200px;
+  height: 220px;
   width: 70%;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
   flex-direction: column;
   align-content: space-around;
 }
 
 .question {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .answers {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   list-style-type: none;
   display: grid;
   grid-auto-columns: 1fr;
@@ -104,9 +104,10 @@
   align-items: center;
   justify-content: space-around;
   position: absolute;
-  top: 80px;
-  right: 231px;
+  top: 68px;
+  right: 245px;
   box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
+  font-size: 16px;
 
   p{
     padding : 0px;
