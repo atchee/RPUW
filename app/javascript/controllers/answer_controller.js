@@ -17,7 +17,7 @@ export default class extends Controller {
 
 		const answerId = evt.params.answerId;
 		console.log(this.participationIdValue);
-		console.log(answerId);
+		console.log("answerid:",answerId)
 		const url = `/participations/${this.participationIdValue}/answer?answer_id=${answerId}`;
 		console.log(url);
 		fetch(url, {
