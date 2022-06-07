@@ -11,26 +11,26 @@ puts "Database cleaned"
 
 
 user_1 = User.new({ nickname: "Açelya", email: 'Açelya@lewagon.com', password: 'password', password_confirmation: 'password', admin: true })
-file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-ace_wg6tis.png")
-user_1.photo.attach(io: file, filename: "avatar-ace_wg6tis", content_type: "image/png")
+file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654590798/RPUW/avatar-ace_1_wbwvnd.png")
+user_1.photo.attach(io: file, filename: "avatar-ace_1_wbwvnd", content_type: "image/png")
 user_1.save!
 p 'created 1 user'
 
 user_2 = User.new({ nickname: "Sophie", email: 'Sophie@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
 file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-sophie_okhgjj.png")
-user_2.photo.attach(io: file, filename: "avatar-sophie_okhgjj", content_type: "image/png")
+user_2.photo.attach(io: file, filename: "avatar-sophie_1_xqe3ib", content_type: "image/png")
 user_2.save!
 p 'created 1 user'
 
 user_3 = User.new({ nickname: "Edouard", email: 'Edouard@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
-file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-edouard_jxnko2.png")
-user_3.photo.attach(io: file, filename: "avatar-edouard_jxnko2", content_type: "image/png")
+file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654590798/RPUW/avatar-edouard_1_xxoknq.png")
+user_3.photo.attach(io: file, filename: "avatar-edouard_1_xxoknq", content_type: "image/png")
 user_3.save!
 p 'created 1 user'
 
 user_4 = User.new({ nickname: "Adams", email: 'Adams@lewagon.com', password: 'password', password_confirmation: 'password', admin: false })
-file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654510743/RPUW/avatar-adams_zpnqft.png")
-user_4.photo.attach(io: file, filename: "avatar-adams_zpnqft", content_type: "image/png")
+file = URI.open("https://res.cloudinary.com/alk1805/image/upload/v1654590798/RPUW/avatar-adams_1_iiwkwo.png")
+user_4.photo.attach(io: file, filename: "avatar-adams_1_iiwkwo", content_type: "image/png")
 user_4.save!
 p 'created 1 user'
 
