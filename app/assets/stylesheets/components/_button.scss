@@ -64,3 +64,22 @@
   right: 5%;
   top: 50%;
 }
+
+.little-orange-btn {
+  border-radius: 5px;
+  background-color: #e9933e;
+  margin: 0 auto;
+  padding: 2px 5px;
+  color: #eef7fc;
+  height: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: 113px;
+  box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
+
+  &:hover {
+    color : #eef7fc;
+    background-color: rgb(25, 135, 45);
+    box-shadow: 0 4px 15px 0 rgba(25, 135, 45, 0.75);
+  }
+}
