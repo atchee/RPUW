@@ -36,16 +36,12 @@
         <% end %>
       </div>
     <% end %>
-
-  </div>
-
-  <div>
-
   </div>
 
   <div>
     <% if game.players_ready? && game.user == user %>
       <%= link_to "Start", start_game_path(game), class:"little-yellow-btn", data: { turbo_method: :post } %>
+
     <% end %>
   </div>
 

@@ -10,6 +10,7 @@ export default class extends Controller {
 		this.csrfToken = document
 			.querySelector('meta[name="csrf-token"]')
 			.getAttribute('content');
+
 	}
 
 	revealAnswer(evt) {
