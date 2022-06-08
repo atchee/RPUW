@@ -11,8 +11,10 @@
         <% question.answers.each do |answer| %>
           <div class="flex-content" id="choice" data-answer-target="input">
           <%# <button id="clicktest" data-action="click->listener#ouioui" data-listener-target="clicktest">test</button> %>
-            <li class= "answer" id="<%= "correct" if answer.correct? %>" data-action="click->answer#revealAnswer click->listener#non" data-answer-answer-id-param="<%= answer.id %>, ">
-            <% %>
+            <li class= "answer" id="<%= "correct" if answer.correct? %>"
+                data-action="click->answer#revealAnswer <%= answer.correct? ? "click->listener#yes" : "click->listener#no" %>"
+                data-answer-answer-id-param="<%= answer.id %>">
+
               <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post } %>
             </li>
           </div>

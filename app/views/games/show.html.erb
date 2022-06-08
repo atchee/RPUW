@@ -1,7 +1,7 @@
 <%= turbo_stream_from @game %>
 <%= turbo_stream_from current_user %>
 
-<div data-controller="answer" data-answer-participation-id-value="<%= current_user.find_participation(@game).id %>">
+<div id="game-show" data-controller="answer" data-answer-participation-id-value="<%= current_user.find_participation(@game).id %>" data-user-id="<%= current_user.id %>">
   <div class="container" id="game">
     <% unless @game.started? || @game.ended? %>
       <div id="players">
@@ -9,14 +9,14 @@
       </div>
     <% end %>
 
-    <div id="timer" class="<%= "owner" if current_user == @game.user %>">
-      <% if @game.started? %>
-        <%= render "games/timer", game: @game %>
-      <% end %>
-    </div>
+      <div id="timer" class="<%= "owner" if current_user == @game.user %>">
+        <% if @game.started? %>
+          <%= render "games/timer", state: "running", game: @game %>
+        <% end %>
+      </div>
 
     <div id="question">
-      <% if @game.started? %>
+      <% if @game.started? && @game.current_question %>
         <%= render "games/question", question: @game.current_question %>
       <% end %>
     </div>

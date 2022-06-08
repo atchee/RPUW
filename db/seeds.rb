@@ -2,6 +2,7 @@ require 'open-uri'
 require 'json'
 
 puts "Cleaning up database..."
+Attempt.destroy_all
 Game.destroy_all
 Theme.destroy_all
 Question.destroy_all
@@ -221,6 +222,7 @@ Answer.create(question: q_19, content: "12", correct: false)
 q_19.save!
 p "created 1 question!"
 
+
 q_20 = Question.create(content: "La ceinture d'astéroïdes est située entre quelles plannetes ?", point_value: 2, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_20, content: "Mars et Jupiter", correct: true)
 Answer.create(question: q_20, content: "Jupiter et Saturn", correct: false)
@@ -228,6 +230,7 @@ Answer.create(question: q_20, content: "Mercure et Venus", correct: false)
 Answer.create(question: q_20, content: "La Terre et Mars", correct: false)
 q_20.save!
 p "created 1 question!"
+
 
 q_21 = Question.create(content: "Quel pays est resté neutre durant la Seconde Guerre Mondiale ?", point_value: 1, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_21, content: "Suisse", correct: true)
@@ -237,6 +240,7 @@ Answer.create(question: q_21, content: "Italie", correct: false)
 q_21.save!
 p "created 1 question!"
 
+
 q_22 = Question.create(content: "Quel est l'infinitif du verbe figurant dans la phrase 'Nous jouons ensemble' ?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_22, content: "Jouer", correct: true)
 Answer.create(question: q_22, content: "Jouir", correct: false)
@@ -244,6 +248,7 @@ Answer.create(question: q_22, content: "Jurer", correct: false)
 Answer.create(question: q_22, content: "Jul", correct: false)
 q_22.save!
 p "created 1 question!"
+
 
 q_23 = Question.create(content: "En quelle année a eu lieu la bataille d'Austerlitz ?", point_value: 2, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_23, content: "1805", correct: true)
@@ -260,6 +265,7 @@ Answer.create(question: q_24, content: "The Rock", correct: false)
 Answer.create(question: q_24, content: "Mission: Impossible", correct: false)
 q_24.save!
 p "created 1 question!"
+
 
 q_25 = Question.create(content: "Qui est le père de Luke Skywalker ?", point_value: 1, theme: Theme.find_by(name: "Literature"))
 Answer.create(question: q_25, content: "Les 3", correct: true)
