@@ -45,7 +45,7 @@ themes_list = [
   "Literature",
   "General knowledge",
   "Mythology",
-  "Movies",
+  "Science",
   "Manga & Anime",
   "Sports",
   "History",
@@ -148,7 +148,7 @@ q_10.save!
 p "created 1 question!"
 
 
-q_11 = Question.create(content: "Quel est le réalisateur du film 'American Graffiti'?", point_value: 1, theme: Theme.find_by(name: "Movies"))
+q_11 = Question.create(content: "Quel est le réalisateur du film 'American Graffiti'?", point_value: 1, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_11, content: "George Lucas", correct: true)
 Answer.create(question: q_11, content: "Ron Howard", correct: false)
 Answer.create(question: q_11, content: "Francis Ford Coppola", correct: false)
@@ -157,7 +157,7 @@ q_11.save!
 p "created 1 question!"
 
 
-q_12 = Question.create(content: "Quelle bataille menée en 1859 par la France contre l'Autriche contribua à la naissance d'une nation italienne?", point_value: 3, theme: Theme.find_by(name: "History"))
+q_12 = Question.create(content: "Quelle bataille menée par la France contre l'Autriche contribua à la naissance d'une nation italienne?", point_value: 3, theme: Theme.find_by(name: "History"))
 Answer.create(question: q_12, content: "Solférino", correct: true)
 Answer.create(question: q_12, content: "Magenta", correct: false)
 Answer.create(question: q_12, content: "Marengo", correct: false)
@@ -197,7 +197,7 @@ Answer.create(question: q_16, content: "Baldr", correct: false)
 q_16.save!
 p "created 1 question!"
 
-q_17 = Question.create(content: "Qui a découvert la péniciline", point_value: 3, theme: Theme.find_by(name: "Movies"))
+q_17 = Question.create(content: "Qui a découvert la péniciline ", point_value: 3, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_17, content: "Alexander Flemming", correct: true)
 Answer.create(question: q_17, content: "Marie Curie", correct: false)
 Answer.create(question: q_17, content: "Alfred Nobel", correct: false)
@@ -253,7 +253,7 @@ Answer.create(question: q_23, content: "1825", correct: false)
 q_23.save!
 p "created 1 question!"
 
-q_24 = Question.create(content: "Lequel de ces films n'est PAS sorti en 1996?", point_value: 2, theme: Theme.find_by(name: "Movies"))
+q_24 = Question.create(content: "Lequel de ces films n'est PAS sorti en 1996?", point_value: 2, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_24, content: "Gladiator", correct: true)
 Answer.create(question: q_24, content: "Independence Day", correct: false)
 Answer.create(question: q_24, content: "The Rock", correct: false)
@@ -301,7 +301,7 @@ Answer.create(question: q_29, content: "Kawasaki", correct: false)
 q_29.save!
 p "created 1 question!"
 
-q_30 = Question.create(content: "Qui est le réalisateur du film Kill Bill?", point_value: 1, theme: Theme.find_by(name: "Movies"))
+q_30 = Question.create(content: "Qui est le réalisateur du film Kill Bill?", point_value: 1, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_30, content: "Quentin Tarantino", correct: true)
 Answer.create(question: q_30, content: "Arnold Schwarzenegger", correct: false)
 Answer.create(question: q_30, content: "David Lean", correct: false)
@@ -373,7 +373,7 @@ Answer.create(question: q_38, content: "6", correct: false)
 q_38.save!
 p "created 1 question!"
 
-q_39 = Question.create(content: "Le film de 1996 'Fargo' se déroule principalement dans quel état des USA?", point_value: 1, theme: Theme.find_by(name: "Movies"))
+q_39 = Question.create(content: "Le film de 1996 'Fargo' se déroule principalement dans quel état des USA?", point_value: 1, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_39, content: "Minnesota", correct: true)
 Answer.create(question: q_39, content: "Dakota du Nord", correct: false)
 Answer.create(question: q_39, content: "Dakota du Sud", correct: false)
