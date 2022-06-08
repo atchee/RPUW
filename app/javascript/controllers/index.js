@@ -19,6 +19,9 @@ application.register("generique", GeneriqueController)
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
+import JsConfettiController from "./js_confetti_controller.js"
+application.register("js-confetti", JsConfettiController)
+
 import ListenerController from "./listener_controller.js"
 application.register("listener", ListenerController)
 

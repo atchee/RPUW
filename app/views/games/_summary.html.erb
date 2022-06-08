@@ -1,10 +1,8 @@
-<div class="summary" data-controller="generique">
+<div class="summary" data-controller="js-confetti" data-controller="generique">
+
   <% participations.each do |participation| %>
 
     <% if participation.point == 9 %>
-      <div class="winner-gif">
-        <%= image_tag "gif/gold-glitter.gif"%>
-      </div>
       <div class="winner">
         <%= image_tag "gif/winner.png"%>
         <%= image_tag "avatar/#{participation.user.photo.filename}.png", id:"avatar-winner"%>
