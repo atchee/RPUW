@@ -25,25 +25,29 @@ class AnswersController < ApplicationController
         broadcast_answer
         broadcast_pause_timer
         broadcast_desk
+
         sleep 2 # To get time to see the broadcasted score
         broadcast_timer
         broadcast_question
+        broadcast_others_desk
       end
     else
       attempt_record(false)
       @looser = @participation.user
       # broadcast_scores
-
+      broadcast_desk
       if @game.all_attempts_false
         broadcast_answer
         sleep 2 # To get time to see the broadcasted score
         @game.question_number += 1
         @game.save
-        broadcast_desk
+        # broadcast_desk
+        broadcast_scores
+
         broadcast_question
         broadcast_timer
       end
-      @game.update(status: "ended") if @game.question_number == question.count
+      @game.update(status: "ended") if @game.question_number == @game.questions.count
     end
   end
 
