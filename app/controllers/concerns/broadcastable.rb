@@ -98,5 +98,4 @@ module Broadcastable
     Turbo::StreamsChannel.broadcast_remove_to @game,
       target: "timer"
   end
-
 end
