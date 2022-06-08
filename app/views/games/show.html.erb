@@ -1,7 +1,7 @@
 <%= turbo_stream_from @game %>
 <%= turbo_stream_from current_user %>
 
-<div data-controller="answer" data-answer-participation-id-value="<%= current_user.find_participation(@game).id %>">
+<div id="game-show" data-controller="answer" data-answer-participation-id-value="<%= current_user.find_participation(@game).id %>" data-user-id="<%= current_user.id %>">
   <div class="container" id="game">
     <% unless @game.started? || @game.ended? %>
       <div id="players">

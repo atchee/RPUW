@@ -2,6 +2,7 @@ require 'open-uri'
 require 'json'
 
 puts "Cleaning up database..."
+Attempt.destroy_all
 Game.destroy_all
 Theme.destroy_all
 Question.destroy_all

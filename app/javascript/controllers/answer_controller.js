@@ -10,17 +10,13 @@ export default class extends Controller {
 		this.csrfToken = document
 			.querySelector('meta[name="csrf-token"]')
 			.getAttribute('content');
-
 	}
 
 	revealAnswer(evt) {
 		evt.preventDefault();
 
 		const answerId = evt.params.answerId;
-		console.log(this.participationIdValue);
-		console.log("answerid:",answerId)
 		const url = `/participations/${this.participationIdValue}/answer?answer_id=${answerId}`;
-		console.log(url);
 		fetch(url, {
 			method: 'POST',
 			headers: {

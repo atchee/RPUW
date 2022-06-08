@@ -100,6 +100,7 @@ module Broadcastable
       target: "timer"
   end
 
+
   def broadcast_pause_timer
     Turbo::StreamsChannel.broadcast_update_to @game,
       target: "timer",
