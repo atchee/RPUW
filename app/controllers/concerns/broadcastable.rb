@@ -54,6 +54,19 @@ module Broadcastable
       }
   end
 
+  def broadcast_others_desk
+    @game.participations.each do |participation|
+      unless participation == @participation
+        Turbo::StreamsChannel.broadcast_update_to @game,
+          target: "participation_#{participation.id}",
+          partial: "games/desk",
+          locals: {
+            participation: participation
+          }
+        end
+    end
+  end
+
   def broadcast_scores
     Turbo::StreamsChannel.broadcast_update_to @game,
       target: "scores",
