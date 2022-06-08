@@ -5,13 +5,20 @@ import { Controller } from "@hotwired/stimulus"
   export default class extends Controller {
     static values = {
       gameId: Number,
-      time: Number
+      time: Number,
+      state: String,
     };
 
     connect() {
       console.log("test")
+      if (this.stateValue == "paused") return
+      // const answerId = params.answerId
       const owner = this.element.closest("#timer").classList.contains("owner")
+      const answers = document.querySelectorAll('.point-1round-orange');
+      const question = this
       console.log(owner)
+      console.log("Hello from timer controller")
+      console.log('answers:', answers)
       this.csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute("content")
       this.interval = setInterval(() => {
         if (this.timeValue > 0) {
@@ -19,6 +26,10 @@ import { Controller } from "@hotwired/stimulus"
           this.timeValue -= 1
         } else {
           if (owner) this._nextQuestion()
+          // && si aucune attemtps (count des attempts de la game_question_id dans ce game_id)
+          // @game.game_questions.attempt.count
+          // no click sur une réponse for all participants
+          //&& answers.length == 0
         }
         if (this.timeValue > 10) {
           this.element.classList.add("timer_green", "timer");
