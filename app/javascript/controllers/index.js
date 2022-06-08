@@ -13,14 +13,14 @@ application.register("desk", DeskController)
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
+import JsConfettiController from "./js_confetti_controller.js"
+application.register("js-confetti", JsConfettiController)
+
 import ListenerController from "./listener_controller.js"
 application.register("listener", ListenerController)
-
-import TimerController from "./timer_controller.js"
-application.register("timer", TimerController)
 
 import SolutionController from "./solution_controller.js"
 application.register("solution", SolutionController)
 
-// import TitleAnimationController from "./title_animation_controller.js"
-// application.register("title-animation", TitleAnimationController)
+import TimerController from "./timer_controller.js"
+application.register("timer", TimerController)
