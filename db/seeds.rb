@@ -395,165 +395,165 @@ Answer.create(question: q_40, content: "Suisse", correct: false)
 q_40.save!
 p "created 1 question!"
 
-q_41 = Question.create(content: "Qu'est-ce que Joey ne partage pas ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_41, content: "Sa nouriture", correct: true)
-Answer.create(question: q_41, content: "Sa voiture", correct: false)
-Answer.create(question: q_41, content: "Son fauteuil", correct: false)
-Answer.create(question: q_41, content: "Ses vêtements", correct: false)
-q_41.save!
-p "created 1 question!"
+# q_41 = Question.create(content: "Qu'est-ce que Joey ne partage pas ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_41, content: "Sa nouriture", correct: true)
+# Answer.create(question: q_41, content: "Sa voiture", correct: false)
+# Answer.create(question: q_41, content: "Son fauteuil", correct: false)
+# Answer.create(question: q_41, content: "Ses vêtements", correct: false)
+# q_41.save!
+# p "created 1 question!"
 
-q_42 = Question.create(content: "Quelle histoire faut-il raconter à une femme pour la séduire selon Joey Tribbiani ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_42, content: "Une randonnée en Espagne", correct: true)
-Answer.create(question: q_42, content: "Un chat à Hawaï", correct: false)
-Answer.create(question: q_42, content: "Un sauvetage au Mexiquel", correct: false)
-Answer.create(question: q_42, content: "Une balade à Venise", correct: false)
-q_42.save!
-p "created 1 question!"
+# q_42 = Question.create(content: "Quelle histoire faut-il raconter à une femme pour la séduire selon Joey Tribbiani ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_42, content: "Une randonnée en Espagne", correct: true)
+# Answer.create(question: q_42, content: "Un chat à Hawaï", correct: false)
+# Answer.create(question: q_42, content: "Un sauvetage au Mexiquel", correct: false)
+# Answer.create(question: q_42, content: "Une balade à Venise", correct: false)
+# q_42.save!
+# p "created 1 question!"
 
-q_43 = Question.create(content: "Quel est l'animal de compagnie de Ross ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_43, content: "Une perruche baptisée Suzie", correct: true)
-Answer.create(question: q_43, content: "Un singe baptisé Marcel", correct: false)
-Answer.create(question: q_43, content: "Un chien baptisé Joel", correct: false)
-Answer.create(question: q_43, content: "Un chat baptisé Nina", correct: false)
-q_43.save!
-p "created 1 question!"
+# q_43 = Question.create(content: "Quel est l'animal de compagnie de Ross ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_43, content: "Une perruche baptisée Suzie", correct: true)
+# Answer.create(question: q_43, content: "Un singe baptisé Marcel", correct: false)
+# Answer.create(question: q_43, content: "Un chien baptisé Joel", correct: false)
+# Answer.create(question: q_43, content: "Un chat baptisé Nina", correct: false)
+# q_43.save!
+# p "created 1 question!"
 
-q_44 = Question.create(content: "Dans quel ville se déroule l'action de la série Stranger Things ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_44, content: "Hawkins", correct: true)
-Answer.create(question: q_44, content: "Milwaukee", correct: false)
-Answer.create(question: q_44, content: "Durtery", correct: false)
-Answer.create(question: q_44, content: "Fairview", correct: false)
-q_44.save!
-p "created 1 question!"
+# q_44 = Question.create(content: "Dans quel ville se déroule l'action de la série Stranger Things ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_44, content: "Hawkins", correct: true)
+# Answer.create(question: q_44, content: "Milwaukee", correct: false)
+# Answer.create(question: q_44, content: "Durtery", correct: false)
+# Answer.create(question: q_44, content: "Fairview", correct: false)
+# q_44.save!
+# p "created 1 question!"
 
-q_45 = Question.create(content: "Qui est Bob Marlex ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_45, content: "Un chanteur de Regex", correct: true)
-Answer.create(question: q_45, content: "Un acteur de Kung Fu", correct: false)
-Answer.create(question: q_45, content: "Un danseur étoile", correct: false)
-Answer.create(question: q_45, content: "Un humoriste pas très drôle", correct: false)
-q_45.save!
-p "created 1 question!"
+# q_45 = Question.create(content: "Qui est Bob Marlex ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_45, content: "Un chanteur de Regex", correct: true)
+# Answer.create(question: q_45, content: "Un acteur de Kung Fu", correct: false)
+# Answer.create(question: q_45, content: "Un danseur étoile", correct: false)
+# Answer.create(question: q_45, content: "Un humoriste pas très drôle", correct: false)
+# q_45.save!
+# p "created 1 question!"
 
-q_46 = Question.create(content: "Quel est le langage le plus faciste ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_46, content: "CSS", correct: true)
-Answer.create(question: q_46, content: "JS", correct: false)
-Answer.create(question: q_46, content: "HTML", correct: false)
-Answer.create(question: q_46, content: "PYTHON", correct: false)
-q_46.save!
-p "created 1 question!"
+# q_46 = Question.create(content: "Quel est le langage le plus faciste ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_46, content: "CSS", correct: true)
+# Answer.create(question: q_46, content: "JS", correct: false)
+# Answer.create(question: q_46, content: "HTML", correct: false)
+# Answer.create(question: q_46, content: "PYTHON", correct: false)
+# q_46.save!
+# p "created 1 question!"
 
-q_47 = Question.create(content: "Comment font les abeilles pour communiquer aujourd'hui ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_47, content: "Par e-miel", correct: true)
-Answer.create(question: q_47, content: "Par Bzz Bzz Bzz", correct: false)
-Answer.create(question: q_47, content: "Par Wifi", correct: false)
-Answer.create(question: q_47, content: "Par télégramme", correct: false)
-q_47.save!
-p "created 1 question!"
+# q_47 = Question.create(content: "Comment font les abeilles pour communiquer aujourd'hui ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_47, content: "Par e-miel", correct: true)
+# Answer.create(question: q_47, content: "Par Bzz Bzz Bzz", correct: false)
+# Answer.create(question: q_47, content: "Par Wifi", correct: false)
+# Answer.create(question: q_47, content: "Par télégramme", correct: false)
+# q_47.save!
+# p "created 1 question!"
 
-q_48 = Question.create(content: "Qu'est qui est rose et connecté ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_48, content: "Un porc USB", correct: true)
-Answer.create(question: q_48, content: "Un filament rose", correct: false)
-Answer.create(question: q_48, content: "Une panthère rose", correct: false)
-Answer.create(question: q_48, content: "Britney Spears", correct: false)
-q_48.save!
-p "created 1 question!"
+# q_48 = Question.create(content: "Qu'est qui est rose et connecté ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_48, content: "Un porc USB", correct: true)
+# Answer.create(question: q_48, content: "Un filament rose", correct: false)
+# Answer.create(question: q_48, content: "Une panthère rose", correct: false)
+# Answer.create(question: q_48, content: "Britney Spears", correct: false)
+# q_48.save!
+# p "created 1 question!"
 
-q_49 = Question.create(content: "Quel est l'animal préféré des développeurs ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_49, content: "Le python", correct: true)
-Answer.create(question: q_49, content: "", correct: false)
-Answer.create(question: q_49, content: "", correct: false)
-Answer.create(question: q_49, content: "", correct: false)
-q_49.save!
-p "created 1 question!"
+# q_49 = Question.create(content: "Quel est l'animal préféré des développeurs ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_49, content: "Le python", correct: true)
+# Answer.create(question: q_49, content: "", correct: false)
+# Answer.create(question: q_49, content: "", correct: false)
+# Answer.create(question: q_49, content: "", correct: false)
+# q_49.save!
+# p "created 1 question!"
 
-q_50 = Question.create(content: "Qu'est-ce qui court et qui se jette ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_50, content: "Une courgette", correct: true)
-Answer.create(question: q_50, content: "Neymar", correct: false)
-Answer.create(question: q_50, content: "Mike Powell", correct: false)
-Answer.create(question: q_50, content: "Usain Bolt", correct: false)
-q_50.save!
-p "created 1 question!"
+# q_50 = Question.create(content: "Qu'est-ce qui court et qui se jette ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_50, content: "Une courgette", correct: true)
+# Answer.create(question: q_50, content: "Neymar", correct: false)
+# Answer.create(question: q_50, content: "Mike Powell", correct: false)
+# Answer.create(question: q_50, content: "Usain Bolt", correct: false)
+# q_50.save!
+# p "created 1 question!"
 
-q_51 = Question.create(content: "Comment s'appelle la fille de Guillaume Debailly, alias Malotru ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_51, content: "Prune", correct: true)
-Answer.create(question: q_51, content: "Clémentine", correct: false)
-Answer.create(question: q_51, content: "Myrtille", correct: false)
-Answer.create(question: q_51, content: "Framboise", correct: false)
-q_51.save!
-p "created 1 question!"
+# q_51 = Question.create(content: "Comment s'appelle la fille de Guillaume Debailly, alias Malotru ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_51, content: "Prune", correct: true)
+# Answer.create(question: q_51, content: "Clémentine", correct: false)
+# Answer.create(question: q_51, content: "Myrtille", correct: false)
+# Answer.create(question: q_51, content: "Framboise", correct: false)
+# q_51.save!
+# p "created 1 question!"
 
-q_52 = Question.create(content: "En quelle année débute l'histoire de la série Stranger Things ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_52, content: "1983", correct: true)
-Answer.create(question: q_52, content: "1979", correct: false)
-Answer.create(question: q_52, content: "1985", correct: false)
-Answer.create(question: q_52, content: "1988", correct: false)
-q_52.save!
-p "created 1 question!"
+# q_52 = Question.create(content: "En quelle année débute l'histoire de la série Stranger Things ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_52, content: "1983", correct: true)
+# Answer.create(question: q_52, content: "1979", correct: false)
+# Answer.create(question: q_52, content: "1985", correct: false)
+# Answer.create(question: q_52, content: "1988", correct: false)
+# q_52.save!
+# p "created 1 question!"
 
-q_53 = Question.create(content: "Quelle est la couleur des vêtements de la Garde de Nuit ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_53, content: "Noire", correct: true)
-Answer.create(question: q_53, content: "Rouge", correct: false)
-Answer.create(question: q_53, content: "Verte", correct: false)
-Answer.create(question: q_53, content: "Blanche", correct: false)
-q_53.save!
-p "created 1 question!"
+# q_53 = Question.create(content: "Quelle est la couleur des vêtements de la Garde de Nuit ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_53, content: "Noire", correct: true)
+# Answer.create(question: q_53, content: "Rouge", correct: false)
+# Answer.create(question: q_53, content: "Verte", correct: false)
+# Answer.create(question: q_53, content: "Blanche", correct: false)
+# q_53.save!
+# p "created 1 question!"
 
-q_54 = Question.create(content: "Comment est surnommé Sandor Clegane ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_54, content: "Le limier", correct: true)
-Answer.create(question: q_54, content: "Le lion", correct: false)
-Answer.create(question: q_54, content: "Le dragon", correct: false)
-Answer.create(question: q_54, content: "Le brûlé", correct: false)
-q_54.save!
-p "created 1 question!"
+# q_54 = Question.create(content: "Comment est surnommé Sandor Clegane ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_54, content: "Le limier", correct: true)
+# Answer.create(question: q_54, content: "Le lion", correct: false)
+# Answer.create(question: q_54, content: "Le dragon", correct: false)
+# Answer.create(question: q_54, content: "Le brûlé", correct: false)
+# q_54.save!
+# p "created 1 question!"
 
-q_55 = Question.create(content: "Quel est le second prénom de Chandler ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_55, content: "Muriel", correct: true)
-Answer.create(question: q_55, content: "Maria", correct: false)
-Answer.create(question: q_55, content: "Benedict", correct: false)
-Answer.create(question: q_55, content: "Line", correct: false)
-q_55.save!
-p "created 1 question!"
+# q_55 = Question.create(content: "Quel est le second prénom de Chandler ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_55, content: "Muriel", correct: true)
+# Answer.create(question: q_55, content: "Maria", correct: false)
+# Answer.create(question: q_55, content: "Benedict", correct: false)
+# Answer.create(question: q_55, content: "Line", correct: false)
+# q_55.save!
+# p "created 1 question!"
 
-q_56 = Question.create(content: "Dans quelle recette de dessert Rachel ajoute par erreur de la viande ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_56, content: "Le diplomate", correct: true)
-Answer.create(question: q_56, content: "Le tiramisu", correct: false)
-Answer.create(question: q_56, content: "Le pudding", correct: false)
-Answer.create(question: q_56, content: "Le fraisier", correct: false)
-q_56.save!
-p "created 1 question!"
+# q_56 = Question.create(content: "Dans quelle recette de dessert Rachel ajoute par erreur de la viande ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_56, content: "Le diplomate", correct: true)
+# Answer.create(question: q_56, content: "Le tiramisu", correct: false)
+# Answer.create(question: q_56, content: "Le pudding", correct: false)
+# Answer.create(question: q_56, content: "Le fraisier", correct: false)
+# q_56.save!
+# p "created 1 question!"
 
-q_57 = Question.create(content: "Quel est le plus léger des gaz derrière l’hydrogène ?", point_value: 1, theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_57, content: "Hélium", correct: true)
-Answer.create(question: q_57, content: "Gallium", correct: false)
-Answer.create(question: q_57, content: "Oxygen", correct: false)
-Answer.create(question: q_57, content: "Brome", correct: false)
-q_57.save!
-p "created 1 question!"
+# q_57 = Question.create(content: "Quel est le plus léger des gaz derrière l’hydrogène ?", point_value: 1, theme: Theme.find_by(name: "Science"))
+# Answer.create(question: q_57, content: "Hélium", correct: true)
+# Answer.create(question: q_57, content: "Gallium", correct: false)
+# Answer.create(question: q_57, content: "Oxygen", correct: false)
+# Answer.create(question: q_57, content: "Brome", correct: false)
+# q_57.save!
+# p "created 1 question!"
 
-q_58 = Question.create(content: "Qui accompagne Louis De Funès dans le film 'L’aile ou la cuisse' ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_58, content: "Coluche", correct: true)
-Answer.create(question: q_58, content: "Bourvil", correct: false)
-Answer.create(question: q_58, content: "Michel Galabru", correct: false)
-Answer.create(question: q_58, content: "Claude Gensac", correct: false)
-q_58.save!
-p "created 1 question!"
+# q_58 = Question.create(content: "Qui accompagne Louis De Funès dans le film 'L’aile ou la cuisse' ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_58, content: "Coluche", correct: true)
+# Answer.create(question: q_58, content: "Bourvil", correct: false)
+# Answer.create(question: q_58, content: "Michel Galabru", correct: false)
+# Answer.create(question: q_58, content: "Claude Gensac", correct: false)
+# q_58.save!
+# p "created 1 question!"
 
-q_59 = Question.create(content: "Quelle est la marque de voiture de James Bond période Daniel Craig ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_59, content: "Aston Martin", correct: true)
-Answer.create(question: q_59, content: "Mercedes", correct: false)
-Answer.create(question: q_59, content: "BMW", correct: false)
-Answer.create(question: q_59, content: "Tesla", correct: false)
-q_59.save!
-p "created 1 question!"
+# q_59 = Question.create(content: "Quelle est la marque de voiture de James Bond période Daniel Craig ?", point_value: 1, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_59, content: "Aston Martin", correct: true)
+# Answer.create(question: q_59, content: "Mercedes", correct: false)
+# Answer.create(question: q_59, content: "BMW", correct: false)
+# Answer.create(question: q_59, content: "Tesla", correct: false)
+# q_59.save!
+# p "created 1 question!"
 
-q_60 = Question.create(content: "Sur quelle planète vit Anakin avant de partir rejoindre les Jedi ?", point_value: 3, theme: Theme.find_by(name: "General Knowledge"))
-Answer.create(question: q_60, content: "Tatooine", correct: true)
-Answer.create(question: q_60, content: "Mustafar", correct: false)
-Answer.create(question: q_60, content: "Naboo", correct: false)
-Answer.create(question: q_60, content: "Dagobah", correct: false)
-q_60.save!
-p "created 1 question!"
+# q_60 = Question.create(content: "Sur quelle planète vit Anakin avant de partir rejoindre les Jedi ?", point_value: 3, theme: Theme.find_by(name: "General Knowledge"))
+# Answer.create(question: q_60, content: "Tatooine", correct: true)
+# Answer.create(question: q_60, content: "Mustafar", correct: false)
+# Answer.create(question: q_60, content: "Naboo", correct: false)
+# Answer.create(question: q_60, content: "Dagobah", correct: false)
+# q_60.save!
+# p "created 1 question!"
 
 
 # q_44 = Question.create(content: "On a dartboard, what number is directly opposite No. 1?", theme: Theme.find_by(name: "General Knowledge"))
