@@ -9,14 +9,14 @@
       </div>
     <% end %>
 
-    <div id="timer" class="<%= "owner" if current_user == @game.user %>">
-      <% if @game.started? %>
-        <%= render "games/timer", game: @game %>
-      <% end %>
-    </div>
+      <div id="timer" class="<%= "owner" if current_user == @game.user %>">
+        <% if @game.started? %>
+          <%= render "games/timer", state: "running", game: @game %>
+        <% end %>
+      </div>
 
     <div id="question">
-      <% if @game.started? %>
+      <% if @game.started? && @game.current_question %>
         <%= render "games/question", question: @game.current_question %>
       <% end %>
     </div>

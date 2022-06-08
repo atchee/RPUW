@@ -6,10 +6,12 @@ export default class extends Controller {
 	static values = {
 		gameId: Number,
 		time: Number,
+    state: String,
 	};
 
 	connect() {
 		// console.log("test")
+    if (this.stateValue == "paused") return
 		const owner = this.element.closest('#timer').classList.contains('owner');
 		// console.log(owner)
 		this.csrfToken = document

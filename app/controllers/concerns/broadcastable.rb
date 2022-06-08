@@ -90,7 +90,8 @@ module Broadcastable
       target: "timer",
       partial: "games/timer",
       locals: {
-        game: @game
+        game: @game,
+        state: "running"
       }
   end
 
@@ -98,4 +99,16 @@ module Broadcastable
     Turbo::StreamsChannel.broadcast_remove_to @game,
       target: "timer"
   end
+
+
+  def broadcast_pause_timer
+    Turbo::StreamsChannel.broadcast_update_to @game,
+      target: "timer",
+      partial: "games/timer",
+      locals: {
+        game: @game,
+        state: "paused"
+      }
+  end
+
 end

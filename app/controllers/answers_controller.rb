@@ -22,7 +22,8 @@ class AnswersController < ApplicationController
         broadcast_remove_scores
         broadcast_remove_timer
       else
-        broadcast_answer
+        broadcast_answer        
+        broadcast_pause_timer
         broadcast_desk
         sleep 2 # To get time to see the broadcasted score
         broadcast_timer
@@ -42,8 +43,7 @@ class AnswersController < ApplicationController
         broadcast_question
         broadcast_timer
       end
-
-      @game.update(status: "ended") if @game.question_number == 40
+      @game.update(status: "ended") if @game.question_number == question.count
     end
   end
 
