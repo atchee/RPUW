@@ -22,7 +22,6 @@ export default class extends Controller {
 				this.element.innerText = this.timeValue - 1;
 				this.timeValue -= 1;
 			} else {
-				console.log('answerId:', answerId);
 				if (owner) this._nextQuestion();
 			}
 			if (this.timeValue > 10) {
