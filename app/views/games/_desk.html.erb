@@ -1,4 +1,9 @@
-<div id="player-desk-1round" data-controller="desk" data-desk-points-value="<%= participation.game.previous_question.point_value %>" data-desk-correct-value="<%= participation.game.previous_attempts.any? ? participation.game.previous_attempts.last.success : false %>">
+<div id="player-desk-1round" data-controller="desk"
+     data-desk-user-id-value="<%= participation.user.id %>"
+     data-desk-points-value="<%= participation.game.previous_question.point_value %>" 
+     data-desk-previous-value="<%= participation.game.previous_attempts.find { |at| at.success }&.participation == participation %>">
+
+
   <%= image_tag "avatar/#{participation.user.photo.filename}.png" %>
   <p id="player-nickname-1round"><%= participation.user.nickname %></p>
 

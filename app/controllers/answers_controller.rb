@@ -23,7 +23,7 @@ class AnswersController < ApplicationController
         broadcast_remove_timer
       else
         broadcast_answer
-        broadcast_scores
+        broadcast_desk
         sleep 2 # To get time to see the broadcasted score
         broadcast_timer
         broadcast_question
@@ -32,15 +32,14 @@ class AnswersController < ApplicationController
       attempt_record(false)
       @looser = @participation.user
       # broadcast_scores
-      broadcast_desk
+      
       if @game.all_attempts_false
         broadcast_answer
         sleep 2 # To get time to see the broadcasted score
         @game.question_number += 1
         @game.save
-        broadcast_question
-        broadcast_scores
         broadcast_desk
+        broadcast_question
         broadcast_timer
       end
 

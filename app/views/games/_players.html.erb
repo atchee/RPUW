@@ -10,24 +10,24 @@
   <div class="card-players">
     <% players.each do |player| %>
       <div class="fa-stack fa-1x card-player";>
-        <% if game.user == player && player.find_participation(game).ready?%>
+        <% if game.user == player && player.find_participation(game).ready? %>
           <div class="card-player-inside" id="owner">
-            <%= image_tag "avatar/#{player.photo.filename}.png", class:"avatar-sas"%>
+            <%= cl_image_tag player.photo.key, class:"avatar-sas" %>
             <p><%= player.nickname %></p>
             <span>
               <i class="fa fa-check check"></i>
             </span>
           </div>
-        <%elsif player.find_participation(game).ready? %>
+        <% elsif player.find_participation(game).ready? %>
           <div class="card-player-inside">
-            <%= image_tag "avatar/#{player.photo.filename}.png", class:"avatar-sas"%>
+            <%= cl_image_tag player.photo.key, class:"avatar-sas" %>
             <p><%= player.nickname %> <span><i class="fa fa-check check flip"></i></span></p>
           </div>
         <% else %>
-        <div class="card-player-inside">
-          <%= image_tag "avatar/#{player.photo.filename}.png", class:"avatar-sas"%>
-          <p><%= player.nickname %></p>
-        </div>
+          <div class="card-player-inside">
+            <%= cl_image_tag player.photo.key, class:"avatar-sas" %>
+            <p><%= player.nickname %></p>
+          </div>
         <% end %>
         <% if user == player %>
           <% unless user.find_participation(game).ready? %>
@@ -41,7 +41,6 @@
   <div>
     <% if game.players_ready? && game.user == user %>
       <%= link_to "Start", start_game_path(game), class:"little-yellow-btn", data: { turbo_method: :post } %>
-
     <% end %>
   </div>
 
