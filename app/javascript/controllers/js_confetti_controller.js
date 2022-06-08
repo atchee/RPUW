@@ -17,9 +17,12 @@ export default class extends Controller {
       })
 
     }, 2000);
+    console.log("generique")
+    const audio = new Audio('https://res.cloudinary.com/alk1805/video/upload/v1654681138/RPUW/OuiOuiGenerique2_kjfgln.mp3');
+    audio.play();
   }
 
-  disconnect () {
+  disconnect() {
     clearInterval(this.confetti)
   }
 }
