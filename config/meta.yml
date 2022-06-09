@@ -1,5 +1,5 @@
 meta_product_name: "RPUW"
 meta_title: "Requête Pour Un Winner"
 meta_description: "Jouez avec vos amis au jeu mythique de votre enfance"
-meta_image: "favicon.png" # should exist in `app/assets/images/`
+meta_image: "favicon.ico" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
