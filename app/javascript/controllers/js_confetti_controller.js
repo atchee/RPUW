@@ -18,7 +18,7 @@ export default class extends Controller {
 
     }, 2000);
     console.log("generique")
-    const audio = new Audio('https://res.cloudinary.com/alk1805/video/upload/v1654681138/RPUW/OuiOuiGenerique2_kjfgln.mp3');
+    const audio = new Audio('https://res.cloudinary.com/alk1805/video/upload/v1654783754/RPUW/mix_10s_audio-joiner.com_vj6qh1.mp3');
     audio.play();
   }
 

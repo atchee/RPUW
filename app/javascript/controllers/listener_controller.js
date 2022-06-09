@@ -6,7 +6,7 @@ export default class extends Controller {
 
   yes() {
     console.log("yes")
-    const audio = new Audio('https://res.cloudinary.com/alk1805/video/upload/v1654597547/RPUW/yes.mp3_xmcxrq.mp3');
+    const audio = new Audio('https://res.cloudinary.com/alk1805/video/upload/v1654783443/RPUW/JJkkUo5y4Mh_bruitage-bonne-reponse-question-pour-un-champion_mp3cut.net_ww0daq_mp3cut.net_fjm3jw.mp3');
     audio.play();
   }
 
@@ -18,7 +18,7 @@ export default class extends Controller {
 
   no() {
     console.log("no")
-    const audio = new Audio('https://res.cloudinary.com/alk1805/video/upload/v1654597547/RPUW/no.mp3_guuge0.mp3');
+    const audio = new Audio('https://res.cloudinary.com/alk1805/video/upload/v1654783590/RPUW/no.mp3_2_htkash_mp3cut.net_snmect.mp3');
     audio.play();
   }
 
