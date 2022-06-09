@@ -126,7 +126,7 @@ q_8 = Question.create(content: "Quelle est la capitale de l'Ecosse ?", point_val
 Answer.create(question: q_8, content: "Edimbourg", correct: true)
 Answer.create(question: q_8, content: "Glasgow", correct: false)
 Answer.create(question: q_8, content: "Leeds", correct: false)
-Answer.create(question: q_8, content: "Londre", correct: false)
+Answer.create(question: q_8, content: "Londres", correct: false)
 q_8.save!
 p "created 1 question!"
 
@@ -158,11 +158,11 @@ q_11.save!
 p "created 1 question!"
 
 
-q_12 = Question.create(content: "Quelle bataille menée en 1859 par la France contre l'Autriche contribua à la naissance d'une nation italienne ?", point_value: 3, theme: Theme.find_by(name: "History"))
-Answer.create(question: q_12, content: "Solférino", correct: true)
-Answer.create(question: q_12, content: "Magenta", correct: false)
-Answer.create(question: q_12, content: "Marengo", correct: false)
-Answer.create(question: q_12, content: "Montebello", correct: false)
+q_12 = Question.create(content: "Qui est l’ennemi de la France pendant la guerre de Cent ans ?", point_value: 3, theme: Theme.find_by(name: "History"))
+Answer.create(question: q_12, content: "Angleterre", correct: true)
+Answer.create(question: q_12, content: "Espagne", correct: false)
+Answer.create(question: q_12, content: "Tatooine", correct: false)
+Answer.create(question: q_12, content: "Narnia", correct: false)
 q_12.save!
 p "created 1 question!"
 
@@ -223,7 +223,7 @@ q_19.save!
 p "created 1 question!"
 
 
-q_20 = Question.create(content: "La ceinture d'astéroïdes est située entre quelles plannetes ?", point_value: 2, theme: Theme.find_by(name: "Science"))
+q_20 = Question.create(content: "La ceinture d'astéroïdes est située entre quelles planètes ?", point_value: 2, theme: Theme.find_by(name: "Science"))
 Answer.create(question: q_20, content: "Mars et Jupiter", correct: true)
 Answer.create(question: q_20, content: "Jupiter et Saturn", correct: false)
 Answer.create(question: q_20, content: "Mercure et Venus", correct: false)
@@ -315,7 +315,7 @@ Answer.create(question: q_30, content: "Stanley Kubrick", correct: false)
 q_30.save!
 p "created 1 question!"
 
-q_31 = Question.create(content: "Qui est le dieu Grec des arts, la beauté masculine et de la guérison ?", point_value: 2, theme: Theme.find_by(name: "Mythology"))
+q_31 = Question.create(content: "Qui est le dieu Grec des arts, de la beauté masculine et de la guérison ?", point_value: 2, theme: Theme.find_by(name: "Mythology"))
 Answer.create(question: q_31, content: "Apollon", correct: true)
 Answer.create(question: q_31, content: "Déméter", correct: false)
 Answer.create(question: q_31, content: "Zeus", correct: false)
@@ -451,7 +451,7 @@ Answer.create(question: q_47, content: "Par télégramme", correct: false)
 q_47.save!
 p "created 1 question!"
 
-q_48 = Question.create(content: "Qu'est qui est rose et connecté ?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
+q_48 = Question.create(content: "Qu'est-ce qui est rose et connecté ?", point_value: 1, theme: Theme.find_by(name: "General knowledge"))
 Answer.create(question: q_48, content: "Un porc USB", correct: true)
 Answer.create(question: q_48, content: "Un filament rose", correct: false)
 Answer.create(question: q_48, content: "Une panthère rose", correct: false)
