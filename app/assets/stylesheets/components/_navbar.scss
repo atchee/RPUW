@@ -12,3 +12,26 @@
 .navbar-lewagon .navbar-brand img {
   width: 10%;
 }
+
+.navbar-home {
+  justify-content: space-between;
+  background-color: transparent;
+  margin-bottom: 0px;
+  padding: 5px;
+  padding-top: 20px;
+}
+
+.navbar-nav-home {
+  display: flex;
+  flex-direction: row-reverse !important;
+  padding-right: 30px;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.drop-down-menu-home {
+  position: absolute;
+  inset: 0px auto auto -117px;
+  margin: 0px;
+  transform: translate3d(0px, 42px, 0px);
+}

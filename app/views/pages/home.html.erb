@@ -1,20 +1,23 @@
 
-<div class="container" data-controller="gamestart">
-  <div class="player-mode">
-    <%= image_tag "babyvira/baby-lain.gif" %>
+<div id="background-homepage">
+  <%= render "shared/navbarhome" %>
+  <div class="container" data-controller="gamestart">
+    <div class="player-mode">
+      <%= image_tag "logo/logo-sans-inner.png", id:"logo-homepage" %>
+      <div class="player-mode-btn">
+        <div class="big-yellow-btn">
+          <i class="fa-solid fa-user"></i>
+          <p class="yellow">Single player</p>
+        </div>
 
-    <div class="player-mode-btn">
-      <div class="big-yellow-btn">
-        <i class="fa-solid fa-user"></i>
-        <p class="yellow">Solo</p>
+        <%= link_to games_path, data: { turbo_method: :post } do %>
+            <div class="big-yellow-btn">
+              <i class="fa-solid fa-users"></i>
+              <p>Multiplayer</p>
+            </div>
+        <% end %>
       </div>
-
-      <%= link_to games_path, data: { turbo_method: :post } do %>
-          <div class="big-yellow-btn">
-            <i class="fa-solid fa-users"></i>
-            <p>Multijoueur</p>
-          </div>
-      <% end %>
+      <%= image_tag "babyvira/baby-lain.gif", id:"gif-homepage"%>
     </div>
   </div>
 </div>
