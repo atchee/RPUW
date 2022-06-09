@@ -7,7 +7,7 @@ class AnswersController < ApplicationController
     @game = @participation.game
 
     if @answer.correct?
-      @game.question_number += 1 if @game.current_attempts.select { |at| at.success }.empty?
+      @game.question_number += 1 if @game.current_attempts.select { |at| at.success }&.empty?
       @game.save
       @score = @participation.point += @answer.question.point_value
       @participation.update(point: @score)
