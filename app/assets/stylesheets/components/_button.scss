@@ -72,6 +72,7 @@
   box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
   display: flex;
   align-items: center;
+  animation: beat .50s infinite alternate;
 
   &:hover {
     color: #eef7fc;

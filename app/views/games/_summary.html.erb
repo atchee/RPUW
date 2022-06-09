@@ -5,11 +5,11 @@
     <% if participation.point == 9 %>
       <div class="winner">
         <%= image_tag "gif/winner.png"%>
+        <p id="winner-name"><%= participation.user.nickname %></p>
         <%= image_tag "avatar/#{participation.user.photo.filename}.png", id:"avatar-winner"%>
-        <p><%= participation.user.nickname %> | <%= participation.point %> pts</p>
       </div>
     <% end %>
   <% end %>
 
-  <%= link_to "Play again",root_path, class:"big-yellow-btn" %>
+  <%= link_to "Play Again",root_path, class:"little-yellow-btn" %>
 </div>
