@@ -8,7 +8,7 @@
   <% end %>
 
   <div class="card-players">
-    <% players.each do |player| %>
+    <% players.order(:id).each do |player| %>
       <div class="fa-stack fa-1x card-player";>
         <% if game.user == player && player.find_participation(game).ready? %>
           <div class="card-player-inside" id="owner">

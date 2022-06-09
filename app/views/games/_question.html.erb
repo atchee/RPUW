@@ -8,7 +8,7 @@
   </div>
     <div class="block-answers" data-controller="listener">
       <ul class="flex-container answers" data-answer-target="listButton">
-        <% question.answers.each do |answer| %>
+        <% question.answers.shuffle.each do |answer| %>
           <div class="flex-content" id="choice" data-answer-target="input">
           <%# <button id="clicktest" data-action="click->listener#ouioui" data-listener-target="clicktest">test</button> %>
             <li class= "answer" id="<%= "correct" if answer.correct? %>"
