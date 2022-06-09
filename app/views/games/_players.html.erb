@@ -31,7 +31,7 @@
         <% end %>
         <% if user == player %>
           <% unless user.find_participation(game).ready? %>
-            <%= link_to "Ready ?", ready_participation_path(user.find_participation(game)), data: { turbo_method: :post }, id:"test", class:"little-orange-btn" %>
+            <%= link_to "Rejoindre", ready_participation_path(user.find_participation(game)), data: { turbo_method: :post }, id:"test", class:"little-orange-btn" %>
           <% end %>
         <% end %>
       </div>
@@ -40,7 +40,7 @@
 
   <div>
     <% if game.players_ready? && game.user == user %>
-      <%= link_to "Start", start_game_path(game), class:"little-yellow-btn", data: { turbo_method: :post } %>
+      <%= link_to "Démarrer", start_game_path(game), class:"little-yellow-btn", data: { turbo_method: :post } %>
     <% end %>
   </div>
 
