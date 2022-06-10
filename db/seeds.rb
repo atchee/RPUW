@@ -174,7 +174,7 @@ Answer.create(question: q_13, content: "Cowboy Bebop", correct: false)
 q_13.save!
 p "created 1 question!"
 
-q_14 = Question.create(content: "Comment s'appelle le lion en peluche dans du manga Bleach ?", point_value: 2, theme: Theme.find_by(name: "Manga & Anime"))
+q_14 = Question.create(content: "Comment s'appelle le lion en peluche du manga Bleach ?", point_value: 2, theme: Theme.find_by(name: "Manga & Anime"))
 Answer.create(question: q_14, content: "Kon", correct: true)
 Answer.create(question: q_14, content: "Jo", correct: false)
 Answer.create(question: q_14, content: "Ichigo", correct: false)
@@ -284,9 +284,9 @@ q_26.save!
 p "created 1 question!"
 
 q_27 = Question.create(content: "A qui est attribué la création du Tableau périodique des éléments ?", point_value: 3, theme: Theme.find_by(name: "Science"))
-Answer.create(question: q_27, content: "Antoine Lavoisier", correct: true)
+Answer.create(question: q_27, content: "Dmitri Mendeleïev", correct: true)
 Answer.create(question: q_27, content: "Louis Pasteur", correct: false)
-Answer.create(question: q_27, content: "Dmitri Mendeleïev", correct: false)
+Answer.create(question: q_27, content: "Antoine Lavoisier", correct: false)
 Answer.create(question: q_27, content: "Alfred Nobel", correct: false)
 q_27.save!
 p "created 1 question!"
