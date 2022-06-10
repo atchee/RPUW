@@ -19,27 +19,26 @@
 #avatar-winner {
   object-fit: contain;
   width: 256px;
-  margin-bottom: 37px;
+  margin-bottom: 0px;
 }
 
 #winner-name {
   color: transparent;
   letter-spacing: 2px;
   font-weight: bold;
-  background-image: linear-gradient(
-    to right,
-    #763607 0,
-    #B36F0B 22%,
-    #DDA535 45%,
-    #F5C04A 50%,
-    #DDA535 55%,
-    #B36F0B 78%,
-    #763607 100%,
-  );
+  background-image: linear-gradient(to right,
+      #763607 0,
+      #B36F0B 22%,
+      #DDA535 45%,
+      #F5C04A 50%,
+      #DDA535 55%,
+      #B36F0B 78%,
+      #763607 100%,
+    );
   background-clip: text;
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 30px;
   font-size: 40px;
   position: absolute;
-  top: 218px;
+  top: 179px;
 }
