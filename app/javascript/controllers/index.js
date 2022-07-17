@@ -7,14 +7,14 @@ import { application } from "./application"
 import AnswerController from "./answer_controller.js"
 application.register("answer", AnswerController)
 
+import CheckUserSessionController from "./check_user_session_controller.js"
+application.register("check-user-session", CheckUserSessionController)
+
 import DeskController from "./desk_controller.js"
 application.register("desk", DeskController)
 
 import GamestartController from "./gamestart_controller.js"
 application.register("gamestart", GamestartController)
-
-// import GeneriqueController from "./generique_controller.js"
-// application.register("generique", GeneriqueController)
 
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
