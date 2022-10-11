@@ -1,30 +1,30 @@
 .blue-btn {
   border-radius: 5px;
-  background-color: #a2bbdf;
+  background-color: $lightblue;
   margin: 0 auto;
   padding: 5px;
-  color: #eef7fc;
-  box-shadow: 0 4px 15px 0 rgba(71, 143, 202, 0.75);
+  color: $white;
+  box-shadow: 0 4px 15px 0 $mediumblueshadow;
 
   &:hover {
-    color: #eef7fc;
+    color: $white;
   }
 }
 
 .big-yellow-btn {
   text-align: center;
-  background-image: linear-gradient(to right, #f7d648, #e9933e, #e85a19);
+  background-image: linear-gradient(to right, $yellow, $lightorange, $darkorange);
   width: 140px;
   height: 140px;
   margin: 20px;
-  color: #eef7fc;
+  color: $white;
   display: flex;
   justify-content: center;
   border-radius: 20px;
   align-items: center;
   align-content: space-around;
   flex-direction: column;
-  box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
+  box-shadow: 0 4px 15px 0 $lightoranfeshadow;
 
   background-size: 300% 100%;
   transition: all 0.4s ease-in-out;
@@ -33,8 +33,8 @@
   &:hover {
     background-position: 100% 0;
     transition: all 0.4s ease-in-out;
-    background-image: linear-gradient(to right, #478fca, #2a3a84, #a2bbdf, #2a3a84);
-    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    background-image: linear-gradient(to right, $mediumblue, $darkblue, $lightblue, $darkblue);
+    box-shadow: 0 4px 15px 0 $mediumblueshadow;
   }
 
   i {
@@ -48,53 +48,53 @@
 
 .orange-btn {
   border-radius: 5px;
-  background-color: rgb(233, 147, 62);
+  background-color: $lightorange;
   margin: 0 auto;
   padding: 5px;
-  color: #eef7fc;
-  box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
+  color: $white;
+  box-shadow: 0 4px 15px 0 $darkorangeshadow;
 
   &:hover {
-    color: #eef7fc;
+    color: $white;
   }
 }
 
 .little-orange-btn {
   border-radius: 5px;
-  background-color: #e9933e;
+  background-color: $lightorange;
   margin: 0 auto;
   padding: 2px 5px;
-  color: #eef7fc;
+  color: $white;
   height: 34px;
   position: absolute;
   bottom: -14px;
   left: 56px;
-  box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
+  box-shadow: 0 4px 15px 0 $darkorangeshadow;
   display: flex;
   align-items: center;
   animation: beat .50s infinite alternate;
 
   &:hover {
-    color: #eef7fc;
-    background-color: rgb(25, 135, 45);
-    box-shadow: 0 4px 15px 0 rgba(25, 135, 45, 0.75);
+    color: $white;
+    background-color: $green;
+    box-shadow: 0 4px 15px 0 $greenshadow;
   }
 }
 
 .little-yellow-btn {
   text-align: center;
-  background-image: linear-gradient(to right, #f7d648, #e9933e, #e85a19);
+  background-image: linear-gradient(to right, $yellow, $lightorange, $darkorange);
   width: 220px;
   height: 70px;
   margin: 20px;
-  color: #eef7fc;
+  color: $white;
   display: flex;
   justify-content: center;
   border-radius: 20px;
   align-items: center;
   align-content: space-around;
   flex-direction: column;
-  box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
+  box-shadow: 0 4px 15px 0 $lightoranfeshadow;
 
   background-size: 300% 100%;
   transition: all 0.4s ease-in-out;
@@ -103,8 +103,8 @@
   &:hover {
     background-position: 100% 0;
     transition: all 0.4s ease-in-out;
-    background-image: linear-gradient(to right, #478fca, #2a3a84, #a2bbdf, #2a3a84);
-    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    background-image: linear-gradient(to right, $mediumblue, $darkblue, $lightblue, $darkblue);
+    box-shadow: 0 4px 15px 0 $mediumblueshadow;
   }
 
   i {
