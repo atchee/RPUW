@@ -31,11 +31,11 @@
 #player-nickname-1round {
   position: absolute;
   background-color: #a2bbdf71;
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  box-shadow: 0 4px 15px 0 $mediumblueshadow;
   border-radius: 5px;
-  color: #eef7fc;
+  color: $white;
   text-align: center;
-  text-shadow: #f7d648 1px 0 10px;
+  text-shadow: $yellow 1px 0 10px;
   left: 23px;
   top: 13px;
   width: 70px;
@@ -52,13 +52,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  box-shadow: 0 4px 15px 0 $mediumblueshadow;
   left: 35px;
   top: 42px;
 }
 
 #card-point-1round-looser {
-  background-color: rgba(229, 16, 16, 0.601);
+  background-color: $redshadow;
   border-radius: 5px;
   width: 46.4px;
   height: 104.16px;
@@ -67,17 +67,17 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  box-shadow: 0 4px 15px 0 $mediumblueshadow;
   left: 35px;
   top: 42px;
   animation: fadeIn 0.5s linear;
 }
 
 .point-1round-orange {
-  background: radial-gradient(#f7d648, #f6ca44, #F4BD3F, #F3B03A, #F2AA38, #F1A335);
+  background: radial-gradient($yellow, #f6ca44, #F4BD3F, #F3B03A, #F2AA38, #F1A335);
   border-radius: 3px;
-  border: solid 1.5px #e85a19;
-  box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
+  border: solid 1.5px $darkorange;
+  box-shadow: 0 4px 15px 0 $lightoranfeshadow;
   width: 37.1px;
   height: 9.34px;
   margin: 0px;
@@ -102,9 +102,9 @@
 }
 
 .point-1round-gray {
-  background: radial-gradient(#eef7fc, #D8D8D8);
+  background: radial-gradient($white, #D8D8D8);
   border-radius: 3px;
-  border: solid 1.5px #e85a19;
+  border: solid 1.5px $darkorange;
   width: 37.1px;
   height: 9.34px;
   margin: 0px;

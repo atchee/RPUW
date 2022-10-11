@@ -12,15 +12,15 @@
 @import "pages/index";
 
 body {
-  background-color: #eef7fc;
+  background-color: $white;
 }
 
 a {
   text-decoration: none;
-  color: #eef7fc;
+  color: $white;
 
   &:hover {
     text-decoration: none;
-    color: #eef7fc;
+    color: $white;
   }
 }

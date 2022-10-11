@@ -1,10 +1,22 @@
-// Define variables for your color scheme
+//Charte Colors
+$white: #eef7fc;
+$yellow: #f7d648;
+$lightorange: #e9933e;
+$darkorange: #e85a19;
+$lightblue: #a2bbdf;
+$mediumblue: #478fca;
+$darkblue: #2a3a84;
+$green: #089c2f;
+$red: #cf0e0e;
 
-// For example:
-$red: #FD1015;
-$blue: #0D6EFD;
-$yellow: #FFC65A;
-$orange: #E67E22;
-$green: #1EDD88;
-$gray: #0E0000;
-$light-gray: #F4F4F4;
+//Shadow Colors:
+$lightoranfeshadow: #e9933ebf;
+$darkorangeshadow: #e85a19bf;
+$mediumblueshadow: #478fcabf;
+$darkblueshadow: #2a3a84bf;
+$redshadow: #cf0e0ebf;
+$greenshadow: #089c2f96;
+
+//Bootstrap Colors:
+$light-gray: #eef7fcbf;
+$gray: #b1b7bbbe;
