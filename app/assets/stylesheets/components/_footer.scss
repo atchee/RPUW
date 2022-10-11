@@ -1,15 +1,15 @@
 .footer {
-  background-image: linear-gradient(to right, #a2bbdf, #478fca, #2a3a84);
+  background-image: linear-gradient(to right, $lightblue, $mediumblue, $darkblue);
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 50px;
   padding: 0px 50px;
-  color: hwb(204 98% 0% / 0.425);
+  color: #fafdff6c;
 }
 
 #footer-text {
-  color: #fcfeff;
+  color: $white;
 }
 
 .footer-links {
@@ -17,7 +17,7 @@
   align-items: center;
 }
 .footer-links a {
-  color: #fcfeff;
+  color: $white;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
@@ -27,5 +27,5 @@
   opacity: 1;
 }
 .footer .fa-heart {
-  color: #D23333;
+  color: $red;
 }

@@ -1,9 +1,9 @@
 .block-questions {
-  color: #eef7fc;
-  background: rgb(42, 58, 132);
+  color: $white;
+  background: $darkblue;
   font-size: 20px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px 0 rgba(65, 133, 234, 0.515);
+  box-shadow: 0 4px 15px 0 $darkblueshadow;
   padding: 0px 28px;
   margin: auto;
   height: 220px;
@@ -37,7 +37,7 @@
 }
 
 .answer {
-  color:#eef7fc;
+  color:$white;
   background-color: #eef7fc52;
   border-radius: 5px;
   padding: 5px;
@@ -46,7 +46,7 @@
   align-items: center;
   align-content: space-around;
   flex-direction: column;
-  box-shadow: 0 4px 10px 0 rgba(65, 132, 234, 0.75);
+  box-shadow: 0 4px 10px 0 $mediumblueshadow;
 
   background-size: 300% 100%;
   transition: all 0.4s ease-in-out;
@@ -55,14 +55,14 @@
   &:hover {
     background-position: 100% 0;
     transition: all 1s ease-in-out;
-    background-image: linear-gradient(to right, #e9933e, #e85a19, #f7d648, #e85a19);
-    box-shadow: 0 4px 10px 0 rgba(227, 119, 67, 0.75);
+    background-image: linear-gradient(to right, $lightorange, $darkorange, $yellow, $darkorange);
+    box-shadow: 0 4px 10px 0 $lightoranfeshadow;
   }
 }
 
 .answer-false {
-  color:#eef7fc;
-  background-color: rgba(229, 16, 16, 0.601);
+  color:$white;
+  background-color: $redshadow;
   border-radius: 5px;
   padding: 5px;
   display: flex;
@@ -70,13 +70,13 @@
   align-items: center;
   align-content: space-around;
   flex-direction: column;
-  box-shadow: 0 4px 10px 0 rgba(229, 16, 16, 0.289);
+  box-shadow: 0 4px 10px 0 rgba(207, 14, 14, 0.29);
   animation: fadeIn 0.5s linear;
 }
 
 .answer-true {
-  color:#eef7fc;
-  background-color: rgba(25, 135, 45, 0.601);
+  color:$white;
+  background-color: $greenshadow;
   border-radius: 5px;
   padding: 5px;
   display: flex;
@@ -84,7 +84,7 @@
   align-items: center;
   align-content: space-around;
   flex-direction: column;
-  box-shadow: 0 4px 10px 0 rgba(10, 67, 20, 0.75);
+  box-shadow: 0 4px 10px 0 rgba(8, 156, 47, 0.29);
   animation: fadeIn 0.5s linear;
 }
 
@@ -94,19 +94,19 @@
 }
 
 .question-point {
-  color: #eef7fc;
+  color: $white;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: solid 2px #e85a19;
-  background-color: #e9933e;
+  border: solid 2px $darkorange;
+  background-color: $lightorange;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: absolute;
   top: 68px;
   right: 245px;
-  box-shadow: 0 4px 15px 0 rgba(227, 119, 67, 0.75);
+  box-shadow: 0 4px 15px 0 $darkorangeshadow;
   font-size: 16px;
 
   p{
