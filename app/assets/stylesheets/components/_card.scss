@@ -1,18 +1,72 @@
 .card-players {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 20px auto;
 }
 
 .card-player {
-  height: 50px;
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  height: 222px;
+  box-shadow: 0 4px 15px 0 $mediumblueshadow;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  width: 400px;
+  width: 184px;
+  position: relative;
+}
 
-  #owner {
-    background-image: linear-gradient(to right, #f7d648, #e9933e, #e85a19);
-    box-shadow: 0 4px 15px 0 rgba(232, 90, 25, 0.75);
+.card-player-inside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-bottom: 0px;
+    border-top: solid 1px black;
+    padding: 0px 40px;
   }
+}
+
+.check {
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-image: radial-gradient(#46EC8B, $green);
+  box-shadow: 0 4px 15px 0 $greenshadow;
+  color:#fcfeff;
+}
+
+.flip {
+	backface-visibility: visible !important;
+	animation: flip 2s ease;
+}
+@keyframes flip {
+	0% {
+		transform: perspective(400px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	40% {
+		transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	80% {
+		transform: perspective(400px) rotateY(360deg) scale(.95);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(400px) scale(1);
+		animation-timing-function: ease-in;
+	}
+}
+
+#owner {
+  background-color: #f7d748e0;
+  box-shadow: 0 4px 15px 0 #f7d748bf;
+  border-radius: 5px;
 }

@@ -1,5 +1,6 @@
 development:
-  adapter: async
+  adapter: redis
+  channel_prefix: RPUW_developement
 
 test:
   adapter: test

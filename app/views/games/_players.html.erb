@@ -1,37 +1,46 @@
-
 <div id="sas">
+  <% unless user.find_participation(game).ready? %>
+    <div class="focus">
+      <div class="focus--mask">
+        <p class="focus--mask-inner">Waiting</p>
+      </div>
+    </div>
+  <% end %>
 
   <div class="card-players">
-    <% players.each do |player| %>
+    <% players.order(:id).each do |player| %>
       <div class="fa-stack fa-1x card-player";>
-        <% if game.user == player && player.find_participation(game).ready?%>
-          <p id="owner">
-            <%= player.nickname %>
+        <% if game.user == player && player.find_participation(game).ready? %>
+          <div class="card-player-inside" id="owner">
+            <%= cl_image_tag player.photo.key, class:"avatar-sas" %>
+            <p><%= player.nickname %></p>
             <span>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa fa-check"></i>
+              <i class="fa fa-check check"></i>
             </span>
-           </p>
-        <%elsif game.user == player%>
-        <p><%= player.nickname %> <span><i class="fa-solid fa-star"></i></span></p>
-        <%elsif player.find_participation(game).ready? %>
-          <p><%= player.nickname %> <span><i class="fa fa-check"></i></span></p>
+          </div>
+        <% elsif player.find_participation(game).ready? %>
+          <div class="card-player-inside">
+            <%= cl_image_tag player.photo.key, class:"avatar-sas" %>
+            <p><%= player.nickname %> <span><i class="fa fa-check check flip"></i></span></p>
+          </div>
         <% else %>
-          <%= player.nickname %>
+          <div class="card-player-inside">
+            <%= cl_image_tag player.photo.key, class:"avatar-sas" %>
+            <p><%= player.nickname %></p>
+          </div>
+        <% end %>
+        <% if user == player %>
+          <% unless user.find_participation(game).ready? %>
+            <%= link_to "Rejoindre", ready_participation_path(user.find_participation(game)), data: { turbo_method: :post }, id:"test", class:"little-orange-btn" %>
+          <% end %>
         <% end %>
       </div>
     <% end %>
   </div>
 
-  <div class="btn-play">
-    <% unless user.find_participation(game).ready? %>
-      <%= link_to "Are you ready", ready_participation_path(user.find_participation(game)), data: { turbo_method: :post }, id:"test", class:"big-yellow-btn" %>
-    <% end %>
-  </div>
-
-  <div class="btn-play">
+  <div>
     <% if game.players_ready? && game.user == user %>
-      <%= link_to "Start", game_path(game), class:"big-yellow-btn"%>
+      <%= link_to "Démarrer", start_game_path(game), class:"little-yellow-btn", data: { turbo_method: :post } %>
     <% end %>
   </div>
 

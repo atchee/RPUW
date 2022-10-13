@@ -1,20 +1,33 @@
 
-<div class="container">
-  <div class="player-mode">
-    <%= image_tag "babyvira/baby-lain.png" %>
-
-    <div class="player-mode-btn">
-      <div class="big-yellow-btn">
-        <i class="fa-solid fa-user"></i>
-        <p class="yellow">Single player</p>
+<div id="background-homepage">
+  <%= render "shared/navbarhome" %>
+  <div class="container" >
+    <div class="player-mode">
+      <%= image_tag "logo/logo.gif", id:"logo-homepage" %>
+      <div class="player-mode-btn">
+        <div class="big-yellow-btn">
+          <i class="fa-solid fa-user"></i>
+          <p class="yellow">Solo</p>
+        </div>
+        <div data-controller="check-user-session">
+          <% if user_signed_in? %>
+            <%= link_to games_path, data: { turbo_method: :post } do %>
+                <div class="big-yellow-btn">
+                  <i data-action="click->check-user-session#desactivate_button"class="fa-solid fa-users"></i>
+                  <p data-check-user-session-target="button">Multijoueur</p>
+                </div>
+            <% end %>
+          <% else %>
+            <%= link_to new_user_session_path, data: { turbo_method: :get } do %>
+                <div class="big-yellow-btn">
+                  <i data-action="click->check-user-session#desactivate_button"class="fa-solid fa-users"></i>
+                  <p data-check-user-session-target="button">Multijoueur</p>
+                </div>
+            <% end %>
+          <% end %>
+        </div>
       </div>
-
-      <%= link_to games_path, data: { turbo_method: :post } do %>
-          <div class="big-yellow-btn">
-            <i class="fa-solid fa-users"></i>
-            <p>Multiplayer</p>
-          </div>
-      <% end %>
+      <%= image_tag "babyvira/baby-lain.gif", id:"gif-homepage"%>
     </div>
   </div>
 </div>

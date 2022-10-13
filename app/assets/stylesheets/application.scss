@@ -10,22 +10,17 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "components/question";
 
 body {
-  background-color: #eef7fc;
+  background-color: $white;
 }
 
 a {
   text-decoration: none;
+  color: $white;
 
   &:hover {
     text-decoration: none;
-  }
-}
-
-#test {
-  &:active {
-    color: red;
+    color: $white;
   }
 }

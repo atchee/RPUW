@@ -1,18 +1,29 @@
 <%= turbo_stream_from @game %>
 <%= turbo_stream_from current_user %>
 
-<div data-controller="answer" data-answer-participation-id-value="<%= current_user.find_participation(@game).id %>">
+<div id="game-show" data-controller="answer" data-answer-participation-id-value="<%= current_user.find_participation(@game).id %>" data-user-id="<%= current_user.id %>">
   <div class="container" id="game">
-    <% unless @game.started? %>
+    <% unless @game.started? || @game.ended? %>
       <div id="players">
-        <h3>Waiting for players</h3>
         <%= render "games/players", players: @game.players, game: @game, user: current_user %>
       </div>
     <% end %>
 
+      <div id="timer" data-controller="gamestart" class="<%= "owner" if current_user == @game.user %>">
+        <% if @game.started? %>
+          <%= render "games/timer", state: "running", game: @game %>
+        <% end %>
+      </div>
+
     <div id="question">
-      <% if @game.started? %>
+      <% if @game.started? && @game.current_question %>
         <%= render "games/question", question: @game.current_question %>
+      <% end %>
+    </div>
+
+    <div id="answer">
+      <% if @game.started? %>
+
       <% end %>
     </div>
 
@@ -21,10 +32,14 @@
         <%= render "games/scores", participations: @game.participations, looser: false %>
       <% end %>
     </div>
+
+    <div id="summary">
+      <% if @game.ended? %>
+        <%= render "games/summary", participations: @game.participations, looser: false %>
+      <% end %>
+    </div>
+    </div>
   </div>
-
-
-  <%= link_to "Display questions", start_game_path(@game), data: { turbo_method: :post } %>
 
   </div>
 </div>

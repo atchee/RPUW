@@ -7,5 +7,26 @@ import { application } from "./application"
 import AnswerController from "./answer_controller.js"
 application.register("answer", AnswerController)
 
+import CheckUserSessionController from "./check_user_session_controller.js"
+application.register("check-user-session", CheckUserSessionController)
+
+import DeskController from "./desk_controller.js"
+application.register("desk", DeskController)
+
+import GamestartController from "./gamestart_controller.js"
+application.register("gamestart", GamestartController)
+
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
+
+import JsConfettiController from "./js_confetti_controller.js"
+application.register("js-confetti", JsConfettiController)
+
+import ListenerController from "./listener_controller.js"
+application.register("listener", ListenerController)
+
+import SolutionController from "./solution_controller.js"
+application.register("solution", SolutionController)
+
+import TimerController from "./timer_controller.js"
+application.register("timer", TimerController)

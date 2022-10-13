@@ -1,16 +1,25 @@
+<div class="game">
+  <div class="block-questions">
+  <div class="question-point">
+    <p><%= "#{question.point_value} pt" %></p>
+  </div>
+  <div class="question">
+    <%= question.content %>
+  </div>
+    <div class="block-answers" data-controller="listener">
+      <ul class="flex-container answers" data-answer-target="listButton">
+        <% question.answers.shuffle.each do |answer| %>
+          <div class="flex-content" id="choice" data-answer-target="input">
+          <%# <button id="clicktest" data-action="click->listener#ouioui" data-listener-target="clicktest">test</button> %>
+            <li class= "answer" id="<%= "correct" if answer.correct? %>"
+                data-action="click->answer#revealAnswer <%= answer.correct? ? "click->listener#yes" : "click->listener#no" %>"
+                data-answer-answer-id-param="<%= answer.id %>">
 
- <div class="question" >
-  <%= question.content %>
-    <ul class="answer" class="flex-container">
-      <% question.answers.each do |answer| %>
-        <div class="flex-content" id="choice">
-          <li data-answer-target="input">
-            <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post, action: "click->answer#revealAnswer", answer_answer_id_param: answer.id } %>
-          </li>
-        </div>
-      <% end %>
-    </ul>
- </div>
- <div>
-  <span data-answer-target="result"></span>
- </div>
+              <%= link_to answer.content, answer_participation_path(answer), data: { turbo_method: :post } %>
+            </li>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

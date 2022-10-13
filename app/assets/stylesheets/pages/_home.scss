@@ -4,12 +4,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  img {
-    width: 20%;
-  }
+  height: 80vh;
 }
 
 .player-mode-btn {
   display: flex;
+  width: 750px;
+  justify-content: space-around;
+}
+
+#background-homepage {
+  background-image: linear-gradient(to bottom, $darkblue, $mediumblue, $lightblue);
+}
+
+#logo-homepage {
+  width: 47vw;
+  padding: 0px;
+}
+
+#gif-homepage {
+  width: 18vw;
 }

@@ -1,6 +1,8 @@
 #sas {
   display: flex;
-  align-content: space-around;
+  font-family: "Poppins", "Helvetica", "sans-serif";
+  flex-direction: column;
   align-items: center;
-  position: relative;
+  justify-content: space-around;
+  height: 80vh;
 }

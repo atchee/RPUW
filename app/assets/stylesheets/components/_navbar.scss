@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-image: linear-gradient(to left, #a2bbdf, #478fca, #2a3a84);
+  background-image: linear-gradient(to left, $lightblue, $mediumblue, $darkblue);
   margin-bottom: 30px;
+  padding: 0px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,5 +10,29 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 10%;
+  width: 83px;
+}
+
+.navbar-home {
+  justify-content: space-between;
+  background-color: transparent;
+  margin-bottom: 0px;
+  padding: 5px;
+  padding-top: 6px;
+}
+
+.navbar-nav-home {
+  display: flex;
+  flex-direction: row-reverse !important;
+  padding-right: 30px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.drop-down-menu-home {
+  position: absolute;
+  inset: 0px auto auto -117px;
+  margin: 0px;
+  transform: translate3d(0px, 42px, 0px);
 }

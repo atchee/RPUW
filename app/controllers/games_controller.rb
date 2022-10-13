@@ -13,7 +13,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(user: current_user)
-    @game.questions = Question.all.sample(20)
+    @game.questions = Question.all.sample(60)
     @game.save
 
     redirect_to game_path(@game)
@@ -22,12 +22,24 @@ class GamesController < ApplicationController
   def start
     @game = Game.find(params[:id])
     @game.update(status: 'running')
-
     broadcast_remove_players_list
     broadcast_question
     broadcast_scores
+    broadcast_timer
   end
 
-  # def next_question
+  # def end
+  #   @game = Game.find(params[:id])
+  #   @game.update(status: 'ended')
+  #   broadcast_summary
   # end
+
+  def next_question
+    @game = Game.find(params[:id])
+    @game.question_number += 1
+    @game.save
+    broadcast_question
+    broadcast_scores
+    broadcast_timer
+  end
 end

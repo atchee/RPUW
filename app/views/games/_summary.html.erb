@@ -1,0 +1,14 @@
+<div class="summary" data-controller="js-confetti">
+
+  <% participations.each do |participation| %>
+    <% if participation.point >= 9 %>
+      <div class="winner">
+        <%= image_tag "gif/winner.png"%>
+        <p id="winner-name"><%= participation.user.nickname %></p>
+        <%= image_tag "avatar/#{participation.user.photo.filename}.png", id:"avatar-winner"%>
+      </div>
+    <% end %>
+  <% end %>
+
+  <%= link_to "Rejouer",root_path, class:"little-yellow-btn" %>
+</div>

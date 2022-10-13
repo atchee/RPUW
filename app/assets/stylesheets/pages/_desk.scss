@@ -1,0 +1,121 @@
+.game {
+  display: flex;
+  position: relative;
+  width: 90vw;
+  height: 40vh;
+}
+
+#players-desk-1round {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+
+  img {
+    width: 80%;
+    position: absolute;
+    top: -78px;
+    right: 10px;
+    z-index: -1;
+    background-color: transparent;
+  }
+}
+
+.participation {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#player-desk-1round {
+  background-image: asset-url('round1/desk-1round.png');
+  background-size: cover;
+  background-position: center;
+  height: 80%;
+  position: relative;
+}
+
+#player-nickname-1round {
+  position: absolute;
+  background-color: #a2bbdf71;
+  box-shadow: 0 4px 15px 0 $mediumblueshadow;
+  border-radius: 5px;
+  color: $white;
+  text-align: center;
+  text-shadow: $yellow 1px 0 10px;
+  left: 23px;
+  top: 13px;
+  width: 70px;
+  font-size: 13px;
+}
+
+#card-point-1round {
+  background-color: #eef7fc52;
+  border-radius: 5px;
+  width: 46.4px;
+  height: 104.16px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 4px 15px 0 $mediumblueshadow;
+  left: 35px;
+  top: 42px;
+}
+
+#card-point-1round-looser {
+  background-color: $redshadow;
+  border-radius: 5px;
+  width: 46.4px;
+  height: 104.16px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 4px 15px 0 $mediumblueshadow;
+  left: 35px;
+  top: 42px;
+  animation: fadeIn 0.5s linear;
+}
+
+.point-1round-orange {
+  background: radial-gradient($yellow, #f6ca44, #F4BD3F, #F3B03A, #F2AA38, #F1A335);
+  border-radius: 3px;
+  border: solid 1.5px $lightorangeshadow;
+  box-shadow: 0 4px 15px 0 $lightorange;
+  width: 37.1px;
+  height: 9.34px;
+  margin: 0px;
+}
+
+.point-1round-orange.flash {
+  animation: flash 500ms, 2s ease alternate;
+}
+
+.point-1round-orange.unflash {
+  animation: none;
+}
+
+@keyframes flash {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.point-1round-gray {
+  background: radial-gradient($white, #D8D8D8);
+  border-radius: 3px;
+  border: solid 1.5px $darkorange;
+  width: 37.1px;
+  height: 9.34px;
+  margin: 0px;
+}
